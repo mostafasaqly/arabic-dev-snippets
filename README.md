@@ -4,9 +4,9 @@
 
 > كود بالعربي — لكل developer عربي
 
-[![Version](https://img.shields.io/badge/version-1.0.1-00d4aa)](https://marketplace.visualstudio.com/items?itemName=MostafaSaqly.arabic-dev-snippets)
-[![License](https://img.shields.io/badge/license-MIT-ff6a6a)](LICENSE)
-[![YouTube](https://img.shields.io/badge/YouTube-Saqly%20Courses-red)](https://youtube.com/@saqlycourses)
+[![Version](https://img.shields.io/badge/Version-1.0.2-00d4aa)](https://marketplace.visualstudio.com/items?itemName=MostafaSaqly.arabic-dev-snippets)
+[![License](https://img.shields.io/badge/License-MIT-ff6a6a)](LICENSE)
+[![YouTube](https://img.shields.io/badge/YouTube-Saqly_Courses-red)](https://youtube.com/@saqlycourses)
 
 ---
 
@@ -23,14 +23,14 @@
 
 ## التقنيات المدعومة
 
-| التقنية | الـ Prefix | عدد الـ Snippets |
+| Technology | Prefix | Snippets |
 |---|---|---|
-| TypeScript | `ts-ar-` | 15 snippet |
-| Angular | `ng-ar-` | 25 snippet |
-| NestJS | `nest-ar-` | 12 snippet |
-| Prisma | `pr-ar-` | 14 snippet |
-| Ionic | `ion-ar-` | 22 snippet |
-| Git | `git-ar-` | 12 snippet |
+| TypeScript | `ts-ar-` | 15 |
+| Angular | `ng-ar-` | 25 |
+| NestJS | `nest-ar-` | 12 |
+| Prisma | `pr-ar-` | 14 |
+| Ionic | `ion-ar-` | 22 |
+| Git | `git-ar-` | 12 |
 
 **الإجمالي: أكتر من 100 snippet**
 
@@ -69,23 +69,23 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 ### TypeScript — `ts-ar-`
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
-| `ts-ar-interface` | إنشاء interface — زي العقد بين الـ components |
-| `ts-ar-type` | إنشاء type alias — للأنواع البسيطة أو الـ union types |
-| `ts-ar-enum` | إنشاء enum — للقيم الثابتة المعروفة مسبقاً |
-| `ts-ar-generic` | دالة generic — بتشتغل مع أي نوع من البيانات |
-| `ts-ar-decorator` | إنشاء decorator — بيضيف سلوك على الـ class أو الـ method |
-| `ts-ar-class` | إنشاء class كامل مع constructor وـ methods |
-| `ts-ar-abstract` | إنشاء abstract class للوراثة منه |
-| `ts-ar-generic-interface` | interface generic بتتكيف مع أي نوع |
-| `ts-ar-utility` | أنواع مساعدة جاهزة — Partial وRequired وPick وOmit |
-| `ts-ar-async` | دالة async مع معالجة الأخطاء |
-| `ts-ar-typeguard` | type guard للتحقق من النوع وقت التشغيل |
-| `ts-ar-mapped` | mapped type لإنشاء نوع جديد من نوع موجود |
-| `ts-ar-intersection` | دمج نوعين مع بعض |
-| `ts-ar-record` | Record type لربط الـ keys بالقيم |
-| `ts-ar-reduce` | تلخيص array في قيمة واحدة |
+| `ts-ar-interface` | تعريف شكل الكائن وحقوله |
+| `ts-ar-type` | تعريف نوع مخصص بسيط أو اتحادي |
+| `ts-ar-enum` | قائمة قيم ثابتة معروفة مسبقاً |
+| `ts-ar-generic` | دالة تشتغل مع أي نوع من البيانات |
+| `ts-ar-decorator` | إضافة سلوك على الكلاس أو الميثود |
+| `ts-ar-class` | قالب كامل لإنشاء الكائنات |
+| `ts-ar-abstract` | كلاس مجرد يورث منه ولا يستخدم مباشرة |
+| `ts-ar-generic-interface` | واجهة تتكيف مع أي نوع بيانات |
+| `ts-ar-utility` | أنواع مساعدة جاهزة لتحويل الأنواع |
+| `ts-ar-async` | دالة غير متزامنة مع معالجة الأخطاء |
+| `ts-ar-typeguard` | التحقق من نوع البيانات وقت التشغيل |
+| `ts-ar-mapped` | إنشاء نوع جديد بناءً على نوع موجود |
+| `ts-ar-intersection` | دمج نوعين معاً في نوع واحد |
+| `ts-ar-record` | ربط المفاتيح بقيم من نوع معين |
+| `ts-ar-reduce` | تلخيص مصفوفة في قيمة واحدة |
 
 ---
 
@@ -93,7 +93,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 #### ملفات TypeScript
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `ng-ar-component` | إنشاء component — المبنة الأساسية في Angular |
 | `ng-ar-service` | إنشاء service — لمشاركة البيانات والـ logic |
@@ -111,7 +111,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 #### ملفات HTML
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `ng-ar-template` | قالب أساسي لـ component |
 | `ng-ar-for` | تكرار العناصر — الطريقة القديمة `*ngFor` |
@@ -131,7 +131,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 ### NestJS — `nest-ar-`
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `nest-ar-module` | إنشاء module — بينظم الكود في وحدات |
 | `nest-ar-controller` | إنشاء controller — بيستقبل الـ HTTP requests |
@@ -150,7 +150,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 ### Prisma — `pr-ar-`
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `pr-ar-model` | تعريف model — جدول في قاعدة البيانات |
 | `pr-ar-findmany` | جيب كل السجلات مع فلترة وترتيب |
@@ -173,7 +173,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 #### ملفات TypeScript
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `ion-ar-page` | صفحة Ionic كاملة |
 | `ion-ar-modal` | نافذة منبثقة — بتظهر فوق الصفحة الحالية |
@@ -190,7 +190,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 #### ملفات HTML
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `ion-ar-list` | قائمة عناصر قابلة للنقر |
 | `ion-ar-card` | card بعنوان ومحتوى وأزرار |
@@ -207,7 +207,7 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 ### Git — `git-ar-`
 
-| الـ Prefix | الوصف |
+| Prefix | الوصف |
 |---|---|
 | `git-ar-init` | إنشاء repo جديد وربطه بـ GitHub |
 | `git-ar-branch` | إنشاء branch والانتقال إليه |
@@ -228,11 +228,11 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 الـ snippets دي مشروحة بالتفصيل في **Saqly Courses**:
 
-| الكورس | الرابط |
-|---|---|
-| Angular من الصفر للاحتراف | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
-| NestJS + Prisma كامل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
-| Ionic للموبايل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| Course | الوصف | الرابط |
+|---|---|---|
+| Angular | من الصفر للاحتراف | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| NestJS + Prisma | كورس كامل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| Ionic | تطبيقات الموبايل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
 
 ---
 

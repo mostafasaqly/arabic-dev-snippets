@@ -1,0 +1,109 @@
+{
+  "name": "arabic-dev-snippets",
+  "displayName": "Arabic Dev Snippets",
+  "description": "كود بالعربي — لكل developer عربي | Code snippets with Arabic descriptions for Angular, TypeScript, NestJS, Prisma, Ionic & Git",
+  "version": "1.0.0",
+  "publisher": "MostafaSaqly",
+  "author": {
+    "name": "Mostafa Saqly",
+    "email": "mostafasaqly1@gmail.com"
+  },
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#0d1117",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MostafaSaqly/arabic-dev-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/MostafaSaqly/arabic-dev-snippets/issues"
+  },
+  "homepage": "https://github.com/MostafaSaqly/arabic-dev-snippets#readme",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages",
+    "Education"
+  ],
+  "keywords": [
+    "arabic",
+    "عربي",
+    "snippets",
+    "angular",
+    "typescript",
+    "nestjs",
+    "prisma",
+    "ionic",
+    "git",
+    "arabic snippets",
+    "كود بالعربي"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/angular.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/angular-html.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nestjs.json"
+      },
+      {
+        "language": "prisma",
+        "path": "./snippets/prisma.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ionic.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/ionic-html.json"
+      },
+      {
+        "language": "shellscript",
+        "path": "./snippets/git.json"
+      },
+      {
+        "language": "bat",
+        "path": "./snippets/git.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0",
+    "@vscode/vsce": "^2.0.0"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "TypeScript Interface (عربي)": {
+    "prefix": "ts-ar-interface",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// بتحدد شكل الـ object — زي العقد بين الـ components",
+      "interface ${1:UserName} {",
+      "  id: number;",
+      "  ${2:name}: string;",
+      "  ${3:email}: string;",
+      "}"
+    ],
+    "description": "إنشاء TypeScript interface بشرح عربي — بتحدد شكل الـ object"
+  },
+
+  "TypeScript Type (عربي)": {
+    "prefix": "ts-ar-type",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// بدون الـ interface للأنواع البسيطة أو الـ union types",
+      "type ${1:Status} = ${2:'active'} | ${3:'inactive'} | ${4:'pending'};"
+    ],
+    "description": "إنشاء TypeScript type alias بشرح عربي — للأنواع البسيطة أو الـ union types"
+  },
+
+  "TypeScript Enum (عربي)": {
+    "prefix": "ts-ar-enum",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// لما عندك قيم ثابتة ومعروفة مسبقاً",
+      "enum ${1:UserRole} {",
+      "  ${2:Admin} = '${3:admin}',",
+      "  ${4:User} = '${5:user}',",
+      "  ${6:Guest} = '${7:guest}'",
+      "}"
+    ],
+    "description": "إنشاء TypeScript enum بشرح عربي — للقيم الثابتة المعروفة مسبقاً"
+  },
+
+  "TypeScript Generic Function (عربي)": {
+    "prefix": "ts-ar-generic",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// دالة بتشتغل مع أي نوع من الداتا",
+      "function ${1:getFirst}<T>(${2:items}: T[]): T {",
+      "  return ${2:items}[0];",
+      "}"
+    ],
+    "description": "إنشاء TypeScript generic function بشرح عربي — بتشتغل مع أي نوع"
+  },
+
+  "TypeScript Decorator (عربي)": {
+    "prefix": "ts-ar-decorator",
+    "scope": "typescript",
+    "body": [
+      "// بيضيف سلوك إضافي على class أو method",
+      "function ${1:Log}(target: any, key: string, descriptor: PropertyDescriptor) {",
+      "  const original = descriptor.value;",
+      "  descriptor.value = function (...args: any[]) {",
+      "    console.log(`Calling \\${key} with`, args);",
+      "    return original.apply(this, args);",
+      "  };",
+      "  return descriptor;",
+      "}"
+    ],
+    "description": "إنشاء TypeScript decorator بشرح عربي — بيضيف سلوك إضافي على class أو method"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "Ionic Page (عربي)": {
+    "prefix": "ion-ar-page",
+    "scope": "typescript",
+    "body": [
+      "// صفحة Ionic كاملة جاهزة للاستخدام",
+      "import { Component, OnInit } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: 'app-${1:home}',",
+      "  template: `",
+      "    <ion-header>",
+      "      <ion-toolbar color=\"primary\">",
+      "        <ion-title>${2:الصفحة الرئيسية}</ion-title>",
+      "      </ion-toolbar>",
+      "    </ion-header>",
+      "    <ion-content class=\"ion-padding\">",
+      "      <p>${3:مرحباً بك!}</p>",
+      "    </ion-content>",
+      "  `",
+      "})",
+      "export class ${4:Home}Page implements OnInit {",
+      "  ngOnInit() {}",
+      "}"
+    ],
+    "description": "إنشاء Ionic page بشرح عربي — صفحة كاملة جاهزة"
+  },
+
+  "Ionic Modal (عربي)": {
+    "prefix": "ion-ar-modal",
+    "scope": "typescript",
+    "body": [
+      "// نافذة منبثقة — بتظهر فوق الصفحة الحالية",
+      "import { ModalController } from '@ionic/angular';",
+      "",
+      "constructor(private modalCtrl: ModalController) {}",
+      "",
+      "async ${1:openModal}() {",
+      "  const modal = await this.modalCtrl.create({",
+      "    component: ${2:MyModal}Component,",
+      "    componentProps: { ${3:title}: '${4:عنوان النافذة}' }",
+      "  });",
+      "  await modal.present();",
+      "  const { data } = await modal.onDidDismiss();",
+      "  ${5:// استخدم الـ data هنا}",
+      "}"
+    ],
+    "description": "إنشاء Ionic modal بشرح عربي — نافذة منبثقة"
+  },
+
+  "Ionic Toast (عربي)": {
+    "prefix": "ion-ar-toast",
+    "scope": "typescript",
+    "body": [
+      "// رسالة صغيرة بتظهر وتتخلى لوحدها",
+      "import { ToastController } from '@ionic/angular';",
+      "",
+      "constructor(private toastCtrl: ToastController) {}",
+      "",
+      "async ${1:showToast}(message: string) {",
+      "  const toast = await this.toastCtrl.create({",
+      "    message,",
+      "    duration: ${2:2000},",
+      "    position: '${3:bottom}',",
+      "    color: '${4:success}'",
+      "  });",
+      "  await toast.present();",
+      "}"
+    ],
+    "description": "إنشاء Ionic toast بشرح عربي — رسالة صغيرة مؤقتة"
+  },
+
+  "Ionic Alert (عربي)": {
+    "prefix": "ion-ar-alert",
+    "scope": "typescript",
+    "body": [
+      "// رسالة تأكيد قبل حذف أو تنفيذ عملية مهمة",
+      "import { AlertController } from '@ionic/angular';",
+      "",
+      "constructor(private alertCtrl: AlertController) {}",
+      "",
+      "async ${1:confirmDelete}() {",
+      "  const alert = await this.alertCtrl.create({",
+      "    header: '${2:تأكيد الحذف}',",
+      "    message: '${3:هل أنت متأكد من حذف هذا العنصر؟}',",
+      "    buttons: [",
+      "      { text: '${4:إلغاء}', role: 'cancel' },",
+      "      { text: '${5:حذف}', role: 'confirm', handler: () => this.${6:delete}() }",
+      "    ]",
+      "  });",
+      "  await alert.present();",
+      "}"
+    ],
+    "description": "إنشاء Ionic alert بشرح عربي — رسالة تأكيد"
+  },
+
+  "Ionic Loading (عربي)": {
+    "prefix": "ion-ar-loading",
+    "scope": "typescript",
+    "body": [
+      "// مؤشر تحميل أثناء انتظار الداتا",
+      "import { LoadingController } from '@ionic/angular';",
+      "",
+      "constructor(private loadingCtrl: LoadingController) {}",
+      "",
+      "async ${1:withLoading}(action: () => Promise<any>) {",
+      "  const loading = await this.loadingCtrl.create({",
+      "    message: '${2:جاري التحميل...}',",
+      "    spinner: '${3:crescent}'",
+      "  });",
+      "  await loading.present();",
+      "  try {",
+      "    await action();",
+      "  } finally {",
+      "    await loading.dismiss();",
+      "  }",
+      "}"
+    ],
+    "description": "إنشاء Ionic loading spinner بشرح عربي — مؤشر تحميل"
+  },
+
+  "Ionic ActionSheet (عربي)": {
+    "prefix": "ion-ar-actionsheet",
+    "scope": "typescript",
+    "body": [
+      "// قائمة خيارات بتظهر من تحت الشاشة",
+      "import { ActionSheetController } from '@ionic/angular';",
+      "",
+      "constructor(private actionSheetCtrl: ActionSheetController) {}",
+      "",
+      "async ${1:showActions}() {",
+      "  const actionSheet = await this.actionSheetCtrl.create({",
+      "    header: '${2:اختار من القايمة}',",
+      "    buttons: [",
+      "      {",
+      "        text: '${3:تعديل}',",
+      "        icon: 'create',",
+      "        handler: () => this.${4:edit}()",
+      "      },",
+      "      {",
+      "        text: '${5:حذف}',",
+      "        icon: 'trash',",
+      "        role: 'destructive',",
+      "        handler: () => this.${6:delete}()",
+      "      },",
+      "      { text: '${7:إلغاء}', role: 'cancel' }",
+      "    ]",
+      "  });",
+      "  await actionSheet.present();",
+      "}"
+    ],
+    "description": "إنشاء Ionic action sheet بشرح عربي — قائمة خيارات"
+  }
+}

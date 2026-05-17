@@ -1,0 +1,109 @@
+{
+  "Angular Component (عربي)": {
+    "prefix": "ng-ar-component",
+    "scope": "typescript",
+    "body": [
+      "// المبنة الأساسية في Angular — لكل صفحة أو جزء من الـ UI",
+      "import { Component } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: 'app-${1:my-component}',",
+      "  templateUrl: './${1:my-component}.component.html',",
+      "  styleUrls: ['./${1:my-component}.component.scss']",
+      "})",
+      "export class ${2:MyComponent} {",
+      "  ${3:title} = '${4:مرحباً}';",
+      "}"
+    ],
+    "description": "إنشاء Angular component بشرح عربي — المبنة الأساسية في Angular"
+  },
+
+  "Angular Service (عربي)": {
+    "prefix": "ng-ar-service",
+    "scope": "typescript",
+    "body": [
+      "// لما عاوز تشارك داتا أو logic بين أكتر من component",
+      "import { Injectable } from '@angular/core';",
+      "import { HttpClient } from '@angular/common/http';",
+      "",
+      "@Injectable({ providedIn: 'root' })",
+      "export class ${1:My}Service {",
+      "  constructor(private http: HttpClient) {}",
+      "",
+      "  getAll() {",
+      "    return this.http.get('${2:/api/items}');",
+      "  }",
+      "}"
+    ],
+    "description": "إنشاء Angular service بشرح عربي — لمشاركة الداتا والـ logic"
+  },
+
+  "Angular Route Guard (عربي)": {
+    "prefix": "ng-ar-guard",
+    "scope": "typescript",
+    "body": [
+      "// بيمنع المستخدم من دخول صفحة من غير إذن",
+      "import { inject } from '@angular/core';",
+      "import { Router } from '@angular/router';",
+      "",
+      "export const ${1:auth}Guard = () => {",
+      "  const router = inject(Router);",
+      "  const token = localStorage.getItem('${2:token}');",
+      "  if (token) return true;",
+      "  return router.navigate(['${3:/login}']);",
+      "};"
+    ],
+    "description": "إنشاء Angular route guard بشرح عربي — بيمنع الدخول بدون إذن"
+  },
+
+  "Angular HTTP Interceptor (عربي)": {
+    "prefix": "ng-ar-interceptor",
+    "scope": "typescript",
+    "body": [
+      "// بيتحكم في كل HTTP request وبيضيف الـ token تلقائياً",
+      "import { HttpInterceptorFn } from '@angular/common/http';",
+      "",
+      "export const ${1:auth}Interceptor: HttpInterceptorFn = (req, next) => {",
+      "  const token = localStorage.getItem('${2:token}');",
+      "  const authReq = req.clone({",
+      "    headers: req.headers.set('Authorization', `Bearer \\${token}`)",
+      "  });",
+      "  return next(authReq);",
+      "};"
+    ],
+    "description": "إنشاء Angular HTTP interceptor بشرح عربي — بيضيف الـ token تلقائياً"
+  },
+
+  "Angular Pipe (عربي)": {
+    "prefix": "ng-ar-pipe",
+    "scope": "typescript",
+    "body": [
+      "// بيغير شكل العرض من غير ما يغير الداتا الأصلية",
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({ name: '${1:arabic}' })",
+      "export class ${2:Arabic}Pipe implements PipeTransform {",
+      "  transform(value: string): string {",
+      "    return value?.trim() ?? '';",
+      "  }",
+      "}"
+    ],
+    "description": "إنشاء Angular pipe بشرح عربي — بيغير شكل العرض"
+  },
+
+  "Angular Signal (عربي)": {
+    "prefix": "ng-ar-signal",
+    "scope": "typescript",
+    "body": [
+      "// الطريقة الجديدة في Angular 17+ لإدارة الـ state",
+      "import { signal, computed } from '@angular/core';",
+      "",
+      "const ${1:count} = signal(${2:0});",
+      "const ${3:double} = computed(() => ${1:count}() * ${4:2});",
+      "",
+      "${1:count}.set(${5:5});           // تعيين قيمة",
+      "${1:count}.update(v => v + 1);  // تحديث القيمة"
+    ],
+    "description": "استخدام Angular signals بشرح عربي — الطريقة الجديدة لإدارة الـ state"
+  }
+}

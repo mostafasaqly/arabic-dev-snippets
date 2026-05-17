@@ -1,0 +1,69 @@
+{
+  "Ionic List (عربي)": {
+    "prefix": "ion-ar-list",
+    "scope": "html",
+    "body": [
+      "<!-- قايمة عناصر قابلة للنقر مع أيقوناتها -->",
+      "<ion-list>",
+      "  <ion-item *ngFor=\"let ${1:item} of ${2:items}\" (click)=\"${3:onSelect}(${1:item})\">",
+      "    <ion-icon name=\"${4:chevron-forward}\" slot=\"end\"></ion-icon>",
+      "    <ion-label>{{ ${1:item}.${5:name} }}</ion-label>",
+      "  </ion-item>",
+      "</ion-list>"
+    ],
+    "description": "إنشاء Ionic list بشرح عربي — قايمة عناصر"
+  },
+
+  "Ionic Card (عربي)": {
+    "prefix": "ion-ar-card",
+    "scope": "html",
+    "body": [
+      "<!-- كارد بيه header وcontent وactions -->",
+      "<ion-card>",
+      "  <ion-card-header>",
+      "    <ion-card-title>${1:عنوان الكارد}</ion-card-title>",
+      "    <ion-card-subtitle>${2:عنوان فرعي}</ion-card-subtitle>",
+      "  </ion-card-header>",
+      "  <ion-card-content>",
+      "    ${3:محتوى الكارد هنا}",
+      "  </ion-card-content>",
+      "  <ion-button fill=\"clear\">${4:اقرأ أكتر}</ion-button>",
+      "</ion-card>"
+    ],
+    "description": "إنشاء Ionic card بشرح عربي — كارد مع header وactions"
+  },
+
+  "Ionic Grid (عربي)": {
+    "prefix": "ion-ar-grid",
+    "scope": "html",
+    "body": [
+      "<!-- تقسيم الشاشة لأعمدة بنظام الـ 12 column -->",
+      "<ion-grid>",
+      "  <ion-row>",
+      "    <ion-col size=\"${1:6}\">",
+      "      ${2:العمود الأول}",
+      "    </ion-col>",
+      "    <ion-col size=\"${3:6}\">",
+      "      ${4:العمود التاني}",
+      "    </ion-col>",
+      "  </ion-row>",
+      "</ion-grid>"
+    ],
+    "description": "إنشاء Ionic grid بشرح عربي — تقسيم الشاشة لأعمدة"
+  },
+
+  "Ionic Searchbar (عربي)": {
+    "prefix": "ion-ar-search",
+    "scope": "html",
+    "body": [
+      "<!-- شريط البحث مع حدث الـ input -->",
+      "<ion-searchbar",
+      "  placeholder=\"${1:ابحث هنا...}\"",
+      "  (ionInput)=\"${2:onSearch}($event)\"",
+      "  (ionClear)=\"${3:onClear}()\"",
+      "  debounce=\"${4:300}\">",
+      "</ion-searchbar>"
+    ],
+    "description": "إنشاء Ionic searchbar بشرح عربي — شريط البحث"
+  }
+}

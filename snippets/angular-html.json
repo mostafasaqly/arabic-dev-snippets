@@ -1,0 +1,85 @@
+{
+  "Angular Component Template (عربي)": {
+    "prefix": "ng-ar-template",
+    "scope": "html",
+    "body": [
+      "<!-- Template أساسي لـ Angular component -->",
+      "<div class=\"${1:container}\">",
+      "  <h1>{{ ${2:title} }}</h1>",
+      "  <ng-content></ng-content>",
+      "</div>"
+    ],
+    "description": "إنشاء Angular template بشرح عربي"
+  },
+
+  "Angular *ngFor (عربي)": {
+    "prefix": "ng-ar-for",
+    "scope": "html",
+    "body": [
+      "<!-- بيكرر عنصر لكل item في الـ array -->",
+      "<div *ngFor=\"let ${1:item} of ${2:items}; trackBy: trackBy${3:Id}\">",
+      "  {{ ${1:item}.${4:name} }}",
+      "</div>"
+    ],
+    "description": "Angular *ngFor directive بشرح عربي"
+  },
+
+  "Angular *ngIf (عربي)": {
+    "prefix": "ng-ar-if",
+    "scope": "html",
+    "body": [
+      "<!-- بيظهر العنصر بس لو الشرط صح -->",
+      "<div *ngIf=\"${1:condition}; else ${2:elseBlock}\">",
+      "  ${3:المحتوى هنا}",
+      "</div>",
+      "<ng-template #${2:elseBlock}>",
+      "  ${4:المحتوى البديل}",
+      "</ng-template>"
+    ],
+    "description": "Angular *ngIf directive بشرح عربي"
+  },
+
+  "Angular @for (عربي)": {
+    "prefix": "ng-ar-for-new",
+    "scope": "html",
+    "body": [
+      "<!-- الطريقة الجديدة في Angular 17+ للـ loop -->",
+      "@for (${1:item} of ${2:items}; track ${1:item}.${3:id}) {",
+      "  <div>{{ ${1:item}.${4:name} }}</div>",
+      "} @empty {",
+      "  <p>${5:مفيش بيانات}</p>",
+      "}"
+    ],
+    "description": "Angular @for control flow بشرح عربي — الطريقة الجديدة في Angular 17+"
+  },
+
+  "Angular @if (عربي)": {
+    "prefix": "ng-ar-if-new",
+    "scope": "html",
+    "body": [
+      "<!-- الطريقة الجديدة في Angular 17+ للـ if -->",
+      "@if (${1:condition}) {",
+      "  ${2:المحتوى هنا}",
+      "} @else {",
+      "  ${3:المحتوى البديل}",
+      "}"
+    ],
+    "description": "Angular @if control flow بشرح عربي — الطريقة الجديدة في Angular 17+"
+  },
+
+  "Angular Reactive Form (عربي)": {
+    "prefix": "ng-ar-form",
+    "scope": "html",
+    "body": [
+      "<!-- نموذج Reactive مرتبط بالـ FormGroup -->",
+      "<form [formGroup]=\"${1:myForm}\" (ngSubmit)=\"${2:onSubmit}()\">",
+      "  <input formControlName=\"${3:name}\" placeholder=\"${4:الاسم}\" />",
+      "  <span *ngIf=\"${1:myForm}.get('${3:name}')?.invalid && ${1:myForm}.get('${3:name}')?.touched\">",
+      "    ${5:الحقل ده مطلوب}",
+      "  </span>",
+      "  <button type=\"submit\" [disabled]=\"${1:myForm}.invalid\">${6:إرسال}</button>",
+      "</form>"
+    ],
+    "description": "Angular reactive form template بشرح عربي"
+  }
+}

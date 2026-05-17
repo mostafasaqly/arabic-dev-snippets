@@ -1,0 +1,98 @@
+{
+  "Git Init & Push (عربي)": {
+    "prefix": "git-ar-init",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إنشاء repo جديد وربطه بـ GitHub",
+      "git init",
+      "git add .",
+      "git commit -m \"first commit: بداية المشروع\"",
+      "git branch -M main",
+      "git remote add origin https://github.com/${1:username}/${2:repo}.git",
+      "git push -u origin main"
+    ],
+    "description": "Git init وربط بـ GitHub بشرح عربي"
+  },
+
+  "Git Branch (عربي)": {
+    "prefix": "git-ar-branch",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إنشاء branch جديد والانتقال إليه",
+      "git checkout -b ${1:feature}/${2:اسم-الـ-feature}",
+      "",
+      "# عرض كل الـ branches",
+      "git branch -a",
+      "",
+      "# الانتقال لـ branch موجود",
+      "git checkout ${3:main}"
+    ],
+    "description": "Git branch بشرح عربي — إنشاء والانتقال"
+  },
+
+  "Git Commit (عربي)": {
+    "prefix": "git-ar-commit",
+    "scope": "shellscript,bat",
+    "body": [
+      "# حفظ التغييرات بشكل صحيح مع رسالة واضحة",
+      "git add .",
+      "git commit -m \"${1|feat,fix,docs,refactor,test,chore|}: ${2:وصف التغيير}\"",
+      "",
+      "# أنواع الـ commit messages:",
+      "# feat:     ميزة جديدة",
+      "# fix:      إصلاح bug",
+      "# docs:     تعديل documentation",
+      "# refactor: إعادة كتابة الكود",
+      "# test:     إضافة أو تعديل tests",
+      "# chore:    مهام صيانة"
+    ],
+    "description": "Git commit بشرح عربي — حفظ التغييرات بشكل صحيح"
+  },
+
+  "Git Merge (عربي)": {
+    "prefix": "git-ar-merge",
+    "scope": "shellscript,bat",
+    "body": [
+      "# دمج branch في الـ main",
+      "git checkout ${1:main}",
+      "git pull origin ${1:main}",
+      "git merge ${2:feature/اسم-الـ-feature}",
+      "",
+      "# أو استخدم rebase لتاريخ أنظف",
+      "# git rebase ${1:main}"
+    ],
+    "description": "Git merge بشرح عربي — دمج الـ branches"
+  },
+
+  "Git Undo (عربي)": {
+    "prefix": "git-ar-undo",
+    "scope": "shellscript,bat",
+    "body": [
+      "# التراجع عن آخر commit من غير حذف التغييرات",
+      "git reset --soft HEAD~1",
+      "",
+      "# التراجع عن تغييرات ملف معين",
+      "git checkout -- ${1:filename}",
+      "",
+      "# إلغاء كل التغييرات غير المحفوظة",
+      "git restore ."
+    ],
+    "description": "Git undo بشرح عربي — التراجع عن التغييرات"
+  },
+
+  "Git Remote (عربي)": {
+    "prefix": "git-ar-remote",
+    "scope": "shellscript,bat",
+    "body": [
+      "# رفع التغييرات على GitHub",
+      "git push origin ${1:feature/اسم-الـ-feature}",
+      "",
+      "# جيب آخر التغييرات من GitHub",
+      "git pull origin ${2:main}",
+      "",
+      "# عرض الـ remote repositories",
+      "git remote -v"
+    ],
+    "description": "Git remote بشرح عربي — رفع وجلب التغييرات"
+  }
+}

@@ -2,45 +2,45 @@
 
 # Arabic Dev Snippets 🇸🇦🇪🇬
 
-> كود بالعربي — لكل مبرمج عربي
+> كود بالعربي — لكل developer عربي
 
-[![الإصدار](https://img.shields.io/badge/الإصدار-1.0.0-00d4aa)](https://marketplace.visualstudio.com/items?itemName=MostafaSaqly.arabic-dev-snippets)
-[![الرخصة](https://img.shields.io/badge/الرخصة-MIT-ff6a6a)](LICENSE)
-[![يوتيوب](https://img.shields.io/badge/يوتيوب-Saqly%20Courses-red)](https://youtube.com/@saqlycourses)
+[![Version](https://img.shields.io/badge/version-1.0.1-00d4aa)](https://marketplace.visualstudio.com/items?itemName=MostafaSaqly.arabic-dev-snippets)
+[![License](https://img.shields.io/badge/license-MIT-ff6a6a)](LICENSE)
+[![YouTube](https://img.shields.io/badge/YouTube-Saqly%20Courses-red)](https://youtube.com/@saqlycourses)
 
 ---
 
-## لماذا هذه الإضافة؟
+## ليه Arabic Dev Snippets؟
 
-أول إضافة عربية بتديك:
+أول extension عربي بيديك:
 
-- كود جاهز بضغطة تاب
-- شرح بالعربي لكل قطعة كود
-- يغطي كل المكدس من الواجهة للخادم
+- كود جاهز بضغطة Tab
+- شرح بالعربي لكل snippet
+- بيغطي كل الـ stack من Frontend للـ Backend
 - مناسب للمبتدئين والمحترفين
 
 ---
 
 ## التقنيات المدعومة
 
-| التقنية | بادئة الكود | عدد القطع |
+| التقنية | الـ Prefix | عدد الـ Snippets |
 |---|---|---|
-| تايبسكريبت | `ts-ar-` | 15 قطعة |
-| أنجولار | `ng-ar-` | 25 قطعة |
-| نيست جي اس | `nest-ar-` | 12 قطعة |
-| بريزما | `pr-ar-` | 14 قطعة |
-| أيونيك | `ion-ar-` | 22 قطعة |
-| جيت | `git-ar-` | 12 قطعة |
+| TypeScript | `ts-ar-` | 15 snippet |
+| Angular | `ng-ar-` | 25 snippet |
+| NestJS | `nest-ar-` | 12 snippet |
+| Prisma | `pr-ar-` | 14 snippet |
+| Ionic | `ion-ar-` | 22 snippet |
+| Git | `git-ar-` | 12 snippet |
 
-**إجمالي: أكتر من 100 قطعة كود**
+**الإجمالي: أكتر من 100 snippet**
 
 ---
 
 ## التثبيت
 
-### من داخل المحرر
+### من داخل VS Code
 
-1. افتح المحرر
+1. افتح VS Code
 2. اضغط `Ctrl+P`
 3. اكتب:
 
@@ -48,119 +48,119 @@
 ext install MostafaSaqly.arabic-dev-snippets
 ```
 
-### من متجر الإضافات
+### من الـ Marketplace
 
-ابحث عن **Arabic Dev Snippets** في تبويب الإضافات
+ابحث عن **Arabic Dev Snippets** في تبويب الـ Extensions
 
 ---
 
 ## طريقة الاستخدام
 
-1. افتح أي ملف تايبسكريبت أو HTML
-2. ابدأ الكتابة بالبادئة المناسبة
-3. اختار القطعة من القائمة
+1. افتح أي ملف TypeScript أو HTML
+2. ابدأ الكتابة بالـ prefix المناسب
+3. اختار الـ snippet من القائمة
 4. اضغط **Tab** والكود بيكتب لوحده
 
 ---
 
-## قائمة قطع الكود
+## قائمة الـ Snippets الكاملة
 
 ---
 
-### تايبسكريبت — `ts-ar-`
+### TypeScript — `ts-ar-`
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `ts-ar-interface` | واجهة — لتحديد شكل الأوبجكت |
-| `ts-ar-type` | نوع مخصص — للأنواع البسيطة أو الاتحادية |
-| `ts-ar-enum` | قائمة ثوابت — للقيم الثابتة المعروفة مسبقاً |
-| `ts-ar-generic` | دالة جينيريك — بتشتغل مع أي نوع من البيانات |
-| `ts-ar-decorator` | ديكوريتور — بيضيف سلوك إضافي على الكلاس أو الميثود |
-| `ts-ar-class` | كلاس كامل مع كونستراكتور وميثودز |
-| `ts-ar-abstract` | كلاس مجرد للوراثة منه |
-| `ts-ar-generic-interface` | واجهة جينيريك بتتكيف مع أي نوع |
+| `ts-ar-interface` | إنشاء interface — زي العقد بين الـ components |
+| `ts-ar-type` | إنشاء type alias — للأنواع البسيطة أو الـ union types |
+| `ts-ar-enum` | إنشاء enum — للقيم الثابتة المعروفة مسبقاً |
+| `ts-ar-generic` | دالة generic — بتشتغل مع أي نوع من البيانات |
+| `ts-ar-decorator` | إنشاء decorator — بيضيف سلوك على الـ class أو الـ method |
+| `ts-ar-class` | إنشاء class كامل مع constructor وـ methods |
+| `ts-ar-abstract` | إنشاء abstract class للوراثة منه |
+| `ts-ar-generic-interface` | interface generic بتتكيف مع أي نوع |
 | `ts-ar-utility` | أنواع مساعدة جاهزة — Partial وRequired وPick وOmit |
-| `ts-ar-async` | دالة غير متزامنة مع معالجة الأخطاء |
-| `ts-ar-typeguard` | تايب جارد للتحقق من النوع وقت التشغيل |
-| `ts-ar-mapped` | نوع مابد لإنشاء نوع جديد من نوع موجود |
+| `ts-ar-async` | دالة async مع معالجة الأخطاء |
+| `ts-ar-typeguard` | type guard للتحقق من النوع وقت التشغيل |
+| `ts-ar-mapped` | mapped type لإنشاء نوع جديد من نوع موجود |
 | `ts-ar-intersection` | دمج نوعين مع بعض |
-| `ts-ar-record` | ريكورد لربط المفاتيح بالقيم |
-| `ts-ar-reduce` | تلخيص مصفوفة في قيمة واحدة |
+| `ts-ar-record` | Record type لربط الـ keys بالقيم |
+| `ts-ar-reduce` | تلخيص array في قيمة واحدة |
 
 ---
 
-### أنجولار — `ng-ar-`
+### Angular — `ng-ar-`
 
-#### ملفات تايبسكريبت
+#### ملفات TypeScript
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `ng-ar-component` | كومبوننت — المبنة الأساسية في أنجولار |
-| `ng-ar-service` | سيرفيس — لمشاركة البيانات والمنطق |
-| `ng-ar-guard` | جارد — يمنع الدخول بدون إذن |
-| `ng-ar-interceptor` | انترسيبتور — يضيف التوكن تلقائياً |
-| `ng-ar-pipe` | بايب — يغير شكل العرض |
-| `ng-ar-signal` | سيجنال — إدارة الحالة في أنجولار 17 |
-| `ng-ar-resolver` | ريزولفر — يجيب البيانات قبل فتح الصفحة |
-| `ng-ar-reactive-form` | فورم ريآكتيف كامل مع التحقق |
-| `ng-ar-store` | ستور بسيط بالسيجنالز |
-| `ng-ar-ondestroy` | إلغاء الاشتراكات عند تدمير الكومبوننت |
-| `ng-ar-directive` | ديريكتيف مخصصة |
-| `ng-ar-io` | تمرير بيانات بالانبوت والاوتبوت |
-| `ng-ar-input-signal` | انبوت سيجنال — الطريقة الجديدة في أنجولار 17 |
+| `ng-ar-component` | إنشاء component — المبنة الأساسية في Angular |
+| `ng-ar-service` | إنشاء service — لمشاركة البيانات والـ logic |
+| `ng-ar-guard` | إنشاء route guard — بيمنع الدخول بدون إذن |
+| `ng-ar-interceptor` | إنشاء HTTP interceptor — بيضيف الـ token تلقائياً |
+| `ng-ar-pipe` | إنشاء pipe — بيغير شكل العرض |
+| `ng-ar-signal` | استخدام signals — إدارة الـ state في Angular 17 |
+| `ng-ar-resolver` | إنشاء resolver — بيجيب البيانات قبل ما الصفحة تفتح |
+| `ng-ar-reactive-form` | إنشاء reactive form كامل مع الـ validation |
+| `ng-ar-store` | store بسيط بالـ signals |
+| `ng-ar-ondestroy` | إلغاء الـ subscriptions عند تدمير الـ component |
+| `ng-ar-directive` | إنشاء custom directive |
+| `ng-ar-io` | تمرير بيانات بالـ Input والـ Output |
+| `ng-ar-input-signal` | Input signal — الطريقة الجديدة في Angular 17 |
 
 #### ملفات HTML
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `ng-ar-template` | قالب أساسي لكومبوننت |
-| `ng-ar-for` | تكرار العناصر — الطريقة القديمة |
-| `ng-ar-if` | إظهار وإخفاء العناصر — الطريقة القديمة |
-| `ng-ar-for-new` | تكرار العناصر — الطريقة الجديدة في أنجولار 17 |
-| `ng-ar-if-new` | الشرط — الطريقة الجديدة في أنجولار 17 |
-| `ng-ar-switch-new` | سويتش — الطريقة الجديدة في أنجولار 17 |
-| `ng-ar-switch` | سويتش — الطريقة القديمة |
-| `ng-ar-form` | قالب فورم ريآكتيف |
-| `ng-ar-twoway` | ربط ثنائي الاتجاه |
-| `ng-ar-event` | ربط أحداث HTML بدوال الكومبوننت |
-| `ng-ar-class-style` | إضافة كلاسات وستايل بشكل ديناميكي |
+| `ng-ar-template` | قالب أساسي لـ component |
+| `ng-ar-for` | تكرار العناصر — الطريقة القديمة `*ngFor` |
+| `ng-ar-if` | إظهار وإخفاء العناصر — الطريقة القديمة `*ngIf` |
+| `ng-ar-for-new` | تكرار العناصر `@for` — Angular 17 |
+| `ng-ar-if-new` | الشرط `@if` — Angular 17 |
+| `ng-ar-switch-new` | الـ switch `@switch` — Angular 17 |
+| `ng-ar-switch` | الـ switch القديم `ngSwitch` |
+| `ng-ar-form` | قالب reactive form |
+| `ng-ar-twoway` | ربط ثنائي الاتجاه `[(ngModel)]` |
+| `ng-ar-event` | ربط أحداث HTML بدوال الـ component |
+| `ng-ar-class-style` | إضافة classes وـ styles بشكل ديناميكي |
 | `ng-ar-bind` | ربط خصائص HTML |
-| `ng-ar-defer` | تحميل كسول — أنجولار 17 |
+| `ng-ar-defer` | تحميل كسول `@defer` — Angular 17 |
 
 ---
 
-### نيست جي اس — `nest-ar-`
+### NestJS — `nest-ar-`
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `nest-ar-module` | موديول — ينظم الكود في وحدات |
-| `nest-ar-controller` | كونترولر — يستقبل الطلبات ويرجع الردود |
-| `nest-ar-service` | سيرفيس — منطق العمل الرئيسي |
-| `nest-ar-dto` | دي تي أو — يحدد شكل البيانات الجاية |
-| `nest-ar-guard` | جارد — يتحقق من صلاحية المستخدم |
-| `nest-ar-pipe` | بايب — يتحقق من البيانات أو يحولها |
-| `nest-ar-interceptor` | انترسيبتور — يلتقط الطلب والرد ويتحكم فيهم |
-| `nest-ar-filter` | فلتر استثناءات — يمسك الأخطاء ويرجع رسالة واضحة |
-| `nest-ar-decorator` | ديكوريتور مخصص لجلب بيانات من الطلب |
-| `nest-ar-schedule` | جدولة المهام — تشغيل مهمة تلقائياً في وقت معين |
-| `nest-ar-prisma-module` | سيرفيس بريزما للتواصل مع قاعدة البيانات |
-| `nest-ar-jwt` | مصادقة كاملة بالجيسون ويب توكن |
+| `nest-ar-module` | إنشاء module — بينظم الكود في وحدات |
+| `nest-ar-controller` | إنشاء controller — بيستقبل الـ HTTP requests |
+| `nest-ar-service` | إنشاء service — منطق العمل الرئيسي |
+| `nest-ar-dto` | إنشاء DTO — بيحدد شكل البيانات الجاية |
+| `nest-ar-guard` | إنشاء guard — بيتحقق من صلاحية المستخدم |
+| `nest-ar-pipe` | إنشاء pipe — بيتحقق من البيانات أو بيحولها |
+| `nest-ar-interceptor` | إنشاء interceptor — بيلتقط الـ request والـ response |
+| `nest-ar-filter` | إنشاء exception filter — بيمسك الأخطاء |
+| `nest-ar-decorator` | إنشاء custom decorator لجلب بيانات من الـ request |
+| `nest-ar-schedule` | جدولة مهام — تشغيل مهمة تلقائياً في وقت معين |
+| `nest-ar-prisma-module` | إنشاء Prisma service للتواصل مع قاعدة البيانات |
+| `nest-ar-jwt` | مصادقة كاملة بالـ JWT |
 
 ---
 
-### بريزما — `pr-ar-`
+### Prisma — `pr-ar-`
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `pr-ar-model` | موديل — تعريف جدول في قاعدة البيانات |
-| `pr-ar-findmany` | جلب كل السجلات مع فلترة وترتيب |
-| `pr-ar-findone` | جلب سجل واحد بالمعرف |
+| `pr-ar-model` | تعريف model — جدول في قاعدة البيانات |
+| `pr-ar-findmany` | جيب كل السجلات مع فلترة وترتيب |
+| `pr-ar-findone` | جيب سجل واحد بالـ ID |
 | `pr-ar-create` | إضافة سجل جديد |
 | `pr-ar-update` | تعديل سجل موجود |
 | `pr-ar-delete` | حذف سجل |
-| `pr-ar-relation` | علاقة واحد لكثير بين جدولين |
-| `pr-ar-many-to-many` | علاقة كثير لكثير |
-| `pr-ar-transaction` | ترانزاكشن — تنفيذ عمليات متعددة مع بعض |
+| `pr-ar-relation` | علاقة One-to-Many بين جدولين |
+| `pr-ar-many-to-many` | علاقة Many-to-Many |
+| `pr-ar-transaction` | transaction — تنفيذ عمليات متعددة مع بعض |
 | `pr-ar-pagination` | تقسيم النتايج لصفحات |
 | `pr-ar-search` | بحث في أكتر من حقل |
 | `pr-ar-upsert` | إضافة أو تحديث سجل |
@@ -169,76 +169,76 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 ---
 
-### أيونيك — `ion-ar-`
+### Ionic — `ion-ar-`
 
-#### ملفات تايبسكريبت
+#### ملفات TypeScript
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `ion-ar-page` | صفحة أيونيك كاملة |
-| `ion-ar-modal` | نافذة منبثقة |
-| `ion-ar-toast` | رسالة صغيرة مؤقتة |
-| `ion-ar-alert` | رسالة تأكيد |
-| `ion-ar-loading` | مؤشر تحميل |
-| `ion-ar-actionsheet` | قائمة خيارات |
-| `ion-ar-popover` | نافذة صغيرة جنب العنصر |
+| `ion-ar-page` | صفحة Ionic كاملة |
+| `ion-ar-modal` | نافذة منبثقة — بتظهر فوق الصفحة الحالية |
+| `ion-ar-toast` | رسالة صغيرة بتظهر وتتخلى لوحدها |
+| `ion-ar-alert` | رسالة تأكيد قبل تنفيذ عملية مهمة |
+| `ion-ar-loading` | مؤشر تحميل أثناء انتظار البيانات |
+| `ion-ar-actionsheet` | قائمة خيارات بتظهر من تحت الشاشة |
+| `ion-ar-popover` | نافذة صغيرة بتطلع جنب العنصر |
 | `ion-ar-nav` | التنقل بين الصفحات |
-| `ion-ar-storage` | حفظ وجلب البيانات محلياً |
-| `ion-ar-refresher` | سحب لأسفل لتحديث البيانات |
+| `ion-ar-storage` | حفظ وجلب البيانات من التخزين المحلي |
+| `ion-ar-refresher` | بيسمح المستخدم يسحب لأسفل لتحديث البيانات |
 | `ion-ar-infinite` | تحميل بيانات إضافية عند الوصول لآخر الصفحة |
 | `ion-ar-camera` | التقاط صور من الكاميرا أو الاستوديو |
 
 #### ملفات HTML
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
 | `ion-ar-list` | قائمة عناصر قابلة للنقر |
-| `ion-ar-card` | كارد بعنوان ومحتوى وأزرار |
+| `ion-ar-card` | card بعنوان ومحتوى وأزرار |
 | `ion-ar-grid` | تقسيم الشاشة لأعمدة |
 | `ion-ar-search` | شريط البحث |
 | `ion-ar-refresher-html` | قالب السحب للتحديث |
 | `ion-ar-infinite-html` | قالب التحميل اللانهائي |
 | `ion-ar-segment` | تبويبات للتنقل بين المحتوى |
-| `ion-ar-slides` | سلايدر للصور والبطاقات |
+| `ion-ar-slides` | slider للصور والبطاقات |
 | `ion-ar-tabs` | شريط التنقل السفلي |
-| `ion-ar-form-html` | نموذج أيونيك كامل مع تحقق |
+| `ion-ar-form-html` | نموذج Ionic كامل مع تحقق |
 
 ---
 
-### جيت — `git-ar-`
+### Git — `git-ar-`
 
-| البادئة | الوصف |
+| الـ Prefix | الوصف |
 |---|---|
-| `git-ar-init` | إنشاء مستودع جديد وربطه بـ GitHub |
-| `git-ar-branch` | إنشاء فرع والانتقال إليه |
+| `git-ar-init` | إنشاء repo جديد وربطه بـ GitHub |
+| `git-ar-branch` | إنشاء branch والانتقال إليه |
 | `git-ar-commit` | حفظ التغييرات بشكل صحيح |
-| `git-ar-merge` | دمج الفروع |
+| `git-ar-merge` | دمج الـ branches |
 | `git-ar-undo` | التراجع عن التغييرات |
 | `git-ar-remote` | رفع وجلب التغييرات |
-| `git-ar-conflict` | حل التعارضات عند الدمج |
-| `git-ar-stash` | حفظ مؤقت للتغييرات بدون كوميت |
-| `git-ar-log` | عرض تاريخ الكوميتات بشكل جميل |
-| `git-ar-tag` | وسم الإصدارات |
-| `git-ar-rebase` | ريبيس تفاعلي لإعادة كتابة التاريخ |
-| `git-ar-clean` | تنظيف المستودع من الفروع القديمة |
+| `git-ar-conflict` | حل الـ conflicts عند الدمج |
+| `git-ar-stash` | حفظ مؤقت للتغييرات بدون commit |
+| `git-ar-log` | عرض تاريخ الـ commits بشكل جميل |
+| `git-ar-tag` | وسم الـ releases |
+| `git-ar-rebase` | interactive rebase لإعادة كتابة التاريخ |
+| `git-ar-clean` | تنظيف الـ repo من الـ branches القديمة |
 
 ---
 
 ## تعلم أكتر
 
-هذه القطع مشروحة بالتفصيل في قناة سقلي كورسز:
+الـ snippets دي مشروحة بالتفصيل في **Saqly Courses**:
 
 | الكورس | الرابط |
 |---|---|
-| أنجولار من الصفر للاحتراف | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
-| نيست جي اس مع بريزما | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
-| أيونيك للموبايل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| Angular من الصفر للاحتراف | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| NestJS + Prisma كامل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| Ionic للموبايل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
 
 ---
 
 ## المساهمة في المشروع
 
-هذه الإضافة مفتوحة المصدر — مرحب بأي مساهمة!
+الـ extension ده open source — مرحب بأي مساهمة!
 
 ```bash
 git clone https://github.com/MostafaSaqly/arabic-dev-snippets
@@ -247,35 +247,35 @@ npm install
 code .
 ```
 
-### تضيف قطعة كود جديدة؟
+### عاوز تضيف snippet جديدة؟
 
-1. افتح الملف المناسب في مجلد `snippets`
-2. أضف القطعة بنفس الشكل الموجود
-3. افتح طلب دمج
+1. افتح الملف المناسب في مجلد `snippets/`
+2. أضف الـ snippet بنفس الشكل الموجود
+3. افتح Pull Request
 
 ---
 
 ## الرخصة
 
-MIT — مجاني للاستخدام الشخصي والتجاري
+MIT License — مجاني للاستخدام الشخصي والتجاري
 
 ---
 
 ## دعم المشروع
 
-لو الإضافة أفادتك:
+لو الـ extension أفادك:
 
-- اعمل نجمة على [GitHub](https://github.com/mostafasaqly/arabic-dev-snippets)
-- اشترك في [سقلي كورسز](https://youtube.com/@saqlycourses)
-- شارك الإضافة مع زملائك
+- اعمل Star على GitHub
+- اشترك في [Saqly Courses](https://youtube.com/@saqlycourses)
+- شارك الـ extension مع زمايلك
 
 ---
 
 <div align="center">
 
-صنيع بالحب للمبرمجين العرب
+صنيع بـ ❤️ للـ developers العرب
 
-[يوتيوب](https://youtube.com/@saqlycourses) — [GitHub](https://github.com/MostafaSaqly) — [لينكدإن](https://linkedin.com/in/mostafasaqly)
+[YouTube](https://youtube.com/@saqlycourses) • [GitHub](https://github.com/MostafaSaqly) • [LinkedIn](https://linkedin.com/in/mostafasaqly)
 
 </div>
 

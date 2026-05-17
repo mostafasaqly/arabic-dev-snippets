@@ -1,9 +1,9 @@
 {
-  "NestJS Module (عربي)": {
+  "موديول نيست": {
     "prefix": "nest-ar-module",
     "scope": "typescript",
     "body": [
-      "// بينظم الكود في وحدات — لكل feature يكون ليها module خاص",
+      "// بينظم الكود في وحدات — لكل فيتشر ليها موديول خاص",
       "import { Module } from '@nestjs/common';",
       "import { ${1:Users}Controller } from './${2:users}.controller';",
       "import { ${1:Users}Service } from './${2:users}.service';",
@@ -15,14 +15,14 @@
       "})",
       "export class ${1:Users}Module {}"
     ],
-    "description": "إنشاء NestJS module بشرح عربي — بينظم الكود في وحدات"
+    "description": "موديول نيست جي اس كامل"
   },
 
-  "NestJS Controller (عربي)": {
+  "كونترولر نيست": {
     "prefix": "nest-ar-controller",
     "scope": "typescript",
     "body": [
-      "// بيستقبل الـ HTTP requests ويرجع responses",
+      "// بيستقبل الطلبات ويرجع الردود",
       "import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';",
       "import { ${1:Users}Service } from './${2:users}.service';",
       "import { Create${3:User}Dto } from './dto/create-${2:user}.dto';",
@@ -52,14 +52,14 @@
       "  }",
       "}"
     ],
-    "description": "إنشاء NestJS controller بشرح عربي — بيستقبل الـ HTTP requests"
+    "description": "كونترولر نيست جي اس كامل"
   },
 
-  "NestJS Service (عربي)": {
+  "سيرفيس نيست": {
     "prefix": "nest-ar-service",
     "scope": "typescript",
     "body": [
-      "// منطق العمل الرئيسي — بعيد عن الـ HTTP layer",
+      "// منطق العمل الرئيسي — بعيد عن طبقة الطلبات",
       "import { Injectable, NotFoundException } from '@nestjs/common';",
       "import { PrismaService } from '../prisma/prisma.service';",
       "import { Create${1:User}Dto } from './dto/create-${2:user}.dto';",
@@ -87,14 +87,14 @@
       "  }",
       "}"
     ],
-    "description": "إنشاء NestJS service بشرح عربي — منطق العمل الرئيسي"
+    "description": "سيرفيس نيست جي اس كامل"
   },
 
-  "NestJS DTO (عربي)": {
+  "دي تي أو نيست": {
     "prefix": "nest-ar-dto",
     "scope": "typescript",
     "body": [
-      "// بيحدد شكل الداتا الجاية من الـ request وبيتحقق منها",
+      "// بيحدد شكل البيانات الجاية ويتحقق منها",
       "import { IsString, IsEmail, IsOptional, MinLength } from 'class-validator';",
       "",
       "export class Create${1:User}Dto {",
@@ -118,14 +118,14 @@
       "  ${3:email}?: string;",
       "}"
     ],
-    "description": "إنشاء NestJS DTO بشرح عربي — بيحدد شكل الداتا الجاية"
+    "description": "دي تي أو نيست جي اس"
   },
 
-  "NestJS Guard (عربي)": {
+  "جارد نيست": {
     "prefix": "nest-ar-guard",
     "scope": "typescript",
     "body": [
-      "// بيتحقق من صلاحية المستخدم قبل أي request",
+      "// بيتحقق من صلاحية المستخدم قبل أي طلب",
       "import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common';",
       "import { JwtService } from '@nestjs/jwt';",
       "",
@@ -141,30 +141,181 @@
       "      request.user = this.jwtService.verify(token);",
       "      return true;",
       "    } catch {",
-      "      throw new UnauthorizedException('الـ token مش صحيح');",
+      "      throw new UnauthorizedException('التوكن مش صحيح');",
       "    }",
       "  }",
       "}"
     ],
-    "description": "إنشاء NestJS guard بشرح عربي — بيتحقق من صلاحية المستخدم"
+    "description": "جارد نيست جي اس للتحقق من الصلاحيات"
   },
 
-  "NestJS Pipe (عربي)": {
+  "بايب نيست": {
     "prefix": "nest-ar-pipe",
     "scope": "typescript",
     "body": [
-      "// بيتحقق من الداتا أو بيحولها قبل ما توصل للـ controller",
+      "// بيتحقق من البيانات أو بيحولها قبل ما توصل للكونترولر",
       "import { PipeTransform, Injectable, BadRequestException } from '@nestjs/common';",
       "",
       "@Injectable()",
       "export class ${1:ParseId}Pipe implements PipeTransform {",
       "  transform(value: string) {",
       "    const id = parseInt(value);",
-      "    if (isNaN(id)) throw new BadRequestException('الـ ID مش رقم صحيح');",
+      "    if (isNaN(id)) throw new BadRequestException('المعرف مش رقم صحيح');",
       "    return id;",
       "  }",
       "}"
     ],
-    "description": "إنشاء NestJS pipe بشرح عربي — بيتحقق من الداتا أو بيحولها"
+    "description": "بايب نيست جي اس للتحقق من البيانات"
+  },
+
+  "انترسيبتور نيست": {
+    "prefix": "nest-ar-interceptor",
+    "scope": "typescript",
+    "body": [
+      "// بيلتقط الطلب والرد ويتحكم فيهم",
+      "import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';",
+      "import { Observable } from 'rxjs';",
+      "import { map } from 'rxjs/operators';",
+      "",
+      "@Injectable()",
+      "export class ${1:Transform}Interceptor implements NestInterceptor {",
+      "  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {",
+      "    return next.handle().pipe(",
+      "      map(data => ({",
+      "        data,",
+      "        success: true,",
+      "        timestamp: new Date().toISOString(),",
+      "      }))",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "انترسيبتور نيست جي اس لتحويل الردود"
+  },
+
+  "فلتر استثناءات نيست": {
+    "prefix": "nest-ar-filter",
+    "scope": "typescript",
+    "body": [
+      "// بيمسك الأخطاء ويرجع رسالة واضحة",
+      "import { ExceptionFilter, Catch, ArgumentsHost, HttpException, HttpStatus } from '@nestjs/common';",
+      "import { Response } from 'express';",
+      "",
+      "@Catch()",
+      "export class ${1:All}ExceptionsFilter implements ExceptionFilter {",
+      "  catch(exception: unknown, host: ArgumentsHost) {",
+      "    const ctx = host.switchToHttp();",
+      "    const response = ctx.getResponse<Response>();",
+      "",
+      "    const status = exception instanceof HttpException",
+      "      ? exception.getStatus()",
+      "      : HttpStatus.INTERNAL_SERVER_ERROR;",
+      "",
+      "    response.status(status).json({",
+      "      success: false,",
+      "      statusCode: status,",
+      "      message: exception instanceof HttpException",
+      "        ? exception.message",
+      "        : 'حصل خطأ في السيرفر',",
+      "    });",
+      "  }",
+      "}"
+    ],
+    "description": "فلتر الاستثناءات في نيست جي اس"
+  },
+
+  "ديكوريتور مستخدم": {
+    "prefix": "nest-ar-decorator",
+    "scope": "typescript",
+    "body": [
+      "// ديكوريتور مخصص لجلب بيانات من الطلب",
+      "import { createParamDecorator, ExecutionContext } from '@nestjs/common';",
+      "",
+      "export const ${1:CurrentUser} = createParamDecorator(",
+      "  (data: string | undefined, ctx: ExecutionContext) => {",
+      "    const request = ctx.switchToHttp().getRequest();",
+      "    const user = request.user;",
+      "    return data ? user?.[data] : user;",
+      "  },",
+      ");"
+    ],
+    "description": "ديكوريتور مخصص في نيست جي اس"
+  },
+
+  "تاسك سكيدولر نيست": {
+    "prefix": "nest-ar-schedule",
+    "scope": "typescript",
+    "body": [
+      "// بيشغل مهمة تلقائياً في وقت معين",
+      "import { Injectable } from '@nestjs/common';",
+      "import { Cron, CronExpression } from '@nestjs/schedule';",
+      "",
+      "@Injectable()",
+      "export class ${1:Task}Service {",
+      "  @Cron(CronExpression.EVERY_DAY_AT_MIDNIGHT)",
+      "  async ${2:handleDailyTask}() {",
+      "    // بيتشغل كل يوم منتصف الليل",
+      "    console.log('تشغيل المهمة اليومية');",
+      "  }",
+      "",
+      "  @Cron('0 * * * *')",
+      "  async ${3:handleHourlyTask}() {",
+      "    // بيتشغل كل ساعة",
+      "  }",
+      "}"
+    ],
+    "description": "جدولة المهام في نيست جي اس"
+  },
+
+  "موديول بريزما": {
+    "prefix": "nest-ar-prisma-module",
+    "scope": "typescript",
+    "body": [
+      "// سيرفيس بريزما للتواصل مع قاعدة البيانات",
+      "import { Injectable, OnModuleInit } from '@nestjs/common';",
+      "import { PrismaClient } from '@prisma/client';",
+      "",
+      "@Injectable()",
+      "export class PrismaService extends PrismaClient implements OnModuleInit {",
+      "  async onModuleInit() {",
+      "    await this.$connect();",
+      "  }",
+      "}"
+    ],
+    "description": "سيرفيس بريزما في نيست جي اس"
+  },
+
+  "مصادقة JWT نيست": {
+    "prefix": "nest-ar-jwt",
+    "scope": "typescript",
+    "body": [
+      "// مصادقة كاملة بالجيسون ويب توكن",
+      "import { Injectable } from '@nestjs/common';",
+      "import { JwtService } from '@nestjs/jwt';",
+      "import { PrismaService } from '../prisma/prisma.service';",
+      "import * as bcrypt from 'bcrypt';",
+      "",
+      "@Injectable()",
+      "export class AuthService {",
+      "  constructor(",
+      "    private prisma: PrismaService,",
+      "    private jwt: JwtService,",
+      "  ) {}",
+      "",
+      "  async login(email: string, password: string) {",
+      "    const user = await this.prisma.user.findUnique({ where: { email } });",
+      "    if (!user) throw new Error('المستخدم مش موجود');",
+      "    const valid = await bcrypt.compare(password, user.password);",
+      "    if (!valid) throw new Error('كلمة المرور غلط');",
+      "    return { token: this.jwt.sign({ sub: user.id, email: user.email }) };",
+      "  }",
+      "",
+      "  async register(data: { name: string; email: string; password: string }) {",
+      "    const hashed = await bcrypt.hash(data.password, 10);",
+      "    return this.prisma.user.create({ data: { ...data, password: hashed } });",
+      "  }",
+      "}"
+    ],
+    "description": "مصادقة JWT كاملة في نيست جي اس"
   }
 }

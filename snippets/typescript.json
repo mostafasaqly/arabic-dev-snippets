@@ -1,29 +1,29 @@
 {
-  "TypeScript Interface (عربي)": {
+  "واجهة تايبسكريبت": {
     "prefix": "ts-ar-interface",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
-      "// بتحدد شكل الـ object — زي العقد بين الـ components",
+      "// بتحدد شكل الأوبجكت — زي العقد بين الكومبوننتس",
       "interface ${1:UserName} {",
       "  id: number;",
       "  ${2:name}: string;",
       "  ${3:email}: string;",
       "}"
     ],
-    "description": "إنشاء TypeScript interface بشرح عربي — بتحدد شكل الـ object"
+    "description": "إنشاء واجهة تايبسكريبت — بتحدد شكل الأوبجكت"
   },
 
-  "TypeScript Type (عربي)": {
+  "نوع تايبسكريبت": {
     "prefix": "ts-ar-type",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
-      "// بدون الـ interface للأنواع البسيطة أو الـ union types",
+      "// للأنواع البسيطة أو الاتحادية",
       "type ${1:Status} = ${2:'active'} | ${3:'inactive'} | ${4:'pending'};"
     ],
-    "description": "إنشاء TypeScript type alias بشرح عربي — للأنواع البسيطة أو الـ union types"
+    "description": "إنشاء نوع مخصص في تايبسكريبت"
   },
 
-  "TypeScript Enum (عربي)": {
+  "قائمة ثوابت": {
     "prefix": "ts-ar-enum",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -34,26 +34,26 @@
       "  ${6:Guest} = '${7:guest}'",
       "}"
     ],
-    "description": "إنشاء TypeScript enum بشرح عربي — للقيم الثابتة المعروفة مسبقاً"
+    "description": "إنشاء قائمة ثوابت في تايبسكريبت"
   },
 
-  "TypeScript Generic Function (عربي)": {
+  "دالة جينيريك": {
     "prefix": "ts-ar-generic",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
-      "// دالة بتشتغل مع أي نوع من الداتا",
+      "// دالة بتشتغل مع أي نوع من البيانات",
       "function ${1:getFirst}<T>(${2:items}: T[]): T {",
       "  return ${2:items}[0];",
       "}"
     ],
-    "description": "إنشاء TypeScript generic function بشرح عربي — بتشتغل مع أي نوع"
+    "description": "دالة جينيريك في تايبسكريبت"
   },
 
-  "TypeScript Decorator (عربي)": {
+  "ديكوريتور": {
     "prefix": "ts-ar-decorator",
     "scope": "typescript",
     "body": [
-      "// بيضيف سلوك إضافي على class أو method",
+      "// بيضيف سلوك إضافي على الكلاس أو الميثود",
       "function ${1:Log}(target: any, key: string, descriptor: PropertyDescriptor) {",
       "  const original = descriptor.value;",
       "  descriptor.value = function (...args: any[]) {",
@@ -63,6 +63,160 @@
       "  return descriptor;",
       "}"
     ],
-    "description": "إنشاء TypeScript decorator بشرح عربي — بيضيف سلوك إضافي على class أو method"
+    "description": "ديكوريتور في تايبسكريبت"
+  },
+
+  "كلاس تايبسكريبت": {
+    "prefix": "ts-ar-class",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// الكلاس هو قالب لإنشاء أوبجكتات",
+      "class ${1:User} {",
+      "  constructor(",
+      "    private ${2:name}: string,",
+      "    private ${3:email}: string",
+      "  ) {}",
+      "",
+      "  get${4:Name}(): string {",
+      "    return this.${2:name};",
+      "  }",
+      "",
+      "  toString(): string {",
+      "    return `\\${this.${2:name}} (\\${this.${3:email}})`;",
+      "  }",
+      "}"
+    ],
+    "description": "كلاس كامل في تايبسكريبت"
+  },
+
+  "كلاس مجرد": {
+    "prefix": "ts-ar-abstract",
+    "scope": "typescript",
+    "body": [
+      "// الكلاس المجرد مش بنعمل منه أوبجكت مباشرة — بس بنورث منه",
+      "abstract class ${1:BaseEntity} {",
+      "  abstract ${2:validate}(): boolean;",
+      "",
+      "  toString(): string {",
+      "    return JSON.stringify(this);",
+      "  }",
+      "}"
+    ],
+    "description": "كلاس مجرد في تايبسكريبت"
+  },
+
+  "واجهة جينيريك": {
+    "prefix": "ts-ar-generic-interface",
+    "scope": "typescript",
+    "body": [
+      "// واجهة بتتكيف مع أي نوع بيانات",
+      "interface ${1:ApiResponse}<T> {",
+      "  data: T;",
+      "  message: string;",
+      "  success: boolean;",
+      "  statusCode: number;",
+      "}"
+    ],
+    "description": "واجهة جينيريك في تايبسكريبت"
+  },
+
+  "يوتيليتي تايبس": {
+    "prefix": "ts-ar-utility",
+    "scope": "typescript",
+    "body": [
+      "// أنواع مساعدة جاهزة في تايبسكريبت",
+      "type ${1:PartialUser} = Partial<${2:User}>;          // كل الحقول اختيارية",
+      "type ${3:RequiredUser} = Required<${2:User}>;        // كل الحقول إجبارية",
+      "type ${4:ReadonlyUser} = Readonly<${2:User}>;        // ما تتغيرش",
+      "type ${5:UserPreview} = Pick<${2:User}, '${6:id}' | '${7:name}'>;  // حقول معينة بس",
+      "type ${8:WithoutPass} = Omit<${2:User}, '${9:password}'>;          // شيل حقل معين"
+    ],
+    "description": "أنواع مساعدة جاهزة في تايبسكريبت"
+  },
+
+  "اسينك اويت": {
+    "prefix": "ts-ar-async",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// دالة غير متزامنة — بتنتظر نتيجة العملية قبل ما تكمل",
+      "async function ${1:fetchData}(): Promise<${2:void}> {",
+      "  try {",
+      "    const result = await ${3:someAsyncOperation}();",
+      "    return result;",
+      "  } catch (error) {",
+      "    console.error('حصل خطأ:', error);",
+      "    throw error;",
+      "  }",
+      "}"
+    ],
+    "description": "دالة async/await في تايبسكريبت"
+  },
+
+  "تايب جارد": {
+    "prefix": "ts-ar-typeguard",
+    "scope": "typescript",
+    "body": [
+      "// بتتأكد من نوع البيانات وقت التشغيل",
+      "function is${1:User}(obj: any): obj is ${1:User} {",
+      "  return typeof obj === 'object' &&",
+      "    typeof obj.${2:name} === 'string' &&",
+      "    typeof obj.${3:email} === 'string';",
+      "}"
+    ],
+    "description": "تايب جارد في تايبسكريبت"
+  },
+
+  "مابد تايب": {
+    "prefix": "ts-ar-mapped",
+    "scope": "typescript",
+    "body": [
+      "// بتعمل نوع جديد بناءً على نوع موجود",
+      "type ${1:Nullable}<T> = {",
+      "  [K in keyof T]: T[K] | null;",
+      "};"
+    ],
+    "description": "مابد تايب في تايبسكريبت"
+  },
+
+  "انتيرسيكشن تايب": {
+    "prefix": "ts-ar-intersection",
+    "scope": "typescript",
+    "body": [
+      "// بتدمج نوعين مع بعض — اللي فيهم الاتنين",
+      "type ${1:AdminUser} = ${2:User} & ${3:Admin};",
+      "",
+      "// مثال",
+      "type ${4:WithTimestamps}<T> = T & {",
+      "  createdAt: Date;",
+      "  updatedAt: Date;",
+      "};"
+    ],
+    "description": "دمج نوعين في تايبسكريبت"
+  },
+
+  "ريكورد تايب": {
+    "prefix": "ts-ar-record",
+    "scope": "typescript",
+    "body": [
+      "// مابد بيربط كيز بقيم من نوع معين",
+      "const ${1:statusMap}: Record<${2:string}, ${3:string}> = {",
+      "  active: 'نشط',",
+      "  inactive: 'غير نشط',",
+      "  pending: 'في الانتظار',",
+      "};"
+    ],
+    "description": "ريكورد تايب في تايبسكريبت"
+  },
+
+  "ريدس كومبيناشن": {
+    "prefix": "ts-ar-reduce",
+    "scope": "typescript,javascript,typescriptreact",
+    "body": [
+      "// بتلخص مصفوفة في قيمة واحدة",
+      "const ${1:total} = ${2:items}.reduce((acc, ${3:item}) => {",
+      "  return acc + ${3:item}.${4:price};",
+      "}, 0);"
+    ],
+    "description": "استخدام reduce في تايبسكريبت"
   }
 }

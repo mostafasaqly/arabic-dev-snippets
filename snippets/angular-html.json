@@ -1,30 +1,30 @@
 {
-  "Angular Component Template (عربي)": {
+  "تمبلت أنجولار": {
     "prefix": "ng-ar-template",
     "scope": "html",
     "body": [
-      "<!-- Template أساسي لـ Angular component -->",
+      "<!-- قالب أساسي لكومبوننت أنجولار -->",
       "<div class=\"${1:container}\">",
       "  <h1>{{ ${2:title} }}</h1>",
       "  <ng-content></ng-content>",
       "</div>"
     ],
-    "description": "إنشاء Angular template بشرح عربي"
+    "description": "قالب أساسي لكومبوننت أنجولار"
   },
 
-  "Angular *ngFor (عربي)": {
+  "لوب قديم": {
     "prefix": "ng-ar-for",
     "scope": "html",
     "body": [
-      "<!-- بيكرر عنصر لكل item في الـ array -->",
+      "<!-- بيكرر عنصر لكل بند في المصفوفة -->",
       "<div *ngFor=\"let ${1:item} of ${2:items}; trackBy: trackBy${3:Id}\">",
       "  {{ ${1:item}.${4:name} }}",
       "</div>"
     ],
-    "description": "Angular *ngFor directive بشرح عربي"
+    "description": "ديريكتيف ngFor لتكرار العناصر"
   },
 
-  "Angular *ngIf (عربي)": {
+  "شرط قديم": {
     "prefix": "ng-ar-if",
     "scope": "html",
     "body": [
@@ -36,50 +36,156 @@
       "  ${4:المحتوى البديل}",
       "</ng-template>"
     ],
-    "description": "Angular *ngIf directive بشرح عربي"
+    "description": "ديريكتيف ngIf لإظهار أو إخفاء العناصر"
   },
 
-  "Angular @for (عربي)": {
+  "لوب جديد": {
     "prefix": "ng-ar-for-new",
     "scope": "html",
     "body": [
-      "<!-- الطريقة الجديدة في Angular 17+ للـ loop -->",
+      "<!-- الطريقة الجديدة في أنجولار 17 للتكرار -->",
       "@for (${1:item} of ${2:items}; track ${1:item}.${3:id}) {",
       "  <div>{{ ${1:item}.${4:name} }}</div>",
       "} @empty {",
       "  <p>${5:مفيش بيانات}</p>",
       "}"
     ],
-    "description": "Angular @for control flow بشرح عربي — الطريقة الجديدة في Angular 17+"
+    "description": "ديريكتيف for الجديد في أنجولار 17"
   },
 
-  "Angular @if (عربي)": {
+  "شرط جديد": {
     "prefix": "ng-ar-if-new",
     "scope": "html",
     "body": [
-      "<!-- الطريقة الجديدة في Angular 17+ للـ if -->",
+      "<!-- الطريقة الجديدة في أنجولار 17 للشرط -->",
       "@if (${1:condition}) {",
       "  ${2:المحتوى هنا}",
+      "} @else if (${3:otherCondition}) {",
+      "  ${4:محتوى آخر}",
       "} @else {",
-      "  ${3:المحتوى البديل}",
+      "  ${5:المحتوى البديل}",
       "}"
     ],
-    "description": "Angular @if control flow بشرح عربي — الطريقة الجديدة في Angular 17+"
+    "description": "ديريكتيف if الجديد في أنجولار 17"
   },
 
-  "Angular Reactive Form (عربي)": {
+  "فورم ريآكتيف قالب": {
     "prefix": "ng-ar-form",
     "scope": "html",
     "body": [
-      "<!-- نموذج Reactive مرتبط بالـ FormGroup -->",
+      "<!-- نموذج مرتبط بالفورم جروب -->",
       "<form [formGroup]=\"${1:myForm}\" (ngSubmit)=\"${2:onSubmit}()\">",
-      "  <input formControlName=\"${3:name}\" placeholder=\"${4:الاسم}\" />",
-      "  <span *ngIf=\"${1:myForm}.get('${3:name}')?.invalid && ${1:myForm}.get('${3:name}')?.touched\">",
-      "    ${5:الحقل ده مطلوب}",
-      "  </span>",
+      "  <div>",
+      "    <label>${3:الاسم}</label>",
+      "    <input formControlName=\"${4:name}\" placeholder=\"${3:الاسم}\" />",
+      "    <span *ngIf=\"${1:myForm}.get('${4:name}')?.invalid && ${1:myForm}.get('${4:name}')?.touched\">",
+      "      ${5:الحقل ده مطلوب}",
+      "    </span>",
+      "  </div>",
       "  <button type=\"submit\" [disabled]=\"${1:myForm}.invalid\">${6:إرسال}</button>",
       "</form>"
     ],
-    "description": "Angular reactive form template بشرح عربي"
+    "description": "قالب فورم ريآكتيف في أنجولار"
+  },
+
+  "سويتش جديد": {
+    "prefix": "ng-ar-switch-new",
+    "scope": "html",
+    "body": [
+      "<!-- سويتش في أنجولار 17 -->",
+      "@switch (${1:status}) {",
+      "  @case ('${2:active}') {",
+      "    <span class=\"active\">${3:نشط}</span>",
+      "  }",
+      "  @case ('${4:inactive}') {",
+      "    <span class=\"inactive\">${5:غير نشط}</span>",
+      "  }",
+      "  @default {",
+      "    <span>${6:غير معروف}</span>",
+      "  }",
+      "}"
+    ],
+    "description": "ديريكتيف switch الجديد في أنجولار 17"
+  },
+
+  "ديريكتيف سويتش قديم": {
+    "prefix": "ng-ar-switch",
+    "scope": "html",
+    "body": [
+      "<!-- سويتش لعرض عناصر مختلفة حسب القيمة -->",
+      "<div [ngSwitch]=\"${1:status}\">",
+      "  <span *ngSwitchCase=\"'${2:active}'\">${3:نشط}</span>",
+      "  <span *ngSwitchCase=\"'${4:inactive}'\">${5:غير نشط}</span>",
+      "  <span *ngSwitchDefault>${6:غير معروف}</span>",
+      "</div>"
+    ],
+    "description": "ديريكتيف ngSwitch القديم في أنجولار"
+  },
+
+  "تو-واي بايندنج": {
+    "prefix": "ng-ar-twoway",
+    "scope": "html",
+    "body": [
+      "<!-- ربط ثنائي الاتجاه بين الكومبوننت والقالب -->",
+      "<input [(ngModel)]=\"${1:value}\" placeholder=\"${2:اكتب هنا}\" />"
+    ],
+    "description": "ربط ثنائي الاتجاه في أنجولار"
+  },
+
+  "ايفنت بايندنج": {
+    "prefix": "ng-ar-event",
+    "scope": "html",
+    "body": [
+      "<!-- ربط حدث HTML بدالة في الكومبوننت -->",
+      "<button (click)=\"${1:onClick}($event)\">${2:اضغط هنا}</button>",
+      "<input (input)=\"${3:onInput}($event)\" (blur)=\"${4:onBlur}()\" />"
+    ],
+    "description": "ربط أحداث HTML في أنجولار"
+  },
+
+  "نج-كلاس ونج-ستايل": {
+    "prefix": "ng-ar-class-style",
+    "scope": "html",
+    "body": [
+      "<!-- إضافة كلاس أو ستايل بشكل ديناميكي -->",
+      "<div",
+      "  [class.${1:active}]=\"${2:isActive}\"",
+      "  [class.${3:disabled}]=\"${4:isDisabled}\"",
+      "  [style.color]=\"${5:textColor}\"",
+      "  [ngClass]=\"{ '${6:highlighted}': ${7:isHighlighted} }\">",
+      "  ${8:المحتوى}",
+      "</div>"
+    ],
+    "description": "ربط الكلاسات والستايل ديناميكياً في أنجولار"
+  },
+
+  "بروبرتي بايندنج": {
+    "prefix": "ng-ar-bind",
+    "scope": "html",
+    "body": [
+      "<!-- ربط خاصية HTML بقيمة من الكومبوننت -->",
+      "<img [src]=\"${1:imageUrl}\" [alt]=\"${2:imageAlt}\" />",
+      "<a [href]=\"${3:link}\" [target]=\"${4:'_blank'}\">${5:رابط}</a>",
+      "<button [disabled]=\"${6:isLoading}\">${7:إرسال}</button>"
+    ],
+    "description": "ربط خصائص HTML في أنجولار"
+  },
+
+  "ديفير لايزي لودينج": {
+    "prefix": "ng-ar-defer",
+    "scope": "html",
+    "body": [
+      "<!-- تحميل الكومبوننت بشكل كسول — بس لما يتحتاج -->",
+      "@defer (on viewport) {",
+      "  <app-${1:heavy-component} />",
+      "} @placeholder {",
+      "  <div>${2:جاري التحميل...}</div>",
+      "} @loading (minimum 500ms) {",
+      "  <div class=\"spinner\">${3:لحظة...}</div>",
+      "} @error {",
+      "  <div>${4:حصل مشكلة}</div>",
+      "}"
+    ],
+    "description": "تحميل كسول بديريكتيف defer في أنجولار 17"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "Angular Component (عربي)": {
+  "كومبوننت أنجولار": {
     "prefix": "ng-ar-component",
     "scope": "typescript",
     "body": [
-      "// المبنة الأساسية في Angular — لكل صفحة أو جزء من الـ UI",
+      "// المبنة الأساسية في أنجولار — لكل صفحة أو جزء من الواجهة",
       "import { Component } from '@angular/core';",
       "",
       "@Component({",
@@ -15,14 +15,14 @@
       "  ${3:title} = '${4:مرحباً}';",
       "}"
     ],
-    "description": "إنشاء Angular component بشرح عربي — المبنة الأساسية في Angular"
+    "description": "كومبوننت أنجولار كامل"
   },
 
-  "Angular Service (عربي)": {
+  "سيرفيس أنجولار": {
     "prefix": "ng-ar-service",
     "scope": "typescript",
     "body": [
-      "// لما عاوز تشارك داتا أو logic بين أكتر من component",
+      "// لما عاوز تشارك بيانات أو منطق بين أكتر من كومبوننت",
       "import { Injectable } from '@angular/core';",
       "import { HttpClient } from '@angular/common/http';",
       "",
@@ -35,10 +35,10 @@
       "  }",
       "}"
     ],
-    "description": "إنشاء Angular service بشرح عربي — لمشاركة الداتا والـ logic"
+    "description": "سيرفيس أنجولار لمشاركة البيانات"
   },
 
-  "Angular Route Guard (عربي)": {
+  "جارد أنجولار": {
     "prefix": "ng-ar-guard",
     "scope": "typescript",
     "body": [
@@ -53,14 +53,14 @@
       "  return router.navigate(['${3:/login}']);",
       "};"
     ],
-    "description": "إنشاء Angular route guard بشرح عربي — بيمنع الدخول بدون إذن"
+    "description": "جارد أنجولار للحماية من الدخول بدون إذن"
   },
 
-  "Angular HTTP Interceptor (عربي)": {
+  "انترسيبتور أنجولار": {
     "prefix": "ng-ar-interceptor",
     "scope": "typescript",
     "body": [
-      "// بيتحكم في كل HTTP request وبيضيف الـ token تلقائياً",
+      "// بيتحكم في كل طلب ويضيف التوكن تلقائياً",
       "import { HttpInterceptorFn } from '@angular/common/http';",
       "",
       "export const ${1:auth}Interceptor: HttpInterceptorFn = (req, next) => {",
@@ -71,14 +71,14 @@
       "  return next(authReq);",
       "};"
     ],
-    "description": "إنشاء Angular HTTP interceptor بشرح عربي — بيضيف الـ token تلقائياً"
+    "description": "انترسيبتور أنجولار لإضافة التوكن"
   },
 
-  "Angular Pipe (عربي)": {
+  "بايب أنجولار": {
     "prefix": "ng-ar-pipe",
     "scope": "typescript",
     "body": [
-      "// بيغير شكل العرض من غير ما يغير الداتا الأصلية",
+      "// بيغير شكل العرض من غير ما يغير البيانات الأصلية",
       "import { Pipe, PipeTransform } from '@angular/core';",
       "",
       "@Pipe({ name: '${1:arabic}' })",
@@ -88,22 +88,195 @@
       "  }",
       "}"
     ],
-    "description": "إنشاء Angular pipe بشرح عربي — بيغير شكل العرض"
+    "description": "بايب أنجولار لتغيير شكل العرض"
   },
 
-  "Angular Signal (عربي)": {
+  "سيجنال أنجولار": {
     "prefix": "ng-ar-signal",
     "scope": "typescript",
     "body": [
-      "// الطريقة الجديدة في Angular 17+ لإدارة الـ state",
+      "// الطريقة الجديدة في أنجولار 17 لإدارة الحالة",
       "import { signal, computed } from '@angular/core';",
       "",
       "const ${1:count} = signal(${2:0});",
       "const ${3:double} = computed(() => ${1:count}() * ${4:2});",
       "",
-      "${1:count}.set(${5:5});           // تعيين قيمة",
-      "${1:count}.update(v => v + 1);  // تحديث القيمة"
+      "${1:count}.set(${5:5});",
+      "${1:count}.update(v => v + 1);"
     ],
-    "description": "استخدام Angular signals بشرح عربي — الطريقة الجديدة لإدارة الـ state"
+    "description": "سيجنال أنجولار لإدارة الحالة"
+  },
+
+  "ريزولفر أنجولار": {
+    "prefix": "ng-ar-resolver",
+    "scope": "typescript",
+    "body": [
+      "// بيجيب البيانات قبل ما الصفحة تفتح",
+      "import { inject } from '@angular/core';",
+      "import { ActivatedRouteSnapshot } from '@angular/router';",
+      "import { ${1:My}Service } from './${2:my}.service';",
+      "",
+      "export const ${3:my}Resolver = (route: ActivatedRouteSnapshot) => {",
+      "  const service = inject(${1:My}Service);",
+      "  const id = route.paramMap.get('id');",
+      "  return service.getById(Number(id));",
+      "};"
+    ],
+    "description": "ريزولفر أنجولار لجلب البيانات قبل فتح الصفحة"
+  },
+
+  "ريآكتيف فورم": {
+    "prefix": "ng-ar-reactive-form",
+    "scope": "typescript",
+    "body": [
+      "// فورم برمجي بالكود — أقوى من نموذج القالب",
+      "import { Component } from '@angular/core';",
+      "import { FormBuilder, FormGroup, Validators } from '@angular/forms';",
+      "",
+      "@Component({ selector: 'app-${1:form}', templateUrl: './${1:form}.component.html' })",
+      "export class ${2:My}FormComponent {",
+      "  form: FormGroup;",
+      "",
+      "  constructor(private fb: FormBuilder) {",
+      "    this.form = this.fb.group({",
+      "      ${3:name}: ['', [Validators.required, Validators.minLength(3)]],",
+      "      ${4:email}: ['', [Validators.required, Validators.email]],",
+      "      ${5:password}: ['', [Validators.required, Validators.minLength(8)]],",
+      "    });",
+      "  }",
+      "",
+      "  onSubmit() {",
+      "    if (this.form.valid) {",
+      "      console.log(this.form.value);",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "ريآكتيف فورم أنجولار كامل"
+  },
+
+  "ستور سيجنال": {
+    "prefix": "ng-ar-store",
+    "scope": "typescript",
+    "body": [
+      "// ستور بسيط بالسيجنالز لإدارة الحالة المشتركة",
+      "import { Injectable, signal, computed } from '@angular/core';",
+      "",
+      "@Injectable({ providedIn: 'root' })",
+      "export class ${1:User}Store {",
+      "  private readonly _${2:items} = signal<${3:User}[]>([]);",
+      "",
+      "  readonly ${2:items} = this._${2:items}.asReadonly();",
+      "  readonly count = computed(() => this._${2:items}().length);",
+      "",
+      "  add(${4:item}: ${3:User}) {",
+      "    this._${2:items}.update(list => [...list, ${4:item}]);",
+      "  }",
+      "",
+      "  remove(id: number) {",
+      "    this._${2:items}.update(list => list.filter(i => i.id !== id));",
+      "  }",
+      "}"
+    ],
+    "description": "ستور بسيط بالسيجنالز في أنجولار"
+  },
+
+  "أونديسترو": {
+    "prefix": "ng-ar-ondestroy",
+    "scope": "typescript",
+    "body": [
+      "// بيلغي الاشتراكات لما الكومبوننت يتدمر",
+      "import { Component, OnInit, OnDestroy } from '@angular/core';",
+      "import { Subject, takeUntil } from 'rxjs';",
+      "",
+      "@Component({ selector: 'app-${1:my}', template: '' })",
+      "export class ${2:My}Component implements OnInit, OnDestroy {",
+      "  private destroy$ = new Subject<void>();",
+      "",
+      "  ngOnInit() {",
+      "    ${3:this.someService.data$}",
+      "      .pipe(takeUntil(this.destroy$))",
+      "      .subscribe(data => {",
+      "        // استخدم البيانات هنا",
+      "      });",
+      "  }",
+      "",
+      "  ngOnDestroy() {",
+      "    this.destroy$.next();",
+      "    this.destroy$.complete();",
+      "  }",
+      "}"
+    ],
+    "description": "إلغاء اشتراكات أنجولار عند تدمير الكومبوننت"
+  },
+
+  "ديريكتيف مخصصة": {
+    "prefix": "ng-ar-directive",
+    "scope": "typescript",
+    "body": [
+      "// بتضيف سلوك مخصص على أي عنصر في القالب",
+      "import { Directive, ElementRef, HostListener, Input } from '@angular/core';",
+      "",
+      "@Directive({ selector: '[app${1:Highlight}]' })",
+      "export class ${1:Highlight}Directive {",
+      "  @Input() app${1:Highlight} = '${2:yellow}';",
+      "",
+      "  constructor(private el: ElementRef) {}",
+      "",
+      "  @HostListener('mouseenter') onMouseEnter() {",
+      "    this.el.nativeElement.style.backgroundColor = this.app${1:Highlight};",
+      "  }",
+      "",
+      "  @HostListener('mouseleave') onMouseLeave() {",
+      "    this.el.nativeElement.style.backgroundColor = '';",
+      "  }",
+      "}"
+    ],
+    "description": "ديريكتيف مخصصة في أنجولار"
+  },
+
+  "انبوت اوتبوت": {
+    "prefix": "ng-ar-io",
+    "scope": "typescript",
+    "body": [
+      "// تمرير بيانات بين الكومبوننتس الأب والابن",
+      "import { Component, Input, Output, EventEmitter } from '@angular/core';",
+      "",
+      "@Component({ selector: 'app-${1:child}', template: '' })",
+      "export class ${2:Child}Component {",
+      "  @Input() ${3:title}: string = '';",
+      "  @Input() ${4:data}: ${5:any}[] = [];",
+      "",
+      "  @Output() ${6:selected} = new EventEmitter<${5:any}>();",
+      "  @Output() ${7:closed} = new EventEmitter<void>();",
+      "",
+      "  onSelect(item: ${5:any}) {",
+      "    this.${6:selected}.emit(item);",
+      "  }",
+      "}"
+    ],
+    "description": "انبوت واوتبوت للتواصل بين الكومبوننتس"
+  },
+
+  "ريسولف قراءة فقط": {
+    "prefix": "ng-ar-input-signal",
+    "scope": "typescript",
+    "body": [
+      "// انبوت بالسيجنالز — الطريقة الجديدة في أنجولار 17",
+      "import { Component, input, output } from '@angular/core';",
+      "",
+      "@Component({ selector: 'app-${1:child}', template: '' })",
+      "export class ${2:Child}Component {",
+      "  ${3:title} = input.required<string>();",
+      "  ${4:data} = input<${5:any}[]>([]);",
+      "",
+      "  ${6:selected} = output<${5:any}>();",
+      "",
+      "  onSelect(item: ${5:any}) {",
+      "    this.${6:selected}.emit(item);",
+      "  }",
+      "}"
+    ],
+    "description": "انبوت سيجنال في أنجولار 17"
   }
 }

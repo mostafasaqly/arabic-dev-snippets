@@ -1,9 +1,9 @@
 {
-  "Ionic Page (عربي)": {
+  "صفحة أيونيك": {
     "prefix": "ion-ar-page",
     "scope": "typescript",
     "body": [
-      "// صفحة Ionic كاملة جاهزة للاستخدام",
+      "// صفحة أيونيك كاملة جاهزة للاستخدام",
       "import { Component, OnInit } from '@angular/core';",
       "",
       "@Component({",
@@ -23,10 +23,10 @@
       "  ngOnInit() {}",
       "}"
     ],
-    "description": "إنشاء Ionic page بشرح عربي — صفحة كاملة جاهزة"
+    "description": "صفحة أيونيك كاملة"
   },
 
-  "Ionic Modal (عربي)": {
+  "نافذة أيونيك": {
     "prefix": "ion-ar-modal",
     "scope": "typescript",
     "body": [
@@ -42,13 +42,13 @@
       "  });",
       "  await modal.present();",
       "  const { data } = await modal.onDidDismiss();",
-      "  ${5:// استخدم الـ data هنا}",
+      "  ${5:// استخدم البيانات هنا}",
       "}"
     ],
-    "description": "إنشاء Ionic modal بشرح عربي — نافذة منبثقة"
+    "description": "نافذة منبثقة في أيونيك"
   },
 
-  "Ionic Toast (عربي)": {
+  "رسالة صغيرة أيونيك": {
     "prefix": "ion-ar-toast",
     "scope": "typescript",
     "body": [
@@ -67,10 +67,10 @@
       "  await toast.present();",
       "}"
     ],
-    "description": "إنشاء Ionic toast بشرح عربي — رسالة صغيرة مؤقتة"
+    "description": "رسالة صغيرة مؤقتة في أيونيك"
   },
 
-  "Ionic Alert (عربي)": {
+  "تأكيد أيونيك": {
     "prefix": "ion-ar-alert",
     "scope": "typescript",
     "body": [
@@ -82,7 +82,7 @@
       "async ${1:confirmDelete}() {",
       "  const alert = await this.alertCtrl.create({",
       "    header: '${2:تأكيد الحذف}',",
-      "    message: '${3:هل أنت متأكد من حذف هذا العنصر؟}',",
+      "    message: '${3:هل أنت متأكد؟}',",
       "    buttons: [",
       "      { text: '${4:إلغاء}', role: 'cancel' },",
       "      { text: '${5:حذف}', role: 'confirm', handler: () => this.${6:delete}() }",
@@ -91,14 +91,14 @@
       "  await alert.present();",
       "}"
     ],
-    "description": "إنشاء Ionic alert بشرح عربي — رسالة تأكيد"
+    "description": "رسالة تأكيد في أيونيك"
   },
 
-  "Ionic Loading (عربي)": {
+  "تحميل أيونيك": {
     "prefix": "ion-ar-loading",
     "scope": "typescript",
     "body": [
-      "// مؤشر تحميل أثناء انتظار الداتا",
+      "// مؤشر تحميل أثناء انتظار البيانات",
       "import { LoadingController } from '@ionic/angular';",
       "",
       "constructor(private loadingCtrl: LoadingController) {}",
@@ -116,10 +116,10 @@
       "  }",
       "}"
     ],
-    "description": "إنشاء Ionic loading spinner بشرح عربي — مؤشر تحميل"
+    "description": "مؤشر تحميل في أيونيك"
   },
 
-  "Ionic ActionSheet (عربي)": {
+  "قائمة خيارات أيونيك": {
     "prefix": "ion-ar-actionsheet",
     "scope": "typescript",
     "body": [
@@ -130,25 +130,148 @@
       "",
       "async ${1:showActions}() {",
       "  const actionSheet = await this.actionSheetCtrl.create({",
-      "    header: '${2:اختار من القايمة}',",
+      "    header: '${2:اختار من القائمة}',",
       "    buttons: [",
-      "      {",
-      "        text: '${3:تعديل}',",
-      "        icon: 'create',",
-      "        handler: () => this.${4:edit}()",
-      "      },",
-      "      {",
-      "        text: '${5:حذف}',",
-      "        icon: 'trash',",
-      "        role: 'destructive',",
-      "        handler: () => this.${6:delete}()",
-      "      },",
+      "      { text: '${3:تعديل}', icon: 'create', handler: () => this.${4:edit}() },",
+      "      { text: '${5:حذف}', icon: 'trash', role: 'destructive', handler: () => this.${6:delete}() },",
       "      { text: '${7:إلغاء}', role: 'cancel' }",
       "    ]",
       "  });",
       "  await actionSheet.present();",
       "}"
     ],
-    "description": "إنشاء Ionic action sheet بشرح عربي — قائمة خيارات"
+    "description": "قائمة خيارات في أيونيك"
+  },
+
+  "بوبوفر أيونيك": {
+    "prefix": "ion-ar-popover",
+    "scope": "typescript",
+    "body": [
+      "// نافذة صغيرة بتطلع جنب العنصر",
+      "import { PopoverController } from '@ionic/angular';",
+      "",
+      "constructor(private popoverCtrl: PopoverController) {}",
+      "",
+      "async ${1:showPopover}(event: Event) {",
+      "  const popover = await this.popoverCtrl.create({",
+      "    component: ${2:MyPopover}Component,",
+      "    event,",
+      "    translucent: true,",
+      "  });",
+      "  await popover.present();",
+      "}"
+    ],
+    "description": "بوبوفر في أيونيك"
+  },
+
+  "ناف كونترولر أيونيك": {
+    "prefix": "ion-ar-nav",
+    "scope": "typescript",
+    "body": [
+      "// التنقل بين الصفحات في أيونيك",
+      "import { NavController } from '@ionic/angular';",
+      "",
+      "constructor(private navCtrl: NavController) {}",
+      "",
+      "goTo${1:Details}(id: number) {",
+      "  this.navCtrl.navigateForward(`/${2:details}/\\${id}`);",
+      "}",
+      "",
+      "goBack() {",
+      "  this.navCtrl.navigateBack('/${3:home}');",
+      "}"
+    ],
+    "description": "التنقل بين الصفحات في أيونيك"
+  },
+
+  "ستوريدج أيونيك": {
+    "prefix": "ion-ar-storage",
+    "scope": "typescript",
+    "body": [
+      "// حفظ وجلب البيانات من التخزين المحلي",
+      "import { Storage } from '@ionic/storage-angular';",
+      "",
+      "constructor(private storage: Storage) {",
+      "  this.storage.create();",
+      "}",
+      "",
+      "async save(key: string, value: any) {",
+      "  await this.storage.set(key, value);",
+      "}",
+      "",
+      "async load<T>(key: string): Promise<T | null> {",
+      "  return this.storage.get(key);",
+      "}",
+      "",
+      "async remove(key: string) {",
+      "  await this.storage.remove(key);",
+      "}"
+    ],
+    "description": "تخزين محلي في أيونيك"
+  },
+
+  "ريفريشر أيونيك": {
+    "prefix": "ion-ar-refresher",
+    "scope": "typescript",
+    "body": [
+      "// بيسمح المستخدم يسحب الصفحة لأسفل لتحديث البيانات",
+      "async ${1:doRefresh}(event: any) {",
+      "  try {",
+      "    await this.${2:loadData}();",
+      "  } finally {",
+      "    event.target.complete();",
+      "  }",
+      "}"
+    ],
+    "description": "ريفريشر في أيونيك"
+  },
+
+  "انفينيت سكرول أيونيك": {
+    "prefix": "ion-ar-infinite",
+    "scope": "typescript",
+    "body": [
+      "// تحميل بيانات إضافية لما المستخدم يوصل لآخر الصفحة",
+      "page = 1;",
+      "",
+      "async ${1:loadMore}(event: any) {",
+      "  this.page++;",
+      "  const newItems = await this.${2:service}.getPage(this.page);",
+      "  this.${3:items}.push(...newItems);",
+      "  event.target.complete();",
+      "  if (newItems.length < ${4:10}) {",
+      "    event.target.disabled = true;",
+      "  }",
+      "}"
+    ],
+    "description": "تحميل لانهائي في أيونيك"
+  },
+
+  "كاميرا أيونيك": {
+    "prefix": "ion-ar-camera",
+    "scope": "typescript",
+    "body": [
+      "// التقاط صورة من الكاميرا أو الاستوديو",
+      "import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';",
+      "",
+      "async ${1:takePhoto}() {",
+      "  const photo = await Camera.getPhoto({",
+      "    quality: 90,",
+      "    allowEditing: false,",
+      "    resultType: CameraResultType.DataUrl,",
+      "    source: CameraSource.Camera,",
+      "  });",
+      "  this.${2:imageUrl} = photo.dataUrl;",
+      "}",
+      "",
+      "async ${3:pickFromGallery}() {",
+      "  const photo = await Camera.getPhoto({",
+      "    quality: 90,",
+      "    resultType: CameraResultType.DataUrl,",
+      "    source: CameraSource.Photos,",
+      "  });",
+      "  this.${2:imageUrl} = photo.dataUrl;",
+      "}"
+    ],
+    "description": "الكاميرا في أيونيك"
   }
 }

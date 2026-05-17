@@ -1,9 +1,9 @@
 {
-  "Ionic List (عربي)": {
+  "قائمة عناصر أيونيك": {
     "prefix": "ion-ar-list",
     "scope": "html",
     "body": [
-      "<!-- قايمة عناصر قابلة للنقر مع أيقوناتها -->",
+      "<!-- قائمة عناصر قابلة للنقر مع أيقوناتها -->",
       "<ion-list>",
       "  <ion-item *ngFor=\"let ${1:item} of ${2:items}\" (click)=\"${3:onSelect}(${1:item})\">",
       "    <ion-icon name=\"${4:chevron-forward}\" slot=\"end\"></ion-icon>",
@@ -11,14 +11,14 @@
       "  </ion-item>",
       "</ion-list>"
     ],
-    "description": "إنشاء Ionic list بشرح عربي — قايمة عناصر"
+    "description": "قائمة عناصر في أيونيك"
   },
 
-  "Ionic Card (عربي)": {
+  "كارت أيونيك": {
     "prefix": "ion-ar-card",
     "scope": "html",
     "body": [
-      "<!-- كارد بيه header وcontent وactions -->",
+      "<!-- كارد بيه عنوان ومحتوى وأزرار -->",
       "<ion-card>",
       "  <ion-card-header>",
       "    <ion-card-title>${1:عنوان الكارد}</ion-card-title>",
@@ -30,14 +30,14 @@
       "  <ion-button fill=\"clear\">${4:اقرأ أكتر}</ion-button>",
       "</ion-card>"
     ],
-    "description": "إنشاء Ionic card بشرح عربي — كارد مع header وactions"
+    "description": "كارد في أيونيك"
   },
 
-  "Ionic Grid (عربي)": {
+  "شبكة أيونيك": {
     "prefix": "ion-ar-grid",
     "scope": "html",
     "body": [
-      "<!-- تقسيم الشاشة لأعمدة بنظام الـ 12 column -->",
+      "<!-- تقسيم الشاشة لأعمدة بنظام الـ 12 عمود -->",
       "<ion-grid>",
       "  <ion-row>",
       "    <ion-col size=\"${1:6}\">",
@@ -49,14 +49,14 @@
       "  </ion-row>",
       "</ion-grid>"
     ],
-    "description": "إنشاء Ionic grid بشرح عربي — تقسيم الشاشة لأعمدة"
+    "description": "شبكة في أيونيك"
   },
 
-  "Ionic Searchbar (عربي)": {
+  "شريط بحث أيونيك": {
     "prefix": "ion-ar-search",
     "scope": "html",
     "body": [
-      "<!-- شريط البحث مع حدث الـ input -->",
+      "<!-- شريط البحث مع حدث الإدخال -->",
       "<ion-searchbar",
       "  placeholder=\"${1:ابحث هنا...}\"",
       "  (ionInput)=\"${2:onSearch}($event)\"",
@@ -64,6 +64,138 @@
       "  debounce=\"${4:300}\">",
       "</ion-searchbar>"
     ],
-    "description": "إنشاء Ionic searchbar بشرح عربي — شريط البحث"
+    "description": "شريط بحث في أيونيك"
+  },
+
+  "ريفريشر قالب": {
+    "prefix": "ion-ar-refresher-html",
+    "scope": "html",
+    "body": [
+      "<!-- سحب لأسفل لتحديث البيانات -->",
+      "<ion-content>",
+      "  <ion-refresher slot=\"fixed\" (ionRefresh)=\"${1:doRefresh}($event)\">",
+      "    <ion-refresher-content",
+      "      pullingIcon=\"chevron-down-circle-outline\"",
+      "      pullingText=\"${2:اسحب لأسفل للتحديث}\"",
+      "      refreshingSpinner=\"crescent\"",
+      "      refreshingText=\"${3:جاري التحديث...}\">",
+      "    </ion-refresher-content>",
+      "  </ion-refresher>",
+      "  ${4:<!-- المحتوى هنا -->}",
+      "</ion-content>"
+    ],
+    "description": "ريفريشر في قالب أيونيك"
+  },
+
+  "تحميل لانهائي قالب": {
+    "prefix": "ion-ar-infinite-html",
+    "scope": "html",
+    "body": [
+      "<!-- تحميل بيانات إضافية عند الوصول لآخر الصفحة -->",
+      "<ion-content>",
+      "  <ion-list>",
+      "    <ion-item *ngFor=\"let ${1:item} of ${2:items}\">",
+      "      {{ ${1:item}.${3:name} }}",
+      "    </ion-item>",
+      "  </ion-list>",
+      "  <ion-infinite-scroll (ionInfinite)=\"${4:loadMore}($event)\">",
+      "    <ion-infinite-scroll-content",
+      "      loadingSpinner=\"crescent\"",
+      "      loadingText=\"${5:جاري تحميل المزيد...}\">",
+      "    </ion-infinite-scroll-content>",
+      "  </ion-infinite-scroll>",
+      "</ion-content>"
+    ],
+    "description": "تحميل لانهائي في قالب أيونيك"
+  },
+
+  "سيجمنت أيونيك": {
+    "prefix": "ion-ar-segment",
+    "scope": "html",
+    "body": [
+      "<!-- تبويبات للتنقل بين المحتوى -->",
+      "<ion-segment [(ngModel)]=\"${1:selectedSegment}\" (ionChange)=\"${2:onSegmentChange}($event)\">",
+      "  <ion-segment-button value=\"${3:all}\">",
+      "    <ion-label>${4:الكل}</ion-label>",
+      "  </ion-segment-button>",
+      "  <ion-segment-button value=\"${5:active}\">",
+      "    <ion-label>${6:نشط}</ion-label>",
+      "  </ion-segment-button>",
+      "  <ion-segment-button value=\"${7:inactive}\">",
+      "    <ion-label>${8:غير نشط}</ion-label>",
+      "  </ion-segment-button>",
+      "</ion-segment>"
+    ],
+    "description": "سيجمنت في أيونيك"
+  },
+
+  "سلايدر أيونيك": {
+    "prefix": "ion-ar-slides",
+    "scope": "html",
+    "body": [
+      "<!-- سلايدر للصور أو البطاقات -->",
+      "<swiper-container [options]=\"${1:slideOpts}\" #${2:swiper}>",
+      "  <swiper-slide *ngFor=\"let ${3:slide} of ${4:slides}\">",
+      "    <img [src]=\"${3:slide}.${5:image}\" [alt]=\"${3:slide}.${6:title}\" />",
+      "    <h2>{{ ${3:slide}.${6:title} }}</h2>",
+      "  </swiper-slide>",
+      "</swiper-container>"
+    ],
+    "description": "سلايدر في أيونيك"
+  },
+
+  "شريط تنقل سفلي": {
+    "prefix": "ion-ar-tabs",
+    "scope": "html",
+    "body": [
+      "<!-- شريط التنقل السفلي -->",
+      "<ion-tabs>",
+      "  <ion-tab-bar slot=\"bottom\">",
+      "    <ion-tab-button tab=\"${1:home}\">",
+      "      <ion-icon name=\"${2:home}\"></ion-icon>",
+      "      <ion-label>${3:الرئيسية}</ion-label>",
+      "    </ion-tab-button>",
+      "    <ion-tab-button tab=\"${4:search}\">",
+      "      <ion-icon name=\"${5:search}\"></ion-icon>",
+      "      <ion-label>${6:بحث}</ion-label>",
+      "    </ion-tab-button>",
+      "    <ion-tab-button tab=\"${7:profile}\">",
+      "      <ion-icon name=\"${8:person}\"></ion-icon>",
+      "      <ion-label>${9:حسابي}</ion-label>",
+      "    </ion-tab-button>",
+      "  </ion-tab-bar>",
+      "</ion-tabs>"
+    ],
+    "description": "شريط تنقل سفلي في أيونيك"
+  },
+
+  "فورم أيونيك": {
+    "prefix": "ion-ar-form-html",
+    "scope": "html",
+    "body": [
+      "<!-- نموذج أيونيك مع تحقق من البيانات -->",
+      "<ion-content class=\"ion-padding\">",
+      "  <form [formGroup]=\"${1:form}\" (ngSubmit)=\"${2:onSubmit}()\">",
+      "    <ion-list>",
+      "      <ion-item>",
+      "        <ion-label position=\"floating\">${3:الاسم}</ion-label>",
+      "        <ion-input formControlName=\"${4:name}\" type=\"text\"></ion-input>",
+      "      </ion-item>",
+      "      <ion-item>",
+      "        <ion-label position=\"floating\">${5:البريد الإلكتروني}</ion-label>",
+      "        <ion-input formControlName=\"${6:email}\" type=\"email\"></ion-input>",
+      "      </ion-item>",
+      "      <ion-item>",
+      "        <ion-label position=\"floating\">${7:كلمة المرور}</ion-label>",
+      "        <ion-input formControlName=\"${8:password}\" type=\"password\"></ion-input>",
+      "      </ion-item>",
+      "    </ion-list>",
+      "    <ion-button expand=\"block\" type=\"submit\" [disabled]=\"${1:form}.invalid\" class=\"ion-margin-top\">",
+      "      ${9:تسجيل الدخول}",
+      "    </ion-button>",
+      "  </form>",
+      "</ion-content>"
+    ],
+    "description": "نموذج أيونيك كامل"
   }
 }

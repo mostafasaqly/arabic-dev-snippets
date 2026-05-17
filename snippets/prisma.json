@@ -1,9 +1,9 @@
 {
-  "Prisma Model (عربي)": {
+  "موديل بريزما": {
     "prefix": "pr-ar-model",
     "scope": "prisma",
     "body": [
-      "// تعريف جدول في الـ database — لكل field نوع وخصائص",
+      "// تعريف جدول في قاعدة البيانات — لكل حقل نوع وخصائص",
       "model ${1:User} {",
       "  id        Int      @id @default(autoincrement())",
       "  ${2:name}      String",
@@ -13,42 +13,42 @@
       "  updatedAt DateTime @updatedAt",
       "}"
     ],
-    "description": "إنشاء Prisma model بشرح عربي — تعريف جدول في الـ database"
+    "description": "تعريف موديل بريزما"
   },
 
-  "Prisma findMany (عربي)": {
+  "جلب كل السجلات": {
     "prefix": "pr-ar-findmany",
     "scope": "typescript",
     "body": [
       "// جيب كل السجلات مع إمكانية الفلترة والترتيب",
       "const ${1:items} = await prisma.${2:user}.findMany({",
-      "  where: { ${3:isActive}: ${4:true} },      // فلتر",
-      "  orderBy: { ${5:createdAt}: '${6:desc}' }, // ترتيب",
-      "  skip: ${7:0},                             // للـ pagination",
-      "  take: ${8:10},                            // عدد النتايج",
+      "  where: { ${3:isActive}: ${4:true} },",
+      "  orderBy: { ${5:createdAt}: '${6:desc}' },",
+      "  skip: ${7:0},",
+      "  take: ${8:10},",
       "});"
     ],
-    "description": "Prisma findMany بشرح عربي — جيب كل السجلات مع الفلترة"
+    "description": "جلب كل السجلات مع فلترة وترتيب"
   },
 
-  "Prisma findUnique (عربي)": {
+  "جلب سجل واحد": {
     "prefix": "pr-ar-findone",
     "scope": "typescript",
     "body": [
-      "// جيب سجل واحد بالـ ID أو أي field فريد",
+      "// جيب سجل واحد بالمعرف أو أي حقل فريد",
       "const ${1:item} = await prisma.${2:user}.findUnique({",
       "  where: { id: ${3:id} },",
-      "  include: { ${4:posts}: true }, // جيب الـ relations معاه",
+      "  include: { ${4:posts}: true },",
       "});"
     ],
-    "description": "Prisma findUnique بشرح عربي — جيب سجل واحد بالـ ID"
+    "description": "جلب سجل واحد بالمعرف"
   },
 
-  "Prisma create (عربي)": {
+  "إضافة سجل": {
     "prefix": "pr-ar-create",
     "scope": "typescript",
     "body": [
-      "// إضافة سجل جديد في الـ database",
+      "// إضافة سجل جديد في قاعدة البيانات",
       "const ${1:newItem} = await prisma.${2:user}.create({",
       "  data: {",
       "    ${3:name}: ${4:'أحمد'},",
@@ -57,39 +57,39 @@
       "  },",
       "});"
     ],
-    "description": "Prisma create بشرح عربي — إضافة سجل جديد"
+    "description": "إضافة سجل جديد في بريزما"
   },
 
-  "Prisma update (عربي)": {
+  "تعديل سجل": {
     "prefix": "pr-ar-update",
     "scope": "typescript",
     "body": [
-      "// تعديل سجل موجود بالـ ID",
+      "// تعديل سجل موجود بالمعرف",
       "const ${1:updated} = await prisma.${2:user}.update({",
       "  where: { id: ${3:id} },",
       "  data: { ${4:name}: ${5:'اسم جديد'} },",
       "});"
     ],
-    "description": "Prisma update بشرح عربي — تعديل سجل موجود"
+    "description": "تعديل سجل موجود في بريزما"
   },
 
-  "Prisma delete (عربي)": {
+  "حذف سجل": {
     "prefix": "pr-ar-delete",
     "scope": "typescript",
     "body": [
-      "// حذف سجل من الـ database",
+      "// حذف سجل من قاعدة البيانات",
       "const ${1:deleted} = await prisma.${2:user}.delete({",
       "  where: { id: ${3:id} },",
       "});"
     ],
-    "description": "Prisma delete بشرح عربي — حذف سجل من الـ database"
+    "description": "حذف سجل من بريزما"
   },
 
-  "Prisma Relation (عربي)": {
+  "علاقة بريزما": {
     "prefix": "pr-ar-relation",
     "scope": "prisma",
     "body": [
-      "// ربط جدولين ببعض — One-to-Many",
+      "// ربط جدولين ببعض — علاقة واحد لكثير",
       "model ${1:Post} {",
       "  id     Int    @id @default(autoincrement())",
       "  ${2:title}  String",
@@ -102,6 +102,135 @@
       "  ${6:posts} ${1:Post}[]",
       "}"
     ],
-    "description": "إنشاء Prisma relation بشرح عربي — ربط جدولين ببعض"
+    "description": "علاقة واحد لكثير في بريزما"
+  },
+
+  "علاقة كثير لكثير": {
+    "prefix": "pr-ar-many-to-many",
+    "scope": "prisma",
+    "body": [
+      "// علاقة كثير لكثير — طالب في أكتر من كورس والعكس",
+      "model ${1:Student} {",
+      "  id      Int       @id @default(autoincrement())",
+      "  name    String",
+      "  courses ${2:Course}[]",
+      "}",
+      "",
+      "model ${2:Course} {",
+      "  id       Int        @id @default(autoincrement())",
+      "  title    String",
+      "  students ${1:Student}[]",
+      "}"
+    ],
+    "description": "علاقة كثير لكثير في بريزما"
+  },
+
+  "ترانزاكشن بريزما": {
+    "prefix": "pr-ar-transaction",
+    "scope": "typescript",
+    "body": [
+      "// تنفيذ أكتر من عملية مع بعض — لو واحدة فشلت كلهم بيرجعوا",
+      "const [${1:user}, ${2:wallet}] = await prisma.$transaction([",
+      "  prisma.${3:user}.create({",
+      "    data: { ${4:name}: '${5:أحمد}', ${6:email}: '${7:ahmed@example.com}' },",
+      "  }),",
+      "  prisma.${8:wallet}.create({",
+      "    data: { ${9:balance}: 0 },",
+      "  }),",
+      "]);"
+    ],
+    "description": "ترانزاكشن في بريزما"
+  },
+
+  "صفحات البريزما": {
+    "prefix": "pr-ar-pagination",
+    "scope": "typescript",
+    "body": [
+      "// تقسيم النتايج لصفحات",
+      "async function ${1:paginate}(page: number, limit: number) {",
+      "  const skip = (page - 1) * limit;",
+      "  const [${2:items}, total] = await prisma.$transaction([",
+      "    prisma.${3:user}.findMany({ skip, take: limit }),",
+      "    prisma.${3:user}.count(),",
+      "  ]);",
+      "  return {",
+      "    ${2:items},",
+      "    total,",
+      "    page,",
+      "    totalPages: Math.ceil(total / limit),",
+      "    hasNext: page * limit < total,",
+      "  };",
+      "}"
+    ],
+    "description": "تقسيم النتايج لصفحات في بريزما"
+  },
+
+  "بحث بريزما": {
+    "prefix": "pr-ar-search",
+    "scope": "typescript",
+    "body": [
+      "// بحث في أكتر من حقل",
+      "const ${1:results} = await prisma.${2:user}.findMany({",
+      "  where: {",
+      "    OR: [",
+      "      { ${3:name}: { contains: ${4:query}, mode: 'insensitive' } },",
+      "      { ${5:email}: { contains: ${4:query}, mode: 'insensitive' } },",
+      "    ],",
+      "  },",
+      "});"
+    ],
+    "description": "بحث في أكتر من حقل في بريزما"
+  },
+
+  "اوبسيرت بريزما": {
+    "prefix": "pr-ar-upsert",
+    "scope": "typescript",
+    "body": [
+      "// لو موجود حدثه — لو مش موجود ضيفه",
+      "const ${1:record} = await prisma.${2:user}.upsert({",
+      "  where: { ${3:email}: '${4:ahmed@example.com}' },",
+      "  update: { ${5:name}: '${6:أحمد محدث}' },",
+      "  create: {",
+      "    ${3:email}: '${4:ahmed@example.com}',",
+      "    ${5:name}: '${6:أحمد}',",
+      "  },",
+      "});"
+    ],
+    "description": "إضافة أو تحديث سجل في بريزما"
+  },
+
+  "حذف متعدد بريزما": {
+    "prefix": "pr-ar-deletemany",
+    "scope": "typescript",
+    "body": [
+      "// حذف أكتر من سجل بشرط معين",
+      "const { count } = await prisma.${1:user}.deleteMany({",
+      "  where: {",
+      "    ${2:isActive}: ${3:false},",
+      "    createdAt: {",
+      "      lt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // قبل 30 يوم",
+      "    },",
+      "  },",
+      "});",
+      "console.log(`تم حذف \\${count} سجل`);"
+    ],
+    "description": "حذف متعدد بشرط في بريزما"
+  },
+
+  "اجريجيت بريزما": {
+    "prefix": "pr-ar-aggregate",
+    "scope": "typescript",
+    "body": [
+      "// إحصائيات — المجموع والمتوسط والأقصى والأقل",
+      "const stats = await prisma.${1:order}.aggregate({",
+      "  _sum: { ${2:amount}: true },",
+      "  _avg: { ${2:amount}: true },",
+      "  _max: { ${2:amount}: true },",
+      "  _min: { ${2:amount}: true },",
+      "  _count: { id: true },",
+      "  where: { ${3:status}: '${4:completed}' },",
+      "});"
+    ],
+    "description": "إحصائيات في بريزما"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "Git Init & Push (عربي)": {
+  "إنشاء مستودع": {
     "prefix": "git-ar-init",
     "scope": "shellscript,bat",
     "body": [
-      "# إنشاء repo جديد وربطه بـ GitHub",
+      "# إنشاء مستودع جديد وربطه بـ GitHub",
       "git init",
       "git add .",
       "git commit -m \"first commit: بداية المشروع\"",
@@ -11,26 +11,26 @@
       "git remote add origin https://github.com/${1:username}/${2:repo}.git",
       "git push -u origin main"
     ],
-    "description": "Git init وربط بـ GitHub بشرح عربي"
+    "description": "إنشاء مستودع جديد وربطه بـ GitHub"
   },
 
-  "Git Branch (عربي)": {
+  "فرع جديد": {
     "prefix": "git-ar-branch",
     "scope": "shellscript,bat",
     "body": [
-      "# إنشاء branch جديد والانتقال إليه",
-      "git checkout -b ${1:feature}/${2:اسم-الـ-feature}",
+      "# إنشاء فرع جديد والانتقال إليه",
+      "git checkout -b ${1:feature}/${2:اسم-الفيتشر}",
       "",
-      "# عرض كل الـ branches",
+      "# عرض كل الفروع",
       "git branch -a",
       "",
-      "# الانتقال لـ branch موجود",
+      "# الانتقال لفرع موجود",
       "git checkout ${3:main}"
     ],
-    "description": "Git branch بشرح عربي — إنشاء والانتقال"
+    "description": "إنشاء فرع جديد في جيت"
   },
 
-  "Git Commit (عربي)": {
+  "حفظ التغييرات": {
     "prefix": "git-ar-commit",
     "scope": "shellscript,bat",
     "body": [
@@ -38,37 +38,37 @@
       "git add .",
       "git commit -m \"${1|feat,fix,docs,refactor,test,chore|}: ${2:وصف التغيير}\"",
       "",
-      "# أنواع الـ commit messages:",
+      "# أنواع الرسايل:",
       "# feat:     ميزة جديدة",
-      "# fix:      إصلاح bug",
-      "# docs:     تعديل documentation",
+      "# fix:      إصلاح خطأ",
+      "# docs:     تحديث التوثيق",
       "# refactor: إعادة كتابة الكود",
-      "# test:     إضافة أو تعديل tests",
+      "# test:     إضافة أو تعديل اختبارات",
       "# chore:    مهام صيانة"
     ],
-    "description": "Git commit بشرح عربي — حفظ التغييرات بشكل صحيح"
+    "description": "حفظ التغييرات في جيت"
   },
 
-  "Git Merge (عربي)": {
+  "دمج الفروع": {
     "prefix": "git-ar-merge",
     "scope": "shellscript,bat",
     "body": [
-      "# دمج branch في الـ main",
+      "# دمج فرع في الفرع الرئيسي",
       "git checkout ${1:main}",
       "git pull origin ${1:main}",
-      "git merge ${2:feature/اسم-الـ-feature}",
+      "git merge ${2:feature/اسم-الفيتشر}",
       "",
-      "# أو استخدم rebase لتاريخ أنظف",
+      "# أو استخدم ريبيس لتاريخ أنظف",
       "# git rebase ${1:main}"
     ],
-    "description": "Git merge بشرح عربي — دمج الـ branches"
+    "description": "دمج الفروع في جيت"
   },
 
-  "Git Undo (عربي)": {
+  "التراجع عن تغيير": {
     "prefix": "git-ar-undo",
     "scope": "shellscript,bat",
     "body": [
-      "# التراجع عن آخر commit من غير حذف التغييرات",
+      "# التراجع عن آخر كوميت من غير حذف التغييرات",
       "git reset --soft HEAD~1",
       "",
       "# التراجع عن تغييرات ملف معين",
@@ -77,22 +77,130 @@
       "# إلغاء كل التغييرات غير المحفوظة",
       "git restore ."
     ],
-    "description": "Git undo بشرح عربي — التراجع عن التغييرات"
+    "description": "التراجع عن التغييرات في جيت"
   },
 
-  "Git Remote (عربي)": {
+  "رفع وجلب التغييرات": {
     "prefix": "git-ar-remote",
     "scope": "shellscript,bat",
     "body": [
       "# رفع التغييرات على GitHub",
-      "git push origin ${1:feature/اسم-الـ-feature}",
+      "git push origin ${1:feature/اسم-الفيتشر}",
       "",
       "# جيب آخر التغييرات من GitHub",
       "git pull origin ${2:main}",
       "",
-      "# عرض الـ remote repositories",
+      "# عرض المستودعات البعيدة",
       "git remote -v"
     ],
-    "description": "Git remote بشرح عربي — رفع وجلب التغييرات"
+    "description": "رفع وجلب التغييرات في جيت"
+  },
+
+  "حل التعارضات": {
+    "prefix": "git-ar-conflict",
+    "scope": "shellscript,bat",
+    "body": [
+      "# لما يحصل تعارض في الكود",
+      "# 1. افتح الملفات اللي فيها تعارض",
+      "# 2. اختار التغيير الصح",
+      "# 3. احذف علامات التعارض",
+      "",
+      "# بعد حل التعارضات",
+      "git add .",
+      "git commit -m \"fix: حل تعارض الدمج\"",
+      "",
+      "# أو استخدم أداة حل التعارضات",
+      "git mergetool"
+    ],
+    "description": "حل التعارضات في جيت"
+  },
+
+  "ستاش التغييرات": {
+    "prefix": "git-ar-stash",
+    "scope": "shellscript,bat",
+    "body": [
+      "# احتفظ بالتغييرات مؤقتاً من غير ما تكوميت",
+      "git stash save \"${1:وصف التغييرات المؤقتة}\"",
+      "",
+      "# عرض قائمة الستاش",
+      "git stash list",
+      "",
+      "# رجع آخر ستاش",
+      "git stash pop",
+      "",
+      "# رجع ستاش معين",
+      "git stash apply stash@{${2:0}}"
+    ],
+    "description": "حفظ مؤقت للتغييرات في جيت"
+  },
+
+  "تاريخ الكوميتات": {
+    "prefix": "git-ar-log",
+    "scope": "shellscript,bat",
+    "body": [
+      "# عرض تاريخ الكوميتات بشكل جميل",
+      "git log --oneline --graph --decorate --all",
+      "",
+      "# عرض تغييرات كوميت معين",
+      "git show ${1:commit-hash}",
+      "",
+      "# البحث في تاريخ الكوميتات",
+      "git log --grep=\"${2:كلمة البحث}\""
+    ],
+    "description": "عرض تاريخ الكوميتات في جيت"
+  },
+
+  "وسم الإصدار": {
+    "prefix": "git-ar-tag",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إنشاء وسم لإصدار جديد",
+      "git tag -a v${1:1.0.0} -m \"${2:إصدار 1.0.0 - أول إطلاق}\"",
+      "",
+      "# عرض كل الوسوم",
+      "git tag -l",
+      "",
+      "# رفع الوسم على GitHub",
+      "git push origin v${1:1.0.0}",
+      "",
+      "# رفع كل الوسوم",
+      "git push origin --tags"
+    ],
+    "description": "وسم الإصدارات في جيت"
+  },
+
+  "ريبيس تفاعلي": {
+    "prefix": "git-ar-rebase",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إعادة كتابة تاريخ الكوميتات الأخيرة",
+      "git rebase -i HEAD~${1:3}",
+      "",
+      "# أوامر الريبيس:",
+      "# pick   - استخدم الكوميت كما هو",
+      "# squash - ادمجه مع اللي قبله",
+      "# reword - غير رسالته بس",
+      "# drop   - احذفه",
+      "",
+      "# بعد الانتهاء",
+      "git push origin ${2:branch-name} --force-with-lease"
+    ],
+    "description": "ريبيس تفاعلي في جيت"
+  },
+
+  "تنظيف المستودع": {
+    "prefix": "git-ar-clean",
+    "scope": "shellscript,bat",
+    "body": [
+      "# حذف الفروع المدموجة محلياً",
+      "git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs git branch -d",
+      "",
+      "# حذف الفروع البعيدة المحذوفة",
+      "git remote prune origin",
+      "",
+      "# تنظيف الملفات غير المتتبعة",
+      "git clean -fd"
+    ],
+    "description": "تنظيف المستودع في جيت"
   }
 }

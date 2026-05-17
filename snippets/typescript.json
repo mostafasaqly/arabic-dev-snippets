@@ -1,5 +1,5 @@
 {
-  "واجهة تايبسكريبت": {
+  "TypeScript Interface": {
     "prefix": "ts-ar-interface",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -10,20 +10,20 @@
       "  ${3:email}: string;",
       "}"
     ],
-    "description": "إنشاء واجهة تايبسكريبت — بتحدد شكل الأوبجكت"
+    "description": "تعريف شكل الكائن وحقوله"
   },
 
-  "نوع تايبسكريبت": {
+  "TypeScript Type Alias": {
     "prefix": "ts-ar-type",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
       "// للأنواع البسيطة أو الاتحادية",
       "type ${1:Status} = ${2:'active'} | ${3:'inactive'} | ${4:'pending'};"
     ],
-    "description": "إنشاء نوع مخصص في تايبسكريبت"
+    "description": "تعريف نوع مخصص بسيط أو اتحادي"
   },
 
-  "قائمة ثوابت": {
+  "TypeScript Enum": {
     "prefix": "ts-ar-enum",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -34,10 +34,10 @@
       "  ${6:Guest} = '${7:guest}'",
       "}"
     ],
-    "description": "إنشاء قائمة ثوابت في تايبسكريبت"
+    "description": "قائمة قيم ثابتة معروفة مسبقاً"
   },
 
-  "دالة جينيريك": {
+  "TypeScript Generic Function": {
     "prefix": "ts-ar-generic",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -46,10 +46,10 @@
       "  return ${2:items}[0];",
       "}"
     ],
-    "description": "دالة جينيريك في تايبسكريبت"
+    "description": "دالة تشتغل مع أي نوع من البيانات"
   },
 
-  "ديكوريتور": {
+  "TypeScript Decorator": {
     "prefix": "ts-ar-decorator",
     "scope": "typescript",
     "body": [
@@ -63,10 +63,10 @@
       "  return descriptor;",
       "}"
     ],
-    "description": "ديكوريتور في تايبسكريبت"
+    "description": "إضافة سلوك على الكلاس أو الميثود"
   },
 
-  "كلاس تايبسكريبت": {
+  "TypeScript Class": {
     "prefix": "ts-ar-class",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -86,10 +86,10 @@
       "  }",
       "}"
     ],
-    "description": "كلاس كامل في تايبسكريبت"
+    "description": "قالب كامل لإنشاء الكائنات"
   },
 
-  "كلاس مجرد": {
+  "TypeScript Abstract Class": {
     "prefix": "ts-ar-abstract",
     "scope": "typescript",
     "body": [
@@ -102,10 +102,10 @@
       "  }",
       "}"
     ],
-    "description": "كلاس مجرد في تايبسكريبت"
+    "description": "كلاس مجرد يورث منه ولا يستخدم مباشرة"
   },
 
-  "واجهة جينيريك": {
+  "TypeScript Generic Interface": {
     "prefix": "ts-ar-generic-interface",
     "scope": "typescript",
     "body": [
@@ -117,10 +117,10 @@
       "  statusCode: number;",
       "}"
     ],
-    "description": "واجهة جينيريك في تايبسكريبت"
+    "description": "واجهة تتكيف مع أي نوع بيانات"
   },
 
-  "يوتيليتي تايبس": {
+  "TypeScript Utility Types": {
     "prefix": "ts-ar-utility",
     "scope": "typescript",
     "body": [
@@ -131,10 +131,10 @@
       "type ${5:UserPreview} = Pick<${2:User}, '${6:id}' | '${7:name}'>;  // حقول معينة بس",
       "type ${8:WithoutPass} = Omit<${2:User}, '${9:password}'>;          // شيل حقل معين"
     ],
-    "description": "أنواع مساعدة جاهزة في تايبسكريبت"
+    "description": "أنواع مساعدة جاهزة لتحويل الأنواع"
   },
 
-  "اسينك اويت": {
+  "TypeScript Async Function": {
     "prefix": "ts-ar-async",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -149,10 +149,10 @@
       "  }",
       "}"
     ],
-    "description": "دالة async/await في تايبسكريبت"
+    "description": "دالة غير متزامنة مع معالجة الأخطاء"
   },
 
-  "تايب جارد": {
+  "TypeScript Type Guard": {
     "prefix": "ts-ar-typeguard",
     "scope": "typescript",
     "body": [
@@ -163,10 +163,10 @@
       "    typeof obj.${3:email} === 'string';",
       "}"
     ],
-    "description": "تايب جارد في تايبسكريبت"
+    "description": "التحقق من نوع البيانات وقت التشغيل"
   },
 
-  "مابد تايب": {
+  "TypeScript Mapped Type": {
     "prefix": "ts-ar-mapped",
     "scope": "typescript",
     "body": [
@@ -175,10 +175,10 @@
       "  [K in keyof T]: T[K] | null;",
       "};"
     ],
-    "description": "مابد تايب في تايبسكريبت"
+    "description": "إنشاء نوع جديد بناءً على نوع موجود"
   },
 
-  "انتيرسيكشن تايب": {
+  "TypeScript Intersection Type": {
     "prefix": "ts-ar-intersection",
     "scope": "typescript",
     "body": [
@@ -191,10 +191,10 @@
       "  updatedAt: Date;",
       "};"
     ],
-    "description": "دمج نوعين في تايبسكريبت"
+    "description": "دمج نوعين معاً في نوع واحد"
   },
 
-  "ريكورد تايب": {
+  "TypeScript Record Type": {
     "prefix": "ts-ar-record",
     "scope": "typescript",
     "body": [
@@ -205,10 +205,10 @@
       "  pending: 'في الانتظار',",
       "};"
     ],
-    "description": "ريكورد تايب في تايبسكريبت"
+    "description": "ربط المفاتيح بقيم من نوع معين"
   },
 
-  "ريدس كومبيناشن": {
+  "TypeScript Array Reduce": {
     "prefix": "ts-ar-reduce",
     "scope": "typescript,javascript,typescriptreact",
     "body": [
@@ -217,6 +217,6 @@
       "  return acc + ${3:item}.${4:price};",
       "}, 0);"
     ],
-    "description": "استخدام reduce في تايبسكريبت"
+    "description": "تلخيص مصفوفة في قيمة واحدة"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "موديول نيست": {
+  "NestJS Module": {
     "prefix": "nest-ar-module",
     "scope": "typescript",
     "body": [
@@ -15,10 +15,10 @@
       "})",
       "export class ${1:Users}Module {}"
     ],
-    "description": "موديول نيست جي اس كامل"
+    "description": "تنظيم الكود في وحدات مستقلة"
   },
 
-  "كونترولر نيست": {
+  "NestJS Controller": {
     "prefix": "nest-ar-controller",
     "scope": "typescript",
     "body": [
@@ -52,10 +52,10 @@
       "  }",
       "}"
     ],
-    "description": "كونترولر نيست جي اس كامل"
+    "description": "استقبال الطلبات وإرجاع الردود"
   },
 
-  "سيرفيس نيست": {
+  "NestJS Service": {
     "prefix": "nest-ar-service",
     "scope": "typescript",
     "body": [
@@ -87,10 +87,10 @@
       "  }",
       "}"
     ],
-    "description": "سيرفيس نيست جي اس كامل"
+    "description": "منطق العمل الرئيسي بعيداً عن الطلبات"
   },
 
-  "دي تي أو نيست": {
+  "NestJS DTO": {
     "prefix": "nest-ar-dto",
     "scope": "typescript",
     "body": [
@@ -118,10 +118,10 @@
       "  ${3:email}?: string;",
       "}"
     ],
-    "description": "دي تي أو نيست جي اس"
+    "description": "تحديد شكل البيانات الواردة والتحقق منها"
   },
 
-  "جارد نيست": {
+  "NestJS Guard": {
     "prefix": "nest-ar-guard",
     "scope": "typescript",
     "body": [
@@ -146,10 +146,10 @@
       "  }",
       "}"
     ],
-    "description": "جارد نيست جي اس للتحقق من الصلاحيات"
+    "description": "التحقق من صلاحية المستخدم قبل الطلب"
   },
 
-  "بايب نيست": {
+  "NestJS Pipe": {
     "prefix": "nest-ar-pipe",
     "scope": "typescript",
     "body": [
@@ -165,10 +165,10 @@
       "  }",
       "}"
     ],
-    "description": "بايب نيست جي اس للتحقق من البيانات"
+    "description": "التحقق من البيانات أو تحويلها قبل المعالجة"
   },
 
-  "انترسيبتور نيست": {
+  "NestJS Interceptor": {
     "prefix": "nest-ar-interceptor",
     "scope": "typescript",
     "body": [
@@ -190,10 +190,10 @@
       "  }",
       "}"
     ],
-    "description": "انترسيبتور نيست جي اس لتحويل الردود"
+    "description": "اعتراض الطلب والرد والتحكم فيهما"
   },
 
-  "فلتر استثناءات نيست": {
+  "NestJS Exception Filter": {
     "prefix": "nest-ar-filter",
     "scope": "typescript",
     "body": [
@@ -221,10 +221,10 @@
       "  }",
       "}"
     ],
-    "description": "فلتر الاستثناءات في نيست جي اس"
+    "description": "التقاط الأخطاء وإرجاع رسالة واضحة"
   },
 
-  "ديكوريتور مستخدم": {
+  "NestJS Custom Decorator": {
     "prefix": "nest-ar-decorator",
     "scope": "typescript",
     "body": [
@@ -239,10 +239,10 @@
       "  },",
       ");"
     ],
-    "description": "ديكوريتور مخصص في نيست جي اس"
+    "description": "مزخرف مخصص لجلب بيانات من الطلب"
   },
 
-  "تاسك سكيدولر نيست": {
+  "NestJS Task Scheduler": {
     "prefix": "nest-ar-schedule",
     "scope": "typescript",
     "body": [
@@ -264,10 +264,10 @@
       "  }",
       "}"
     ],
-    "description": "جدولة المهام في نيست جي اس"
+    "description": "تشغيل مهمة تلقائياً في وقت محدد"
   },
 
-  "موديول بريزما": {
+  "NestJS Prisma Service": {
     "prefix": "nest-ar-prisma-module",
     "scope": "typescript",
     "body": [
@@ -282,10 +282,10 @@
       "  }",
       "}"
     ],
-    "description": "سيرفيس بريزما في نيست جي اس"
+    "description": "خدمة الاتصال بقاعدة البيانات"
   },
 
-  "مصادقة JWT نيست": {
+  "NestJS JWT Authentication": {
     "prefix": "nest-ar-jwt",
     "scope": "typescript",
     "body": [
@@ -316,6 +316,6 @@
       "  }",
       "}"
     ],
-    "description": "مصادقة JWT كاملة في نيست جي اس"
+    "description": "مصادقة كاملة لتسجيل الدخول والتسجيل"
   }
 }

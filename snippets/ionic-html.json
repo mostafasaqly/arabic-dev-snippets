@@ -1,5 +1,5 @@
 {
-  "قائمة عناصر أيونيك": {
+  "Ionic List": {
     "prefix": "ion-ar-list",
     "scope": "html",
     "body": [
@@ -11,33 +11,33 @@
       "  </ion-item>",
       "</ion-list>"
     ],
-    "description": "قائمة عناصر في أيونيك"
+    "description": "قائمة عناصر قابلة للنقر"
   },
 
-  "كارت أيونيك": {
+  "Ionic Card": {
     "prefix": "ion-ar-card",
     "scope": "html",
     "body": [
-      "<!-- كارد بيه عنوان ومحتوى وأزرار -->",
+      "<!-- بطاقة بيها عنوان ومحتوى وأزرار -->",
       "<ion-card>",
       "  <ion-card-header>",
-      "    <ion-card-title>${1:عنوان الكارد}</ion-card-title>",
+      "    <ion-card-title>${1:عنوان البطاقة}</ion-card-title>",
       "    <ion-card-subtitle>${2:عنوان فرعي}</ion-card-subtitle>",
       "  </ion-card-header>",
       "  <ion-card-content>",
-      "    ${3:محتوى الكارد هنا}",
+      "    ${3:محتوى البطاقة هنا}",
       "  </ion-card-content>",
       "  <ion-button fill=\"clear\">${4:اقرأ أكتر}</ion-button>",
       "</ion-card>"
     ],
-    "description": "كارد في أيونيك"
+    "description": "بطاقة بعنوان ومحتوى وأزرار"
   },
 
-  "شبكة أيونيك": {
+  "Ionic Grid": {
     "prefix": "ion-ar-grid",
     "scope": "html",
     "body": [
-      "<!-- تقسيم الشاشة لأعمدة بنظام الـ 12 عمود -->",
+      "<!-- تقسيم الشاشة لأعمدة بنظام الاثني عشر عمود -->",
       "<ion-grid>",
       "  <ion-row>",
       "    <ion-col size=\"${1:6}\">",
@@ -49,10 +49,10 @@
       "  </ion-row>",
       "</ion-grid>"
     ],
-    "description": "شبكة في أيونيك"
+    "description": "تقسيم الشاشة إلى أعمدة"
   },
 
-  "شريط بحث أيونيك": {
+  "Ionic Searchbar": {
     "prefix": "ion-ar-search",
     "scope": "html",
     "body": [
@@ -64,10 +64,10 @@
       "  debounce=\"${4:300}\">",
       "</ion-searchbar>"
     ],
-    "description": "شريط بحث في أيونيك"
+    "description": "شريط بحث مع معالجة الإدخال"
   },
 
-  "ريفريشر قالب": {
+  "Ionic Refresher Template": {
     "prefix": "ion-ar-refresher-html",
     "scope": "html",
     "body": [
@@ -84,10 +84,10 @@
       "  ${4:<!-- المحتوى هنا -->}",
       "</ion-content>"
     ],
-    "description": "ريفريشر في قالب أيونيك"
+    "description": "قالب التحديث بالسحب لأسفل"
   },
 
-  "تحميل لانهائي قالب": {
+  "Ionic Infinite Scroll Template": {
     "prefix": "ion-ar-infinite-html",
     "scope": "html",
     "body": [
@@ -106,10 +106,10 @@
       "  </ion-infinite-scroll>",
       "</ion-content>"
     ],
-    "description": "تحميل لانهائي في قالب أيونيك"
+    "description": "قالب التحميل التدريجي للبيانات"
   },
 
-  "سيجمنت أيونيك": {
+  "Ionic Segment": {
     "prefix": "ion-ar-segment",
     "scope": "html",
     "body": [
@@ -126,14 +126,14 @@
       "  </ion-segment-button>",
       "</ion-segment>"
     ],
-    "description": "سيجمنت في أيونيك"
+    "description": "تبويبات للتنقل بين أقسام المحتوى"
   },
 
-  "سلايدر أيونيك": {
+  "Ionic Slides": {
     "prefix": "ion-ar-slides",
     "scope": "html",
     "body": [
-      "<!-- سلايدر للصور أو البطاقات -->",
+      "<!-- شرائح متحركة للصور أو البطاقات -->",
       "<swiper-container [options]=\"${1:slideOpts}\" #${2:swiper}>",
       "  <swiper-slide *ngFor=\"let ${3:slide} of ${4:slides}\">",
       "    <img [src]=\"${3:slide}.${5:image}\" [alt]=\"${3:slide}.${6:title}\" />",
@@ -141,10 +141,10 @@
       "  </swiper-slide>",
       "</swiper-container>"
     ],
-    "description": "سلايدر في أيونيك"
+    "description": "شرائح متحركة للصور والبطاقات"
   },
 
-  "شريط تنقل سفلي": {
+  "Ionic Tabs": {
     "prefix": "ion-ar-tabs",
     "scope": "html",
     "body": [
@@ -166,10 +166,10 @@
       "  </ion-tab-bar>",
       "</ion-tabs>"
     ],
-    "description": "شريط تنقل سفلي في أيونيك"
+    "description": "شريط تنقل سفلي بين الصفحات"
   },
 
-  "فورم أيونيك": {
+  "Ionic Form Template": {
     "prefix": "ion-ar-form-html",
     "scope": "html",
     "body": [
@@ -196,6 +196,6 @@
       "  </form>",
       "</ion-content>"
     ],
-    "description": "نموذج أيونيك كامل"
+    "description": "نموذج كامل مع التحقق من المدخلات"
   }
 }

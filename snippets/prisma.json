@@ -1,5 +1,5 @@
 {
-  "موديل بريزما": {
+  "Prisma Model": {
     "prefix": "pr-ar-model",
     "scope": "prisma",
     "body": [
@@ -13,10 +13,10 @@
       "  updatedAt DateTime @updatedAt",
       "}"
     ],
-    "description": "تعريف موديل بريزما"
+    "description": "تعريف جدول في قاعدة البيانات"
   },
 
-  "جلب كل السجلات": {
+  "Prisma Find Many": {
     "prefix": "pr-ar-findmany",
     "scope": "typescript",
     "body": [
@@ -31,7 +31,7 @@
     "description": "جلب كل السجلات مع فلترة وترتيب"
   },
 
-  "جلب سجل واحد": {
+  "Prisma Find One": {
     "prefix": "pr-ar-findone",
     "scope": "typescript",
     "body": [
@@ -44,7 +44,7 @@
     "description": "جلب سجل واحد بالمعرف"
   },
 
-  "إضافة سجل": {
+  "Prisma Create": {
     "prefix": "pr-ar-create",
     "scope": "typescript",
     "body": [
@@ -57,10 +57,10 @@
       "  },",
       "});"
     ],
-    "description": "إضافة سجل جديد في بريزما"
+    "description": "إضافة سجل جديد إلى قاعدة البيانات"
   },
 
-  "تعديل سجل": {
+  "Prisma Update": {
     "prefix": "pr-ar-update",
     "scope": "typescript",
     "body": [
@@ -70,10 +70,10 @@
       "  data: { ${4:name}: ${5:'اسم جديد'} },",
       "});"
     ],
-    "description": "تعديل سجل موجود في بريزما"
+    "description": "تعديل سجل موجود بالمعرف"
   },
 
-  "حذف سجل": {
+  "Prisma Delete": {
     "prefix": "pr-ar-delete",
     "scope": "typescript",
     "body": [
@@ -82,10 +82,10 @@
       "  where: { id: ${3:id} },",
       "});"
     ],
-    "description": "حذف سجل من بريزما"
+    "description": "حذف سجل من قاعدة البيانات"
   },
 
-  "علاقة بريزما": {
+  "Prisma One To Many Relation": {
     "prefix": "pr-ar-relation",
     "scope": "prisma",
     "body": [
@@ -102,10 +102,10 @@
       "  ${6:posts} ${1:Post}[]",
       "}"
     ],
-    "description": "علاقة واحد لكثير في بريزما"
+    "description": "علاقة واحد لكثير بين جدولين"
   },
 
-  "علاقة كثير لكثير": {
+  "Prisma Many To Many Relation": {
     "prefix": "pr-ar-many-to-many",
     "scope": "prisma",
     "body": [
@@ -122,10 +122,10 @@
       "  students ${1:Student}[]",
       "}"
     ],
-    "description": "علاقة كثير لكثير في بريزما"
+    "description": "علاقة كثير لكثير بين جدولين"
   },
 
-  "ترانزاكشن بريزما": {
+  "Prisma Transaction": {
     "prefix": "pr-ar-transaction",
     "scope": "typescript",
     "body": [
@@ -139,10 +139,10 @@
       "  }),",
       "]);"
     ],
-    "description": "ترانزاكشن في بريزما"
+    "description": "تنفيذ عمليات متعددة معاً بأمان"
   },
 
-  "صفحات البريزما": {
+  "Prisma Pagination": {
     "prefix": "pr-ar-pagination",
     "scope": "typescript",
     "body": [
@@ -162,10 +162,10 @@
       "  };",
       "}"
     ],
-    "description": "تقسيم النتايج لصفحات في بريزما"
+    "description": "تقسيم النتائج إلى صفحات"
   },
 
-  "بحث بريزما": {
+  "Prisma Search": {
     "prefix": "pr-ar-search",
     "scope": "typescript",
     "body": [
@@ -179,10 +179,10 @@
       "  },",
       "});"
     ],
-    "description": "بحث في أكتر من حقل في بريزما"
+    "description": "البحث في أكثر من حقل معاً"
   },
 
-  "اوبسيرت بريزما": {
+  "Prisma Upsert": {
     "prefix": "pr-ar-upsert",
     "scope": "typescript",
     "body": [
@@ -196,10 +196,10 @@
       "  },",
       "});"
     ],
-    "description": "إضافة أو تحديث سجل في بريزما"
+    "description": "إضافة سجل أو تحديثه إن كان موجوداً"
   },
 
-  "حذف متعدد بريزما": {
+  "Prisma Delete Many": {
     "prefix": "pr-ar-deletemany",
     "scope": "typescript",
     "body": [
@@ -214,10 +214,10 @@
       "});",
       "console.log(`تم حذف \\${count} سجل`);"
     ],
-    "description": "حذف متعدد بشرط في بريزما"
+    "description": "حذف عدة سجلات بشرط معين"
   },
 
-  "اجريجيت بريزما": {
+  "Prisma Aggregate": {
     "prefix": "pr-ar-aggregate",
     "scope": "typescript",
     "body": [
@@ -231,6 +231,6 @@
       "  where: { ${3:status}: '${4:completed}' },",
       "});"
     ],
-    "description": "إحصائيات في بريزما"
+    "description": "حساب إحصائيات المجموع والمتوسط والحدود"
   }
 }

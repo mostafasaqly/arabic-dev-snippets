@@ -1,5 +1,5 @@
 {
-  "تمبلت أنجولار": {
+  "Angular Component Template": {
     "prefix": "ng-ar-template",
     "scope": "html",
     "body": [
@@ -9,10 +9,10 @@
       "  <ng-content></ng-content>",
       "</div>"
     ],
-    "description": "قالب أساسي لكومبوننت أنجولار"
+    "description": "قالب أساسي لجزء من الواجهة"
   },
 
-  "لوب قديم": {
+  "Angular ngFor": {
     "prefix": "ng-ar-for",
     "scope": "html",
     "body": [
@@ -21,10 +21,10 @@
       "  {{ ${1:item}.${4:name} }}",
       "</div>"
     ],
-    "description": "ديريكتيف ngFor لتكرار العناصر"
+    "description": "تكرار العنصر لكل بند في المصفوفة"
   },
 
-  "شرط قديم": {
+  "Angular ngIf": {
     "prefix": "ng-ar-if",
     "scope": "html",
     "body": [
@@ -36,10 +36,10 @@
       "  ${4:المحتوى البديل}",
       "</ng-template>"
     ],
-    "description": "ديريكتيف ngIf لإظهار أو إخفاء العناصر"
+    "description": "إظهار العنصر إذا تحقق الشرط"
   },
 
-  "لوب جديد": {
+  "Angular New For": {
     "prefix": "ng-ar-for-new",
     "scope": "html",
     "body": [
@@ -50,10 +50,10 @@
       "  <p>${5:مفيش بيانات}</p>",
       "}"
     ],
-    "description": "ديريكتيف for الجديد في أنجولار 17"
+    "description": "تكرار العناصر بالطريقة الحديثة"
   },
 
-  "شرط جديد": {
+  "Angular New If": {
     "prefix": "ng-ar-if-new",
     "scope": "html",
     "body": [
@@ -66,29 +66,10 @@
       "  ${5:المحتوى البديل}",
       "}"
     ],
-    "description": "ديريكتيف if الجديد في أنجولار 17"
+    "description": "الشرط بالطريقة الحديثة"
   },
 
-  "فورم ريآكتيف قالب": {
-    "prefix": "ng-ar-form",
-    "scope": "html",
-    "body": [
-      "<!-- نموذج مرتبط بالفورم جروب -->",
-      "<form [formGroup]=\"${1:myForm}\" (ngSubmit)=\"${2:onSubmit}()\">",
-      "  <div>",
-      "    <label>${3:الاسم}</label>",
-      "    <input formControlName=\"${4:name}\" placeholder=\"${3:الاسم}\" />",
-      "    <span *ngIf=\"${1:myForm}.get('${4:name}')?.invalid && ${1:myForm}.get('${4:name}')?.touched\">",
-      "      ${5:الحقل ده مطلوب}",
-      "    </span>",
-      "  </div>",
-      "  <button type=\"submit\" [disabled]=\"${1:myForm}.invalid\">${6:إرسال}</button>",
-      "</form>"
-    ],
-    "description": "قالب فورم ريآكتيف في أنجولار"
-  },
-
-  "سويتش جديد": {
+  "Angular New Switch": {
     "prefix": "ng-ar-switch-new",
     "scope": "html",
     "body": [
@@ -105,10 +86,10 @@
       "  }",
       "}"
     ],
-    "description": "ديريكتيف switch الجديد في أنجولار 17"
+    "description": "اختيار من حالات متعددة بالطريقة الحديثة"
   },
 
-  "ديريكتيف سويتش قديم": {
+  "Angular ngSwitch": {
     "prefix": "ng-ar-switch",
     "scope": "html",
     "body": [
@@ -119,31 +100,50 @@
       "  <span *ngSwitchDefault>${6:غير معروف}</span>",
       "</div>"
     ],
-    "description": "ديريكتيف ngSwitch القديم في أنجولار"
+    "description": "اختيار من حالات متعددة بالطريقة القديمة"
   },
 
-  "تو-واي بايندنج": {
+  "Angular Reactive Form Template": {
+    "prefix": "ng-ar-form",
+    "scope": "html",
+    "body": [
+      "<!-- نموذج مرتبط بالفورم جروب -->",
+      "<form [formGroup]=\"${1:myForm}\" (ngSubmit)=\"${2:onSubmit}()\">",
+      "  <div>",
+      "    <label>${3:الاسم}</label>",
+      "    <input formControlName=\"${4:name}\" placeholder=\"${3:الاسم}\" />",
+      "    <span *ngIf=\"${1:myForm}.get('${4:name}')?.invalid && ${1:myForm}.get('${4:name}')?.touched\">",
+      "      ${5:الحقل ده مطلوب}",
+      "    </span>",
+      "  </div>",
+      "  <button type=\"submit\" [disabled]=\"${1:myForm}.invalid\">${6:إرسال}</button>",
+      "</form>"
+    ],
+    "description": "قالب نموذج مرتبط بمجموعة الحقول"
+  },
+
+  "Angular Two Way Binding": {
     "prefix": "ng-ar-twoway",
     "scope": "html",
     "body": [
       "<!-- ربط ثنائي الاتجاه بين الكومبوننت والقالب -->",
       "<input [(ngModel)]=\"${1:value}\" placeholder=\"${2:اكتب هنا}\" />"
     ],
-    "description": "ربط ثنائي الاتجاه في أنجولار"
+    "description": "ربط ثنائي الاتجاه بين الجزء والقالب"
   },
 
-  "ايفنت بايندنج": {
+  "Angular Event Binding": {
     "prefix": "ng-ar-event",
     "scope": "html",
     "body": [
-      "<!-- ربط حدث HTML بدالة في الكومبوننت -->",
+      "<!-- ربط حدث بدالة في الكومبوننت -->",
       "<button (click)=\"${1:onClick}($event)\">${2:اضغط هنا}</button>",
       "<input (input)=\"${3:onInput}($event)\" (blur)=\"${4:onBlur}()\" />"
     ],
-    "description": "ربط أحداث HTML في أنجولار"
+    "description": "ربط الأحداث بدوال الجزء"
   },
 
-  "نج-كلاس ونج-ستايل": {
+  "Angular Class And Style Binding": {
     "prefix": "ng-ar-class-style",
     "scope": "html",
     "body": [
@@ -156,22 +156,22 @@
       "  ${8:المحتوى}",
       "</div>"
     ],
-    "description": "ربط الكلاسات والستايل ديناميكياً في أنجولار"
+    "description": "ربط الأنماط والتنسيقات بشكل ديناميكي"
   },
 
-  "بروبرتي بايندنج": {
+  "Angular Property Binding": {
     "prefix": "ng-ar-bind",
     "scope": "html",
     "body": [
-      "<!-- ربط خاصية HTML بقيمة من الكومبوننت -->",
+      "<!-- ربط خاصية بقيمة من الكومبوننت -->",
       "<img [src]=\"${1:imageUrl}\" [alt]=\"${2:imageAlt}\" />",
       "<a [href]=\"${3:link}\" [target]=\"${4:'_blank'}\">${5:رابط}</a>",
       "<button [disabled]=\"${6:isLoading}\">${7:إرسال}</button>"
     ],
-    "description": "ربط خصائص HTML في أنجولار"
+    "description": "ربط خصائص العنصر بقيم من الجزء"
   },
 
-  "ديفير لايزي لودينج": {
+  "Angular Defer Lazy Loading": {
     "prefix": "ng-ar-defer",
     "scope": "html",
     "body": [
@@ -186,6 +186,6 @@
       "  <div>${4:حصل مشكلة}</div>",
       "}"
     ],
-    "description": "تحميل كسول بديريكتيف defer في أنجولار 17"
+    "description": "تحميل الجزء بشكل كسول عند الحاجة"
   }
 }

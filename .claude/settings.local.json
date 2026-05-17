@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(awk -F: '{sum += $2} END {print \"Total: \" sum}')",
-      "Bash(awk -F: 'BEGIN{sum=0} {sum+=$2} END{print \"إجمالي القطع: \" sum}')"
+      "Bash(awk -F: 'BEGIN{sum=0} {sum+=$2} END{print \"إجمالي القطع: \" sum}')",
+      "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''__TRACKED_VAR__'\\\\'','\\\\''utf8'\\\\''\\)\\)')",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('package.json','utf8'\\)\\)\")"
     ]
   }
 }

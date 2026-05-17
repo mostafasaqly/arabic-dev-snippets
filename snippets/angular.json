@@ -1,5 +1,5 @@
 {
-  "كومبوننت أنجولار": {
+  "Angular Component": {
     "prefix": "ng-ar-component",
     "scope": "typescript",
     "body": [
@@ -15,10 +15,10 @@
       "  ${3:title} = '${4:مرحباً}';",
       "}"
     ],
-    "description": "كومبوننت أنجولار كامل"
+    "description": "المبنة الأساسية لكل صفحة أو جزء من الواجهة"
   },
 
-  "سيرفيس أنجولار": {
+  "Angular Service": {
     "prefix": "ng-ar-service",
     "scope": "typescript",
     "body": [
@@ -35,10 +35,10 @@
       "  }",
       "}"
     ],
-    "description": "سيرفيس أنجولار لمشاركة البيانات"
+    "description": "مشاركة البيانات والمنطق بين الأجزاء"
   },
 
-  "جارد أنجولار": {
+  "Angular Route Guard": {
     "prefix": "ng-ar-guard",
     "scope": "typescript",
     "body": [
@@ -53,10 +53,10 @@
       "  return router.navigate(['${3:/login}']);",
       "};"
     ],
-    "description": "جارد أنجولار للحماية من الدخول بدون إذن"
+    "description": "منع دخول الصفحة من غير إذن"
   },
 
-  "انترسيبتور أنجولار": {
+  "Angular HTTP Interceptor": {
     "prefix": "ng-ar-interceptor",
     "scope": "typescript",
     "body": [
@@ -71,10 +71,10 @@
       "  return next(authReq);",
       "};"
     ],
-    "description": "انترسيبتور أنجولار لإضافة التوكن"
+    "description": "اعتراض كل طلب وإضافة التوكن تلقائياً"
   },
 
-  "بايب أنجولار": {
+  "Angular Pipe": {
     "prefix": "ng-ar-pipe",
     "scope": "typescript",
     "body": [
@@ -88,10 +88,10 @@
       "  }",
       "}"
     ],
-    "description": "بايب أنجولار لتغيير شكل العرض"
+    "description": "تغيير شكل العرض دون تغيير البيانات"
   },
 
-  "سيجنال أنجولار": {
+  "Angular Signal": {
     "prefix": "ng-ar-signal",
     "scope": "typescript",
     "body": [
@@ -104,10 +104,10 @@
       "${1:count}.set(${5:5});",
       "${1:count}.update(v => v + 1);"
     ],
-    "description": "سيجنال أنجولار لإدارة الحالة"
+    "description": "الطريقة الحديثة لإدارة حالة التطبيق"
   },
 
-  "ريزولفر أنجولار": {
+  "Angular Resolver": {
     "prefix": "ng-ar-resolver",
     "scope": "typescript",
     "body": [
@@ -122,10 +122,10 @@
       "  return service.getById(Number(id));",
       "};"
     ],
-    "description": "ريزولفر أنجولار لجلب البيانات قبل فتح الصفحة"
+    "description": "جلب البيانات قبل فتح الصفحة"
   },
 
-  "ريآكتيف فورم": {
+  "Angular Reactive Form": {
     "prefix": "ng-ar-reactive-form",
     "scope": "typescript",
     "body": [
@@ -152,10 +152,10 @@
       "  }",
       "}"
     ],
-    "description": "ريآكتيف فورم أنجولار كامل"
+    "description": "نموذج برمجي كامل مع التحقق من المدخلات"
   },
 
-  "ستور سيجنال": {
+  "Angular Signal Store": {
     "prefix": "ng-ar-store",
     "scope": "typescript",
     "body": [
@@ -178,10 +178,10 @@
       "  }",
       "}"
     ],
-    "description": "ستور بسيط بالسيجنالز في أنجولار"
+    "description": "مخزن بسيط لإدارة الحالة المشتركة"
   },
 
-  "أونديسترو": {
+  "Angular OnDestroy": {
     "prefix": "ng-ar-ondestroy",
     "scope": "typescript",
     "body": [
@@ -207,10 +207,10 @@
       "  }",
       "}"
     ],
-    "description": "إلغاء اشتراكات أنجولار عند تدمير الكومبوننت"
+    "description": "إلغاء الاشتراكات عند تدمير الجزء"
   },
 
-  "ديريكتيف مخصصة": {
+  "Angular Custom Directive": {
     "prefix": "ng-ar-directive",
     "scope": "typescript",
     "body": [
@@ -232,10 +232,10 @@
       "  }",
       "}"
     ],
-    "description": "ديريكتيف مخصصة في أنجولار"
+    "description": "إضافة سلوك مخصص على أي عنصر"
   },
 
-  "انبوت اوتبوت": {
+  "Angular Input Output": {
     "prefix": "ng-ar-io",
     "scope": "typescript",
     "body": [
@@ -255,10 +255,10 @@
       "  }",
       "}"
     ],
-    "description": "انبوت واوتبوت للتواصل بين الكومبوننتس"
+    "description": "تمرير البيانات بين الجزء الأب والابن"
   },
 
-  "ريسولف قراءة فقط": {
+  "Angular Input Signal": {
     "prefix": "ng-ar-input-signal",
     "scope": "typescript",
     "body": [
@@ -277,6 +277,6 @@
       "  }",
       "}"
     ],
-    "description": "انبوت سيجنال في أنجولار 17"
+    "description": "تمرير المدخلات بالطريقة الحديثة"
   }
 }

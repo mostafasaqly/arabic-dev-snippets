@@ -1,7 +1,7 @@
 {
   "name": "arabic-dev-snippets",
   "displayName": "Arabic Dev Snippets",
-  "description": "كود بالعربي — لكل developer عربي | Code snippets with Arabic descriptions for Angular, TypeScript, NestJS, Prisma, Ionic & Git",
+  "description": "Code snippets with Arabic descriptions for Angular, TypeScript, NestJS, Prisma, Ionic & Git. 100+ snippets explained in Arabic.",
   "version": "1.0.1",
   "publisher": "MostafaSaqly",
   "author": {
@@ -32,7 +32,6 @@
   ],
   "keywords": [
     "arabic",
-    "عربي",
     "snippets",
     "angular",
     "typescript",
@@ -41,6 +40,7 @@
     "ionic",
     "git",
     "arabic snippets",
+    "عربي",
     "كود بالعربي"
   ],
   "activationEvents": [],

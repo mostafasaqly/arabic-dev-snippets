@@ -1,9 +1,9 @@
 {
-  "إنشاء مستودع": {
+  "Git Init And Push": {
     "prefix": "git-ar-init",
     "scope": "shellscript,bat",
     "body": [
-      "# إنشاء مستودع جديد وربطه بـ GitHub",
+      "# إنشاء مستودع جديد وربطه بجيت هب",
       "git init",
       "git add .",
       "git commit -m \"first commit: بداية المشروع\"",
@@ -11,15 +11,15 @@
       "git remote add origin https://github.com/${1:username}/${2:repo}.git",
       "git push -u origin main"
     ],
-    "description": "إنشاء مستودع جديد وربطه بـ GitHub"
+    "description": "إنشاء مستودع جديد وربطه بالمنصة"
   },
 
-  "فرع جديد": {
+  "Git Branch": {
     "prefix": "git-ar-branch",
     "scope": "shellscript,bat",
     "body": [
       "# إنشاء فرع جديد والانتقال إليه",
-      "git checkout -b ${1:feature}/${2:اسم-الفيتشر}",
+      "git checkout -b ${1:feature}/${2:اسم-الفرع}",
       "",
       "# عرض كل الفروع",
       "git branch -a",
@@ -27,10 +27,10 @@
       "# الانتقال لفرع موجود",
       "git checkout ${3:main}"
     ],
-    "description": "إنشاء فرع جديد في جيت"
+    "description": "إنشاء فرع جديد والانتقال إليه"
   },
 
-  "حفظ التغييرات": {
+  "Git Commit": {
     "prefix": "git-ar-commit",
     "scope": "shellscript,bat",
     "body": [
@@ -38,7 +38,7 @@
       "git add .",
       "git commit -m \"${1|feat,fix,docs,refactor,test,chore|}: ${2:وصف التغيير}\"",
       "",
-      "# أنواع الرسايل:",
+      "# أنواع الرسائل:",
       "# feat:     ميزة جديدة",
       "# fix:      إصلاح خطأ",
       "# docs:     تحديث التوثيق",
@@ -46,29 +46,29 @@
       "# test:     إضافة أو تعديل اختبارات",
       "# chore:    مهام صيانة"
     ],
-    "description": "حفظ التغييرات في جيت"
+    "description": "حفظ التغييرات مع رسالة واضحة"
   },
 
-  "دمج الفروع": {
+  "Git Merge": {
     "prefix": "git-ar-merge",
     "scope": "shellscript,bat",
     "body": [
       "# دمج فرع في الفرع الرئيسي",
       "git checkout ${1:main}",
       "git pull origin ${1:main}",
-      "git merge ${2:feature/اسم-الفيتشر}",
+      "git merge ${2:feature/اسم-الفرع}",
       "",
-      "# أو استخدم ريبيس لتاريخ أنظف",
+      "# أو استخدم إعادة الأساس لتاريخ أنظف",
       "# git rebase ${1:main}"
     ],
-    "description": "دمج الفروع في جيت"
+    "description": "دمج فرع في الفرع الرئيسي"
   },
 
-  "التراجع عن تغيير": {
+  "Git Undo": {
     "prefix": "git-ar-undo",
     "scope": "shellscript,bat",
     "body": [
-      "# التراجع عن آخر كوميت من غير حذف التغييرات",
+      "# التراجع عن آخر حفظة من غير حذف التغييرات",
       "git reset --soft HEAD~1",
       "",
       "# التراجع عن تغييرات ملف معين",
@@ -77,26 +77,26 @@
       "# إلغاء كل التغييرات غير المحفوظة",
       "git restore ."
     ],
-    "description": "التراجع عن التغييرات في جيت"
+    "description": "التراجع عن التغييرات الأخيرة"
   },
 
-  "رفع وجلب التغييرات": {
+  "Git Remote": {
     "prefix": "git-ar-remote",
     "scope": "shellscript,bat",
     "body": [
-      "# رفع التغييرات على GitHub",
-      "git push origin ${1:feature/اسم-الفيتشر}",
+      "# رفع التغييرات على المنصة",
+      "git push origin ${1:feature/اسم-الفرع}",
       "",
-      "# جيب آخر التغييرات من GitHub",
+      "# جلب آخر التغييرات من المنصة",
       "git pull origin ${2:main}",
       "",
       "# عرض المستودعات البعيدة",
       "git remote -v"
     ],
-    "description": "رفع وجلب التغييرات في جيت"
+    "description": "رفع وجلب التغييرات من المنصة"
   },
 
-  "حل التعارضات": {
+  "Git Resolve Conflict": {
     "prefix": "git-ar-conflict",
     "scope": "shellscript,bat",
     "body": [
@@ -112,45 +112,45 @@
       "# أو استخدم أداة حل التعارضات",
       "git mergetool"
     ],
-    "description": "حل التعارضات في جيت"
+    "description": "حل التعارضات الناتجة عن الدمج"
   },
 
-  "ستاش التغييرات": {
+  "Git Stash": {
     "prefix": "git-ar-stash",
     "scope": "shellscript,bat",
     "body": [
-      "# احتفظ بالتغييرات مؤقتاً من غير ما تكوميت",
+      "# احتفظ بالتغييرات مؤقتاً من غير حفظ نهائي",
       "git stash save \"${1:وصف التغييرات المؤقتة}\"",
       "",
-      "# عرض قائمة الستاش",
+      "# عرض قائمة التغييرات المؤقتة",
       "git stash list",
       "",
-      "# رجع آخر ستاش",
+      "# استرجاع آخر تغييرات مؤقتة",
       "git stash pop",
       "",
-      "# رجع ستاش معين",
+      "# استرجاع تغييرات مؤقتة معينة",
       "git stash apply stash@{${2:0}}"
     ],
-    "description": "حفظ مؤقت للتغييرات في جيت"
+    "description": "حفظ التغييرات مؤقتاً دون تثبيت"
   },
 
-  "تاريخ الكوميتات": {
+  "Git Log": {
     "prefix": "git-ar-log",
     "scope": "shellscript,bat",
     "body": [
-      "# عرض تاريخ الكوميتات بشكل جميل",
+      "# عرض تاريخ الحفظات بشكل جميل",
       "git log --oneline --graph --decorate --all",
       "",
-      "# عرض تغييرات كوميت معين",
+      "# عرض تغييرات حفظة معينة",
       "git show ${1:commit-hash}",
       "",
-      "# البحث في تاريخ الكوميتات",
+      "# البحث في تاريخ الحفظات",
       "git log --grep=\"${2:كلمة البحث}\""
     ],
-    "description": "عرض تاريخ الكوميتات في جيت"
+    "description": "عرض سجل التغييرات بشكل منظم"
   },
 
-  "وسم الإصدار": {
+  "Git Tag": {
     "prefix": "git-ar-tag",
     "scope": "shellscript,bat",
     "body": [
@@ -160,35 +160,35 @@
       "# عرض كل الوسوم",
       "git tag -l",
       "",
-      "# رفع الوسم على GitHub",
+      "# رفع الوسم على المنصة",
       "git push origin v${1:1.0.0}",
       "",
       "# رفع كل الوسوم",
       "git push origin --tags"
     ],
-    "description": "وسم الإصدارات في جيت"
+    "description": "إنشاء وسم للإصدارات"
   },
 
-  "ريبيس تفاعلي": {
+  "Git Interactive Rebase": {
     "prefix": "git-ar-rebase",
     "scope": "shellscript,bat",
     "body": [
-      "# إعادة كتابة تاريخ الكوميتات الأخيرة",
+      "# إعادة كتابة تاريخ الحفظات الأخيرة",
       "git rebase -i HEAD~${1:3}",
       "",
-      "# أوامر الريبيس:",
-      "# pick   - استخدم الكوميت كما هو",
-      "# squash - ادمجه مع اللي قبله",
-      "# reword - غير رسالته بس",
-      "# drop   - احذفه",
+      "# الأوامر المتاحة:",
+      "# pick   - استخدم الحفظة كما هي",
+      "# squash - ادمجها مع اللي قبلها",
+      "# reword - غير رسالتها بس",
+      "# drop   - احذفها",
       "",
       "# بعد الانتهاء",
       "git push origin ${2:branch-name} --force-with-lease"
     ],
-    "description": "ريبيس تفاعلي في جيت"
+    "description": "إعادة كتابة سجل التغييرات الأخيرة"
   },
 
-  "تنظيف المستودع": {
+  "Git Clean": {
     "prefix": "git-ar-clean",
     "scope": "shellscript,bat",
     "body": [
@@ -201,6 +201,6 @@
       "# تنظيف الملفات غير المتتبعة",
       "git clean -fd"
     ],
-    "description": "تنظيف المستودع في جيت"
+    "description": "تنظيف المستودع من الفروع القديمة"
   }
 }

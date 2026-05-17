@@ -1,5 +1,5 @@
 {
-  "صفحة أيونيك": {
+  "Ionic Page": {
     "prefix": "ion-ar-page",
     "scope": "typescript",
     "body": [
@@ -23,10 +23,10 @@
       "  ngOnInit() {}",
       "}"
     ],
-    "description": "صفحة أيونيك كاملة"
+    "description": "صفحة كاملة جاهزة للاستخدام"
   },
 
-  "نافذة أيونيك": {
+  "Ionic Modal": {
     "prefix": "ion-ar-modal",
     "scope": "typescript",
     "body": [
@@ -45,10 +45,10 @@
       "  ${5:// استخدم البيانات هنا}",
       "}"
     ],
-    "description": "نافذة منبثقة في أيونيك"
+    "description": "نافذة منبثقة فوق الصفحة الحالية"
   },
 
-  "رسالة صغيرة أيونيك": {
+  "Ionic Toast": {
     "prefix": "ion-ar-toast",
     "scope": "typescript",
     "body": [
@@ -67,10 +67,10 @@
       "  await toast.present();",
       "}"
     ],
-    "description": "رسالة صغيرة مؤقتة في أيونيك"
+    "description": "رسالة صغيرة تظهر وتختفي تلقائياً"
   },
 
-  "تأكيد أيونيك": {
+  "Ionic Alert": {
     "prefix": "ion-ar-alert",
     "scope": "typescript",
     "body": [
@@ -91,10 +91,10 @@
       "  await alert.present();",
       "}"
     ],
-    "description": "رسالة تأكيد في أيونيك"
+    "description": "رسالة تأكيد قبل تنفيذ عملية مهمة"
   },
 
-  "تحميل أيونيك": {
+  "Ionic Loading": {
     "prefix": "ion-ar-loading",
     "scope": "typescript",
     "body": [
@@ -116,10 +116,10 @@
       "  }",
       "}"
     ],
-    "description": "مؤشر تحميل في أيونيك"
+    "description": "مؤشر تحميل أثناء انتظار البيانات"
   },
 
-  "قائمة خيارات أيونيك": {
+  "Ionic Action Sheet": {
     "prefix": "ion-ar-actionsheet",
     "scope": "typescript",
     "body": [
@@ -140,10 +140,10 @@
       "  await actionSheet.present();",
       "}"
     ],
-    "description": "قائمة خيارات في أيونيك"
+    "description": "قائمة خيارات تظهر من أسفل الشاشة"
   },
 
-  "بوبوفر أيونيك": {
+  "Ionic Popover": {
     "prefix": "ion-ar-popover",
     "scope": "typescript",
     "body": [
@@ -161,10 +161,10 @@
       "  await popover.present();",
       "}"
     ],
-    "description": "بوبوفر في أيونيك"
+    "description": "نافذة صغيرة تظهر بجانب العنصر"
   },
 
-  "ناف كونترولر أيونيك": {
+  "Ionic Navigation": {
     "prefix": "ion-ar-nav",
     "scope": "typescript",
     "body": [
@@ -181,10 +181,10 @@
       "  this.navCtrl.navigateBack('/${3:home}');",
       "}"
     ],
-    "description": "التنقل بين الصفحات في أيونيك"
+    "description": "التنقل بين صفحات التطبيق"
   },
 
-  "ستوريدج أيونيك": {
+  "Ionic Storage": {
     "prefix": "ion-ar-storage",
     "scope": "typescript",
     "body": [
@@ -207,10 +207,10 @@
       "  await this.storage.remove(key);",
       "}"
     ],
-    "description": "تخزين محلي في أيونيك"
+    "description": "حفظ وجلب البيانات من التخزين المحلي"
   },
 
-  "ريفريشر أيونيك": {
+  "Ionic Refresher": {
     "prefix": "ion-ar-refresher",
     "scope": "typescript",
     "body": [
@@ -223,10 +223,10 @@
       "  }",
       "}"
     ],
-    "description": "ريفريشر في أيونيك"
+    "description": "تحديث البيانات بالسحب لأسفل"
   },
 
-  "انفينيت سكرول أيونيك": {
+  "Ionic Infinite Scroll": {
     "prefix": "ion-ar-infinite",
     "scope": "typescript",
     "body": [
@@ -243,10 +243,10 @@
       "  }",
       "}"
     ],
-    "description": "تحميل لانهائي في أيونيك"
+    "description": "تحميل بيانات إضافية عند نهاية الصفحة"
   },
 
-  "كاميرا أيونيك": {
+  "Ionic Camera": {
     "prefix": "ion-ar-camera",
     "scope": "typescript",
     "body": [
@@ -272,6 +272,6 @@
       "  this.${2:imageUrl} = photo.dataUrl;",
       "}"
     ],
-    "description": "الكاميرا في أيونيك"
+    "description": "التقاط صورة من الكاميرا أو معرض الصور"
   }
 }

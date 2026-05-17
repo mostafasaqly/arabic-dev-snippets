@@ -1,13 +1,14 @@
-<div dir="rtl">
+
 
 # Arabic Dev Snippets 🇸🇦🇪🇬
 
-> كود بالعربي — لكل developer عربي
+
 
 [![Version](https://img.shields.io/badge/version-1.0.1-00d4aa)](https://marketplace.visualstudio.com/items?itemName=MostafaSaqly.arabic-dev-snippets)
 [![License](https://img.shields.io/badge/license-MIT-ff6a6a)](LICENSE)
 [![YouTube](https://img.shields.io/badge/YouTube-Saqly%20Courses-red)](https://youtube.com/@saqlycourses)
-
+<div dir="rtl" align="right">
+> كود بالعربي — لكل developer عربي
 ---
 
 ## ليه Arabic Dev Snippets؟

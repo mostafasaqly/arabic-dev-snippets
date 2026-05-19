@@ -1,0 +1,496 @@
+{
+  "CSS Reset": {
+    "prefix": "css-ar-reset",
+    "scope": "css",
+    "body": [
+      "/* إعادة ضبط الأنماط الافتراضية للمتصفح */",
+      "* {",
+      "  margin: 0;",
+      "  padding: 0;",
+      "  box-sizing: border-box;",
+      "}"
+    ],
+    "description": "إعادة ضبط الأنماط الافتراضية للمتصفح"
+  },
+
+  "CSS Flex Center": {
+    "prefix": "css-ar-flex-center",
+    "scope": "css",
+    "body": [
+      "/* توسيط العناصر أفقياً وعمودياً بالـ flexbox */",
+      ".${1:container} {",
+      "  display: flex;",
+      "  justify-content: center;",
+      "  align-items: center;",
+      "}"
+    ],
+    "description": "توسيط العناصر أفقياً وعمودياً بالـ flexbox"
+  },
+
+  "CSS Flexbox": {
+    "prefix": "css-ar-flex",
+    "scope": "css",
+    "body": [
+      "/* ترتيب العناصر في صف أو عمود مرن */",
+      ".${1:container} {",
+      "  display: flex;",
+      "  flex-direction: ${2:row};",
+      "  justify-content: ${3:space-between};",
+      "  align-items: ${4:center};",
+      "  gap: ${5:1rem};",
+      "}"
+    ],
+    "description": "ترتيب العناصر في صف أو عمود مرن"
+  },
+
+  "CSS Grid": {
+    "prefix": "css-ar-grid",
+    "scope": "css",
+    "body": [
+      "/* تقسيم الصفحة لشبكة من الأعمدة */",
+      ".${1:container} {",
+      "  display: grid;",
+      "  grid-template-columns: repeat(${2:3}, 1fr);",
+      "  gap: ${3:1rem};",
+      "}"
+    ],
+    "description": "تقسيم الصفحة لشبكة من الأعمدة"
+  },
+
+  "CSS Grid Auto Fit": {
+    "prefix": "css-ar-grid-auto",
+    "scope": "css",
+    "body": [
+      "/* شبكة متجاوبة تتكيف تلقائياً مع المساحة */",
+      ".${1:container} {",
+      "  display: grid;",
+      "  grid-template-columns: repeat(auto-fit, minmax(${2:250px}, 1fr));",
+      "  gap: ${3:1rem};",
+      "}"
+    ],
+    "description": "شبكة متجاوبة تتكيف تلقائياً مع المساحة"
+  },
+
+  "CSS Media Query": {
+    "prefix": "css-ar-media",
+    "scope": "css",
+    "body": [
+      "/* أنماط خاصة بحجم شاشة معين */",
+      "@media (max-width: ${1:768px}) {",
+      "  .${2:element} {",
+      "    ${3:property}: ${4:value};",
+      "  }",
+      "}"
+    ],
+    "description": "أنماط خاصة بحجم شاشة معين"
+  },
+
+  "CSS Variables": {
+    "prefix": "css-ar-vars",
+    "scope": "css",
+    "body": [
+      "/* متغيرات لإعادة استخدام القيم في كل المشروع */",
+      ":root {",
+      "  --color-primary: ${1:#0d6efd};",
+      "  --color-text: ${2:#212529};",
+      "  --spacing: ${3:1rem};",
+      "  --radius: ${4:8px};",
+      "}"
+    ],
+    "description": "متغيرات لإعادة استخدام القيم في كل المشروع"
+  },
+
+  "CSS Transition": {
+    "prefix": "css-ar-transition",
+    "scope": "css",
+    "body": [
+      "/* انتقال سلس عند تغير الخصائص */",
+      ".${1:element} {",
+      "  transition: ${2:all} ${3:0.3s} ${4:ease};",
+      "}"
+    ],
+    "description": "انتقال سلس عند تغير الخصائص"
+  },
+
+  "CSS Hover Effect": {
+    "prefix": "css-ar-hover",
+    "scope": "css",
+    "body": [
+      "/* تأثير عند مرور الماوس فوق العنصر */",
+      ".${1:element} {",
+      "  transition: transform 0.3s ease;",
+      "}",
+      ".${1:element}:hover {",
+      "  transform: ${2:scale(1.05)};",
+      "}"
+    ],
+    "description": "تأثير عند مرور الماوس فوق العنصر"
+  },
+
+  "CSS Keyframes": {
+    "prefix": "css-ar-keyframes",
+    "scope": "css",
+    "body": [
+      "/* تعريف حركة مخصصة بمراحل */",
+      "@keyframes ${1:animationName} {",
+      "  from {",
+      "    ${2:opacity}: ${3:0};",
+      "  }",
+      "  to {",
+      "    ${2:opacity}: ${4:1};",
+      "  }",
+      "}"
+    ],
+    "description": "تعريف حركة مخصصة بمراحل"
+  },
+
+  "CSS Animation": {
+    "prefix": "css-ar-animation",
+    "scope": "css",
+    "body": [
+      "/* تطبيق حركة على عنصر */",
+      ".${1:element} {",
+      "  animation: ${2:animationName} ${3:1s} ${4:ease} ${5:infinite};",
+      "}"
+    ],
+    "description": "تطبيق حركة على عنصر"
+  },
+
+  "CSS Fade In": {
+    "prefix": "css-ar-fadein",
+    "scope": "css",
+    "body": [
+      "/* حركة ظهور تدريجي للعنصر */",
+      "@keyframes fadeIn {",
+      "  from { opacity: 0; transform: translateY(20px); }",
+      "  to { opacity: 1; transform: translateY(0); }",
+      "}",
+      ".${1:element} {",
+      "  animation: fadeIn 0.6s ease forwards;",
+      "}"
+    ],
+    "description": "حركة ظهور تدريجي للعنصر"
+  },
+
+  "CSS Spinner": {
+    "prefix": "css-ar-spinner",
+    "scope": "css",
+    "body": [
+      "/* مؤشر تحميل دائري يدور */",
+      "@keyframes spin {",
+      "  to { transform: rotate(360deg); }",
+      "}",
+      ".${1:spinner} {",
+      "  width: ${2:40px};",
+      "  height: ${2:40px};",
+      "  border: 4px solid #eee;",
+      "  border-top-color: ${3:#0d6efd};",
+      "  border-radius: 50%;",
+      "  animation: spin 1s linear infinite;",
+      "}"
+    ],
+    "description": "مؤشر تحميل دائري يدور"
+  },
+
+  "CSS Box Shadow": {
+    "prefix": "css-ar-shadow",
+    "scope": "css",
+    "body": [
+      "/* ظل ناعم حول العنصر */",
+      ".${1:element} {",
+      "  box-shadow: ${2:0} ${3:4px} ${4:12px} rgba(0, 0, 0, ${5:0.15});",
+      "}"
+    ],
+    "description": "ظل ناعم حول العنصر"
+  },
+
+  "CSS Card Style": {
+    "prefix": "css-ar-card",
+    "scope": "css",
+    "body": [
+      "/* تنسيق بطاقة بظل وحواف دائرية */",
+      ".card {",
+      "  background: #fff;",
+      "  border-radius: ${1:12px};",
+      "  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);",
+      "  padding: ${2:1.5rem};",
+      "  overflow: hidden;",
+      "}"
+    ],
+    "description": "تنسيق بطاقة بظل وحواف دائرية"
+  },
+
+  "CSS Button Style": {
+    "prefix": "css-ar-btn",
+    "scope": "css",
+    "body": [
+      "/* تنسيق زر جذاب مع تأثير -hover */",
+      ".btn {",
+      "  display: inline-block;",
+      "  padding: ${1:0.75rem 1.5rem};",
+      "  background: ${2:#0d6efd};",
+      "  color: #fff;",
+      "  border: none;",
+      "  border-radius: ${3:6px};",
+      "  cursor: pointer;",
+      "  transition: background 0.3s ease;",
+      "}",
+      ".btn:hover {",
+      "  background: ${4:#0b5ed7};",
+      "}"
+    ],
+    "description": "تنسيق زر جذاب مع تأثير -hover"
+  },
+
+  "CSS Gradient Background": {
+    "prefix": "css-ar-gradient",
+    "scope": "css",
+    "body": [
+      "/* خلفية متدرجة الألوان */",
+      ".${1:element} {",
+      "  background: linear-gradient(${2:135deg}, ${3:#667eea}, ${4:#764ba2});",
+      "}"
+    ],
+    "description": "خلفية متدرجة الألوان"
+  },
+
+  "CSS Center Absolute": {
+    "prefix": "css-ar-center-abs",
+    "scope": "css",
+    "body": [
+      "/* توسيط مطلق للعنصر داخل أبيه */",
+      ".${1:element} {",
+      "  position: absolute;",
+      "  top: 50%;",
+      "  left: 50%;",
+      "  transform: translate(-50%, -50%);",
+      "}"
+    ],
+    "description": "توسيط مطلق للعنصر داخل أبيه"
+  },
+
+  "CSS Position": {
+    "prefix": "css-ar-position",
+    "scope": "css",
+    "body": [
+      "/* تحديد موضع العنصر بدقة */",
+      ".${1:element} {",
+      "  position: ${2:relative};",
+      "  top: ${3:0};",
+      "  left: ${4:0};",
+      "  z-index: ${5:1};",
+      "}"
+    ],
+    "description": "تحديد موضع العنصر بدقة"
+  },
+
+  "CSS Sticky Header": {
+    "prefix": "css-ar-sticky",
+    "scope": "css",
+    "body": [
+      "/* رأس يلتصق بأعلى الشاشة عند التمرير */",
+      ".${1:header} {",
+      "  position: sticky;",
+      "  top: 0;",
+      "  z-index: 100;",
+      "  background: ${2:#fff};",
+      "}"
+    ],
+    "description": "رأس يلتصق بأعلى الشاشة عند التمرير"
+  },
+
+  "CSS Text Truncate": {
+    "prefix": "css-ar-truncate",
+    "scope": "css",
+    "body": [
+      "/* قص النص الطويل وإضافة ثلاث نقاط */",
+      ".${1:text} {",
+      "  white-space: nowrap;",
+      "  overflow: hidden;",
+      "  text-overflow: ellipsis;",
+      "}"
+    ],
+    "description": "قص النص الطويل وإضافة ثلاث نقاط"
+  },
+
+  "CSS Line Clamp": {
+    "prefix": "css-ar-clamp",
+    "scope": "css",
+    "body": [
+      "/* قص النص بعد عدد محدد من الأسطر */",
+      ".${1:text} {",
+      "  display: -webkit-box;",
+      "  -webkit-line-clamp: ${2:3};",
+      "  -webkit-box-orient: vertical;",
+      "  overflow: hidden;",
+      "}"
+    ],
+    "description": "قص النص بعد عدد محدد من الأسطر"
+  },
+
+  "CSS Aspect Ratio": {
+    "prefix": "css-ar-aspect",
+    "scope": "css",
+    "body": [
+      "/* الحفاظ على نسبة أبعاد ثابتة للعنصر */",
+      ".${1:element} {",
+      "  aspect-ratio: ${2:16 / 9};",
+      "  width: 100%;",
+      "  object-fit: cover;",
+      "}"
+    ],
+    "description": "الحفاظ على نسبة أبعاد ثابتة للعنصر"
+  },
+
+  "CSS Glassmorphism": {
+    "prefix": "css-ar-glass",
+    "scope": "css",
+    "body": [
+      "/* تأثير الزجاج الشفاف الضبابي */",
+      ".${1:glass} {",
+      "  background: rgba(255, 255, 255, ${2:0.15});",
+      "  backdrop-filter: blur(${3:10px});",
+      "  border: 1px solid rgba(255, 255, 255, 0.2);",
+      "  border-radius: ${4:12px};",
+      "}"
+    ],
+    "description": "تأثير الزجاج الشفاف الضبابي"
+  },
+
+  "CSS Custom Scrollbar": {
+    "prefix": "css-ar-scrollbar",
+    "scope": "css",
+    "body": [
+      "/* تنسيق شريط التمرير بشكل مخصص */",
+      ".${1:element}::-webkit-scrollbar {",
+      "  width: ${2:8px};",
+      "}",
+      ".${1:element}::-webkit-scrollbar-thumb {",
+      "  background: ${3:#888};",
+      "  border-radius: 4px;",
+      "}",
+      ".${1:element}::-webkit-scrollbar-track {",
+      "  background: ${4:#f1f1f1};",
+      "}"
+    ],
+    "description": "تنسيق شريط التمرير بشكل مخصص"
+  },
+
+  "CSS Pseudo Element": {
+    "prefix": "css-ar-pseudo",
+    "scope": "css",
+    "body": [
+      "/* إضافة محتوى قبل أو بعد العنصر */",
+      ".${1:element}::${2:before} {",
+      "  content: \"${3:}\";",
+      "  display: ${4:block};",
+      "}"
+    ],
+    "description": "إضافة محتوى قبل أو بعد العنصر"
+  },
+
+  "CSS Dark Mode": {
+    "prefix": "css-ar-dark",
+    "scope": "css",
+    "body": [
+      "/* أنماط الوضع الليلي حسب تفضيل النظام */",
+      "@media (prefers-color-scheme: dark) {",
+      "  :root {",
+      "    --color-bg: ${1:#121212};",
+      "    --color-text: ${2:#e0e0e0};",
+      "  }",
+      "}"
+    ],
+    "description": "أنماط الوضع الليلي حسب تفضيل النظام"
+  },
+
+  "CSS Container Width": {
+    "prefix": "css-ar-container",
+    "scope": "css",
+    "body": [
+      "/* حاوية بعرض أقصى وتوسيط تلقائي */",
+      ".container {",
+      "  max-width: ${1:1200px};",
+      "  margin: 0 auto;",
+      "  padding: 0 ${2:1rem};",
+      "}"
+    ],
+    "description": "حاوية بعرض أقصى وتوسيط تلقائي"
+  },
+
+  "CSS Overlay": {
+    "prefix": "css-ar-overlay",
+    "scope": "css",
+    "body": [
+      "/* طبقة تغطية شفافة فوق المحتوى */",
+      ".overlay {",
+      "  position: fixed;",
+      "  inset: 0;",
+      "  background: rgba(0, 0, 0, ${1:0.5});",
+      "  display: flex;",
+      "  justify-content: center;",
+      "  align-items: center;",
+      "  z-index: ${2:1000};",
+      "}"
+    ],
+    "description": "طبقة تغطية شفافة فوق المحتوى"
+  },
+
+  "CSS Hide Element": {
+    "prefix": "css-ar-hide",
+    "scope": "css",
+    "body": [
+      "/* إخفاء العنصر بصرياً مع بقائه لقارئ الشاشة */",
+      ".${1:sr-only} {",
+      "  position: absolute;",
+      "  width: 1px;",
+      "  height: 1px;",
+      "  padding: 0;",
+      "  margin: -1px;",
+      "  overflow: hidden;",
+      "  clip: rect(0, 0, 0, 0);",
+      "  border: 0;",
+      "}"
+    ],
+    "description": "إخفاء العنصر بصرياً مع بقائه لقارئ الشاشة"
+  },
+
+  "CSS Clamp Responsive Font": {
+    "prefix": "css-ar-fluid-font",
+    "scope": "css",
+    "body": [
+      "/* حجم خط متجاوب يتغير مع حجم الشاشة */",
+      ".${1:element} {",
+      "  font-size: clamp(${2:1rem}, ${3:2.5vw}, ${4:2rem});",
+      "}"
+    ],
+    "description": "حجم خط متجاوب يتغير مع حجم الشاشة"
+  },
+
+  "CSS Hover Lift": {
+    "prefix": "css-ar-lift",
+    "scope": "css",
+    "body": [
+      "/* رفع العنصر مع ظل عند المرور عليه */",
+      ".${1:element} {",
+      "  transition: transform 0.3s ease, box-shadow 0.3s ease;",
+      "}",
+      ".${1:element}:hover {",
+      "  transform: translateY(-8px);",
+      "  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);",
+      "}"
+    ],
+    "description": "رفع العنصر مع ظل عند المرور عليه"
+  },
+
+  "CSS Comment Block": {
+    "prefix": "css-ar-comment",
+    "scope": "css",
+    "body": [
+      "/* ========================== */",
+      "/* ${1:اسم القسم} */",
+      "/* ========================== */"
+    ],
+    "description": "تعليق بارز لتقسيم الكود"
+  }
+}

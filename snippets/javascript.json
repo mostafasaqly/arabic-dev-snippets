@@ -1,0 +1,396 @@
+{
+  "JS Query Selector": {
+    "prefix": "js-ar-select",
+    "scope": "javascript",
+    "body": [
+      "// اختيار عنصر واحد من الصفحة",
+      "const ${1:element} = document.querySelector('${2:.selector}');"
+    ],
+    "description": "اختيار عنصر واحد من الصفحة"
+  },
+
+  "JS Query Selector All": {
+    "prefix": "js-ar-select-all",
+    "scope": "javascript",
+    "body": [
+      "// اختيار كل العناصر المطابقة والمرور عليها",
+      "const ${1:elements} = document.querySelectorAll('${2:.selector}');",
+      "${1:elements}.forEach((${3:el}) => {",
+      "  ${4:// كود لكل عنصر}",
+      "});"
+    ],
+    "description": "اختيار كل العناصر المطابقة والمرور عليها"
+  },
+
+  "JS Event Listener": {
+    "prefix": "js-ar-event",
+    "scope": "javascript",
+    "body": [
+      "// ربط حدث بعنصر",
+      "${1:element}.addEventListener('${2:click}', (${3:e}) => {",
+      "  ${4:// الكود هنا}",
+      "});"
+    ],
+    "description": "ربط حدث بعنصر"
+  },
+
+  "JS DOM Ready": {
+    "prefix": "js-ar-ready",
+    "scope": "javascript",
+    "body": [
+      "// تشغيل الكود بعد تحميل الصفحة بالكامل",
+      "document.addEventListener('DOMContentLoaded', () => {",
+      "  ${1:// الكود هنا}",
+      "});"
+    ],
+    "description": "تشغيل الكود بعد تحميل الصفحة بالكامل"
+  },
+
+  "JS Create Element": {
+    "prefix": "js-ar-create",
+    "scope": "javascript",
+    "body": [
+      "// إنشاء عنصر جديد وإضافته للصفحة",
+      "const ${1:el} = document.createElement('${2:div}');",
+      "${1:el}.className = '${3:class-name}';",
+      "${1:el}.textContent = '${4:النص}';",
+      "${5:parent}.appendChild(${1:el});"
+    ],
+    "description": "إنشاء عنصر جديد وإضافته للصفحة"
+  },
+
+  "JS Toggle Class": {
+    "prefix": "js-ar-toggle",
+    "scope": "javascript",
+    "body": [
+      "// تبديل وجود class على العنصر",
+      "${1:element}.classList.toggle('${2:active}');"
+    ],
+    "description": "تبديل وجود class على العنصر"
+  },
+
+  "JS Function": {
+    "prefix": "js-ar-function",
+    "scope": "javascript",
+    "body": [
+      "// تعريف دالة",
+      "function ${1:functionName}(${2:params}) {",
+      "  ${3:// الكود هنا}",
+      "  return ${4:result};",
+      "}"
+    ],
+    "description": "تعريف دالة"
+  },
+
+  "JS Arrow Function": {
+    "prefix": "js-ar-arrow",
+    "scope": "javascript",
+    "body": [
+      "// دالة سهمية مختصرة",
+      "const ${1:functionName} = (${2:params}) => {",
+      "  ${3:// الكود هنا}",
+      "};"
+    ],
+    "description": "دالة سهمية مختصرة"
+  },
+
+  "JS Fetch API": {
+    "prefix": "js-ar-fetch",
+    "scope": "javascript",
+    "body": [
+      "// جلب بيانات من API",
+      "fetch('${1:https://api.example.com/data}')",
+      "  .then((res) => res.json())",
+      "  .then((data) => {",
+      "    ${2:console.log(data);}",
+      "  })",
+      "  .catch((err) => console.error('خطأ:', err));"
+    ],
+    "description": "جلب بيانات من API"
+  },
+
+  "JS Async Fetch": {
+    "prefix": "js-ar-async-fetch",
+    "scope": "javascript",
+    "body": [
+      "// جلب بيانات بطريقة async/await مع معالجة الأخطاء",
+      "async function ${1:getData}() {",
+      "  try {",
+      "    const res = await fetch('${2:https://api.example.com}');",
+      "    const data = await res.json();",
+      "    return data;",
+      "  } catch (err) {",
+      "    console.error('خطأ في جلب البيانات:', err);",
+      "  }",
+      "}"
+    ],
+    "description": "جلب بيانات بطريقة async/await مع معالجة الأخطاء"
+  },
+
+  "JS POST Request": {
+    "prefix": "js-ar-post",
+    "scope": "javascript",
+    "body": [
+      "// إرسال بيانات للسيرفر بطلب POST",
+      "async function ${1:sendData}(${2:payload}) {",
+      "  const res = await fetch('${3:https://api.example.com}', {",
+      "    method: 'POST',",
+      "    headers: { 'Content-Type': 'application/json' },",
+      "    body: JSON.stringify(${2:payload}),",
+      "  });",
+      "  return res.json();",
+      "}"
+    ],
+    "description": "إرسال بيانات للسيرفر بطلب POST"
+  },
+
+  "JS Promise": {
+    "prefix": "js-ar-promise",
+    "scope": "javascript",
+    "body": [
+      "// إنشاء وعد للعمليات غير المتزامنة",
+      "const ${1:myPromise} = new Promise((resolve, reject) => {",
+      "  if (${2:condition}) {",
+      "    resolve(${3:value});",
+      "  } else {",
+      "    reject(${4:error});",
+      "  }",
+      "});"
+    ],
+    "description": "إنشاء وعد للعمليات غير المتزامنة"
+  },
+
+  "JS Try Catch": {
+    "prefix": "js-ar-try",
+    "scope": "javascript",
+    "body": [
+      "// محاولة تنفيذ كود مع التقاط الأخطاء",
+      "try {",
+      "  ${1:// الكود هنا}",
+      "} catch (err) {",
+      "  console.error('${2:حدث خطأ}:', err);",
+      "}"
+    ],
+    "description": "محاولة تنفيذ كود مع التقاط الأخطاء"
+  },
+
+  "JS Map": {
+    "prefix": "js-ar-map",
+    "scope": "javascript",
+    "body": [
+      "// تحويل كل عنصر في المصفوفة لعنصر جديد",
+      "const ${1:result} = ${2:array}.map((${3:item}) => ${4:item});"
+    ],
+    "description": "تحويل كل عنصر في المصفوفة لعنصر جديد"
+  },
+
+  "JS Filter": {
+    "prefix": "js-ar-filter",
+    "scope": "javascript",
+    "body": [
+      "// تصفية المصفوفة حسب شرط معين",
+      "const ${1:result} = ${2:array}.filter((${3:item}) => ${4:condition});"
+    ],
+    "description": "تصفية المصفوفة حسب شرط معين"
+  },
+
+  "JS Reduce": {
+    "prefix": "js-ar-reduce",
+    "scope": "javascript",
+    "body": [
+      "// تلخيص المصفوفة في قيمة واحدة",
+      "const ${1:total} = ${2:array}.reduce((acc, ${3:item}) => acc + ${3:item}, ${4:0});"
+    ],
+    "description": "تلخيص المصفوفة في قيمة واحدة"
+  },
+
+  "JS Find": {
+    "prefix": "js-ar-find",
+    "scope": "javascript",
+    "body": [
+      "// إيجاد أول عنصر يحقق الشرط",
+      "const ${1:found} = ${2:array}.find((${3:item}) => ${4:condition});"
+    ],
+    "description": "إيجاد أول عنصر يحقق الشرط"
+  },
+
+  "JS ForEach": {
+    "prefix": "js-ar-foreach",
+    "scope": "javascript",
+    "body": [
+      "// المرور على كل عناصر المصفوفة",
+      "${1:array}.forEach((${2:item}, ${3:index}) => {",
+      "  ${4:// الكود هنا}",
+      "});"
+    ],
+    "description": "المرور على كل عناصر المصفوفة"
+  },
+
+  "JS Destructuring": {
+    "prefix": "js-ar-destruct",
+    "scope": "javascript",
+    "body": [
+      "// تفكيك الكائن لاستخراج قيمه",
+      "const { ${1:prop1}, ${2:prop2} } = ${3:object};"
+    ],
+    "description": "تفكيك الكائن لاستخراج قيمه"
+  },
+
+  "JS Spread": {
+    "prefix": "js-ar-spread",
+    "scope": "javascript",
+    "body": [
+      "// نسخ ودمج المصفوفات أو الكائنات",
+      "const ${1:merged} = { ...${2:obj1}, ...${3:obj2} };"
+    ],
+    "description": "نسخ ودمج المصفوفات أو الكائنات"
+  },
+
+  "JS Template Literal": {
+    "prefix": "js-ar-template",
+    "scope": "javascript",
+    "body": [
+      "// نص مع متغيرات بداخله",
+      "const ${1:message} = `${2:مرحباً} ${${3:name}}`;"
+    ],
+    "description": "نص مع متغيرات بداخله"
+  },
+
+  "JS Ternary": {
+    "prefix": "js-ar-ternary",
+    "scope": "javascript",
+    "body": [
+      "// شرط مختصر في سطر واحد",
+      "const ${1:result} = ${2:condition} ? ${3:valueIfTrue} : ${4:valueIfFalse};"
+    ],
+    "description": "شرط مختصر في سطر واحد"
+  },
+
+  "JS Optional Chaining": {
+    "prefix": "js-ar-optional",
+    "scope": "javascript",
+    "body": [
+      "// الوصول الآمن لخصائص قد تكون غير موجودة",
+      "const ${1:value} = ${2:object}?.${3:prop}?.${4:nested};"
+    ],
+    "description": "الوصول الآمن لخصائص قد تكون غير موجودة"
+  },
+
+  "JS LocalStorage": {
+    "prefix": "js-ar-storage",
+    "scope": "javascript",
+    "body": [
+      "// حفظ وجلب البيانات من التخزين المحلي",
+      "localStorage.setItem('${1:key}', JSON.stringify(${2:value}));",
+      "const ${3:data} = JSON.parse(localStorage.getItem('${1:key}'));"
+    ],
+    "description": "حفظ وجلب البيانات من التخزين المحلي"
+  },
+
+  "JS SetTimeout": {
+    "prefix": "js-ar-timeout",
+    "scope": "javascript",
+    "body": [
+      "// تنفيذ كود بعد فترة زمنية محددة",
+      "setTimeout(() => {",
+      "  ${1:// الكود هنا}",
+      "}, ${2:1000});"
+    ],
+    "description": "تنفيذ كود بعد فترة زمنية محددة"
+  },
+
+  "JS SetInterval": {
+    "prefix": "js-ar-interval",
+    "scope": "javascript",
+    "body": [
+      "// تكرار تنفيذ كود كل فترة زمنية",
+      "const ${1:timer} = setInterval(() => {",
+      "  ${2:// الكود هنا}",
+      "}, ${3:1000});",
+      "// لإيقافه: clearInterval(${1:timer});"
+    ],
+    "description": "تكرار تنفيذ كود كل فترة زمنية"
+  },
+
+  "JS Debounce": {
+    "prefix": "js-ar-debounce",
+    "scope": "javascript",
+    "body": [
+      "// تأخير تنفيذ الدالة حتى يتوقف المستخدم",
+      "function debounce(fn, delay = ${1:300}) {",
+      "  let timer;",
+      "  return (...args) => {",
+      "    clearTimeout(timer);",
+      "    timer = setTimeout(() => fn(...args), delay);",
+      "  };",
+      "}"
+    ],
+    "description": "تأخير تنفيذ الدالة حتى يتوقف المستخدم"
+  },
+
+  "JS Class": {
+    "prefix": "js-ar-class",
+    "scope": "javascript",
+    "body": [
+      "// تعريف كلاس لإنشاء الكائنات",
+      "class ${1:ClassName} {",
+      "  constructor(${2:params}) {",
+      "    this.${3:property} = ${3:property};",
+      "  }",
+      "",
+      "  ${4:methodName}() {",
+      "    ${5:// الكود هنا}",
+      "  }",
+      "}"
+    ],
+    "description": "تعريف كلاس لإنشاء الكائنات"
+  },
+
+  "JS Form Submit": {
+    "prefix": "js-ar-form-submit",
+    "scope": "javascript",
+    "body": [
+      "// التقاط إرسال النموذج ومنع إعادة التحميل",
+      "${1:form}.addEventListener('submit', (e) => {",
+      "  e.preventDefault();",
+      "  const data = new FormData(${1:form});",
+      "  ${2:// معالجة البيانات}",
+      "});"
+    ],
+    "description": "التقاط إرسال النموذج ومنع إعادة التحميل"
+  },
+
+  "JS Array Methods": {
+    "prefix": "js-ar-array",
+    "scope": "javascript",
+    "body": [
+      "// إنشاء مصفوفة والعمليات الأساسية عليها",
+      "const ${1:arr} = [${2:1, 2, 3}];",
+      "${1:arr}.push(${3:item});",
+      "const ${4:sorted} = [...${1:arr}].sort((a, b) => a - b);"
+    ],
+    "description": "إنشاء مصفوفة والعمليات الأساسية عليها"
+  },
+
+  "JS Object Loop": {
+    "prefix": "js-ar-object-loop",
+    "scope": "javascript",
+    "body": [
+      "// المرور على مفاتيح وقيم الكائن",
+      "Object.entries(${1:object}).forEach(([key, value]) => {",
+      "  ${2:console.log(key, value);}",
+      "});"
+    ],
+    "description": "المرور على مفاتيح وقيم الكائن"
+  },
+
+  "JS Console Log": {
+    "prefix": "js-ar-log",
+    "scope": "javascript",
+    "body": [
+      "// طباعة قيمة في الكونسول للتتبع",
+      "console.log('${1:label}:', ${2:value});"
+    ],
+    "description": "طباعة قيمة في الكونسول للتتبع"
+  }
+}

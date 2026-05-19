@@ -1,0 +1,480 @@
+{
+  "HTML5 Boilerplate": {
+    "prefix": "html-ar-page",
+    "scope": "html",
+    "body": [
+      "<!-- صفحة HTML5 كاملة جاهزة للبدء -->",
+      "<!DOCTYPE html>",
+      "<html lang=\"${1:ar}\" dir=\"${2:rtl}\">",
+      "<head>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <title>${3:عنوان الصفحة}</title>",
+      "  <link rel=\"stylesheet\" href=\"${4:style.css}\">",
+      "</head>",
+      "<body>",
+      "  ${5:المحتوى هنا}",
+      "  <script src=\"${6:script.js}\"></script>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "صفحة HTML5 كاملة جاهزة للبدء"
+  },
+
+  "HTML Meta SEO": {
+    "prefix": "html-ar-meta",
+    "scope": "html",
+    "body": [
+      "<!-- وسوم meta لتحسين الظهور في محركات البحث -->",
+      "<meta name=\"description\" content=\"${1:وصف الصفحة}\">",
+      "<meta name=\"keywords\" content=\"${2:كلمات مفتاحية}\">",
+      "<meta name=\"author\" content=\"${3:اسم الكاتب}\">",
+      "<meta property=\"og:title\" content=\"${4:عنوان المشاركة}\">",
+      "<meta property=\"og:description\" content=\"${5:وصف المشاركة}\">",
+      "<meta property=\"og:image\" content=\"${6:رابط الصورة}\">"
+    ],
+    "description": "وسوم meta لتحسين الـ SEO ومشاركة الروابط"
+  },
+
+  "HTML Navbar": {
+    "prefix": "html-ar-navbar",
+    "scope": "html",
+    "body": [
+      "<!-- شريط تنقل أساسي بقائمة روابط -->",
+      "<nav class=\"navbar\">",
+      "  <a href=\"${1:/}\" class=\"logo\">${2:الشعار}</a>",
+      "  <ul class=\"nav-links\">",
+      "    <li><a href=\"${3:#}\">${4:الرئيسية}</a></li>",
+      "    <li><a href=\"${5:#}\">${6:من نحن}</a></li>",
+      "    <li><a href=\"${7:#}\">${8:تواصل}</a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "شريط تنقل أساسي بقائمة روابط"
+  },
+
+  "HTML Header": {
+    "prefix": "html-ar-header",
+    "scope": "html",
+    "body": [
+      "<!-- رأس الصفحة بعنوان ووصف -->",
+      "<header class=\"header\">",
+      "  <h1>${1:العنوان الرئيسي}</h1>",
+      "  <p>${2:وصف مختصر}</p>",
+      "</header>"
+    ],
+    "description": "رأس الصفحة بعنوان ووصف"
+  },
+
+  "HTML Footer": {
+    "prefix": "html-ar-footer",
+    "scope": "html",
+    "body": [
+      "<!-- تذييل الصفحة بحقوق النشر -->",
+      "<footer class=\"footer\">",
+      "  <p>&copy; ${1:2026} ${2:اسم الموقع}. كل الحقوق محفوظة.</p>",
+      "</footer>"
+    ],
+    "description": "تذييل الصفحة بحقوق النشر"
+  },
+
+  "HTML Section": {
+    "prefix": "html-ar-section",
+    "scope": "html",
+    "body": [
+      "<!-- قسم من الصفحة بعنوان ومحتوى -->",
+      "<section id=\"${1:section-id}\" class=\"${2:section}\">",
+      "  <h2>${3:عنوان القسم}</h2>",
+      "  <p>${4:محتوى القسم}</p>",
+      "</section>"
+    ],
+    "description": "قسم من الصفحة بعنوان ومحتوى"
+  },
+
+  "HTML Article": {
+    "prefix": "html-ar-article",
+    "scope": "html",
+    "body": [
+      "<!-- مقال مستقل له معنى بذاته -->",
+      "<article class=\"${1:article}\">",
+      "  <h2>${2:عنوان المقال}</h2>",
+      "  <p class=\"meta\">${3:بتاريخ}</p>",
+      "  <p>${4:نص المقال}</p>",
+      "</article>"
+    ],
+    "description": "مقال مستقل له معنى بذاته"
+  },
+
+  "HTML Form": {
+    "prefix": "html-ar-form",
+    "scope": "html",
+    "body": [
+      "<!-- نموذج إدخال بيانات كامل -->",
+      "<form action=\"${1:/submit}\" method=\"${2:post}\">",
+      "  <label for=\"${3:name}\">${4:الاسم}</label>",
+      "  <input type=\"text\" id=\"${3:name}\" name=\"${3:name}\" required>",
+      "",
+      "  <label for=\"${5:email}\">${6:البريد الإلكتروني}</label>",
+      "  <input type=\"email\" id=\"${5:email}\" name=\"${5:email}\" required>",
+      "",
+      "  <button type=\"submit\">${7:إرسال}</button>",
+      "</form>"
+    ],
+    "description": "نموذج إدخال بيانات كامل"
+  },
+
+  "HTML Input": {
+    "prefix": "html-ar-input",
+    "scope": "html",
+    "body": [
+      "<!-- حقل إدخال مع تسمية -->",
+      "<label for=\"${1:field}\">${2:التسمية}</label>",
+      "<input type=\"${3:text}\" id=\"${1:field}\" name=\"${1:field}\" placeholder=\"${4:اكتب هنا}\">"
+    ],
+    "description": "حقل إدخال مع تسمية"
+  },
+
+  "HTML Select": {
+    "prefix": "html-ar-select",
+    "scope": "html",
+    "body": [
+      "<!-- قائمة اختيار منسدلة -->",
+      "<label for=\"${1:choice}\">${2:اختر}</label>",
+      "<select id=\"${1:choice}\" name=\"${1:choice}\">",
+      "  <option value=\"${3:1}\">${4:الخيار الأول}</option>",
+      "  <option value=\"${5:2}\">${6:الخيار الثاني}</option>",
+      "</select>"
+    ],
+    "description": "قائمة اختيار منسدلة"
+  },
+
+  "HTML Textarea": {
+    "prefix": "html-ar-textarea",
+    "scope": "html",
+    "body": [
+      "<!-- صندوق نص متعدد الأسطر -->",
+      "<label for=\"${1:message}\">${2:الرسالة}</label>",
+      "<textarea id=\"${1:message}\" name=\"${1:message}\" rows=\"${3:5}\" placeholder=\"${4:اكتب رسالتك}\"></textarea>"
+    ],
+    "description": "صندوق نص متعدد الأسطر"
+  },
+
+  "HTML Checkbox": {
+    "prefix": "html-ar-checkbox",
+    "scope": "html",
+    "body": [
+      "<!-- مربع اختيار للموافقة أو التحديد -->",
+      "<label>",
+      "  <input type=\"checkbox\" name=\"${1:agree}\" value=\"${2:yes}\">",
+      "  ${3:أوافق على الشروط}",
+      "</label>"
+    ],
+    "description": "مربع اختيار للموافقة أو التحديد"
+  },
+
+  "HTML Radio Group": {
+    "prefix": "html-ar-radio",
+    "scope": "html",
+    "body": [
+      "<!-- مجموعة أزرار اختيار واحد فقط -->",
+      "<label><input type=\"radio\" name=\"${1:gender}\" value=\"${2:male}\"> ${3:ذكر}</label>",
+      "<label><input type=\"radio\" name=\"${1:gender}\" value=\"${4:female}\"> ${5:أنثى}</label>"
+    ],
+    "description": "مجموعة أزرار اختيار واحد فقط"
+  },
+
+  "HTML Button": {
+    "prefix": "html-ar-button",
+    "scope": "html",
+    "body": [
+      "<!-- زر قابل للنقر -->",
+      "<button type=\"${1:button}\" class=\"${2:btn}\">${3:اضغط هنا}</button>"
+    ],
+    "description": "زر قابل للنقر"
+  },
+
+  "HTML Table": {
+    "prefix": "html-ar-table",
+    "scope": "html",
+    "body": [
+      "<!-- جدول بيانات بعناوين وصفوف -->",
+      "<table>",
+      "  <thead>",
+      "    <tr>",
+      "      <th>${1:العمود الأول}</th>",
+      "      <th>${2:العمود الثاني}</th>",
+      "    </tr>",
+      "  </thead>",
+      "  <tbody>",
+      "    <tr>",
+      "      <td>${3:قيمة}</td>",
+      "      <td>${4:قيمة}</td>",
+      "    </tr>",
+      "  </tbody>",
+      "</table>"
+    ],
+    "description": "جدول بيانات بعناوين وصفوف"
+  },
+
+  "HTML Ordered List": {
+    "prefix": "html-ar-ol",
+    "scope": "html",
+    "body": [
+      "<!-- قائمة مرقمة -->",
+      "<ol>",
+      "  <li>${1:البند الأول}</li>",
+      "  <li>${2:البند الثاني}</li>",
+      "  <li>${3:البند الثالث}</li>",
+      "</ol>"
+    ],
+    "description": "قائمة مرقمة"
+  },
+
+  "HTML Unordered List": {
+    "prefix": "html-ar-ul",
+    "scope": "html",
+    "body": [
+      "<!-- قائمة نقطية غير مرقمة -->",
+      "<ul>",
+      "  <li>${1:البند الأول}</li>",
+      "  <li>${2:البند الثاني}</li>",
+      "  <li>${3:البند الثالث}</li>",
+      "</ul>"
+    ],
+    "description": "قائمة نقطية غير مرقمة"
+  },
+
+  "HTML Image": {
+    "prefix": "html-ar-img",
+    "scope": "html",
+    "body": [
+      "<!-- صورة مع نص بديل -->",
+      "<img src=\"${1:image.jpg}\" alt=\"${2:وصف الصورة}\" width=\"${3:400}\" loading=\"lazy\">"
+    ],
+    "description": "صورة مع نص بديل وتحميل كسول"
+  },
+
+  "HTML Picture Responsive": {
+    "prefix": "html-ar-picture",
+    "scope": "html",
+    "body": [
+      "<!-- صورة متجاوبة تتغير حسب حجم الشاشة -->",
+      "<picture>",
+      "  <source media=\"(min-width: 768px)\" srcset=\"${1:large.jpg}\">",
+      "  <source media=\"(max-width: 767px)\" srcset=\"${2:small.jpg}\">",
+      "  <img src=\"${3:default.jpg}\" alt=\"${4:وصف الصورة}\">",
+      "</picture>"
+    ],
+    "description": "صورة متجاوبة تتغير حسب حجم الشاشة"
+  },
+
+  "HTML Video": {
+    "prefix": "html-ar-video",
+    "scope": "html",
+    "body": [
+      "<!-- مشغل فيديو مع عناصر التحكم -->",
+      "<video width=\"${1:640}\" controls poster=\"${2:cover.jpg}\">",
+      "  <source src=\"${3:video.mp4}\" type=\"video/mp4\">",
+      "  ${4:متصفحك لا يدعم الفيديو}",
+      "</video>"
+    ],
+    "description": "مشغل فيديو مع عناصر التحكم"
+  },
+
+  "HTML Audio": {
+    "prefix": "html-ar-audio",
+    "scope": "html",
+    "body": [
+      "<!-- مشغل صوت مع عناصر التحكم -->",
+      "<audio controls>",
+      "  <source src=\"${1:audio.mp3}\" type=\"audio/mpeg\">",
+      "  ${2:متصفحك لا يدعم الصوت}",
+      "</audio>"
+    ],
+    "description": "مشغل صوت مع عناصر التحكم"
+  },
+
+  "HTML Link": {
+    "prefix": "html-ar-link",
+    "scope": "html",
+    "body": [
+      "<!-- رابط يفتح في تبويب جديد بأمان -->",
+      "<a href=\"${1:https://example.com}\" target=\"_blank\" rel=\"noopener noreferrer\">${2:النص}</a>"
+    ],
+    "description": "رابط يفتح في تبويب جديد بأمان"
+  },
+
+  "HTML Card": {
+    "prefix": "html-ar-card",
+    "scope": "html",
+    "body": [
+      "<!-- بطاقة بصورة وعنوان ومحتوى -->",
+      "<div class=\"card\">",
+      "  <img src=\"${1:image.jpg}\" alt=\"${2:وصف}\" class=\"card-img\">",
+      "  <div class=\"card-body\">",
+      "    <h3>${3:عنوان البطاقة}</h3>",
+      "    <p>${4:نص البطاقة}</p>",
+      "    <a href=\"${5:#}\" class=\"card-link\">${6:اقرأ المزيد}</a>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "بطاقة بصورة وعنوان ومحتوى"
+  },
+
+  "HTML Modal": {
+    "prefix": "html-ar-modal",
+    "scope": "html",
+    "body": [
+      "<!-- نافذة منبثقة بزر إغلاق -->",
+      "<div class=\"modal\" id=\"${1:modal}\">",
+      "  <div class=\"modal-content\">",
+      "    <span class=\"modal-close\">&times;</span>",
+      "    <h2>${2:عنوان النافذة}</h2>",
+      "    <p>${3:محتوى النافذة}</p>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "نافذة منبثقة بزر إغلاق"
+  },
+
+  "HTML Accordion": {
+    "prefix": "html-ar-accordion",
+    "scope": "html",
+    "body": [
+      "<!-- قسم قابل للطي والفتح بدون جافاسكربت -->",
+      "<details>",
+      "  <summary>${1:السؤال أو العنوان}</summary>",
+      "  <p>${2:الإجابة أو التفاصيل}</p>",
+      "</details>"
+    ],
+    "description": "قسم قابل للطي والفتح بدون جافاسكربت"
+  },
+
+  "HTML Figure": {
+    "prefix": "html-ar-figure",
+    "scope": "html",
+    "body": [
+      "<!-- صورة مع تعليق وصفي -->",
+      "<figure>",
+      "  <img src=\"${1:image.jpg}\" alt=\"${2:وصف}\">",
+      "  <figcaption>${3:تعليق على الصورة}</figcaption>",
+      "</figure>"
+    ],
+    "description": "صورة مع تعليق وصفي"
+  },
+
+  "HTML Iframe": {
+    "prefix": "html-ar-iframe",
+    "scope": "html",
+    "body": [
+      "<!-- إطار لتضمين صفحة أو فيديو خارجي -->",
+      "<iframe src=\"${1:https://example.com}\" width=\"${2:600}\" height=\"${3:400}\" title=\"${4:العنوان}\" loading=\"lazy\"></iframe>"
+    ],
+    "description": "إطار لتضمين صفحة أو فيديو خارجي"
+  },
+
+  "HTML Progress": {
+    "prefix": "html-ar-progress",
+    "scope": "html",
+    "body": [
+      "<!-- شريط تقدم لإظهار نسبة الإنجاز -->",
+      "<progress value=\"${1:70}\" max=\"${2:100}\">${1:70}%</progress>"
+    ],
+    "description": "شريط تقدم لإظهار نسبة الإنجاز"
+  },
+
+  "HTML Fieldset": {
+    "prefix": "html-ar-fieldset",
+    "scope": "html",
+    "body": [
+      "<!-- تجميع حقول النموذج تحت عنوان واحد -->",
+      "<fieldset>",
+      "  <legend>${1:عنوان المجموعة}</legend>",
+      "  ${2:الحقول هنا}",
+      "</fieldset>"
+    ],
+    "description": "تجميع حقول النموذج تحت عنوان واحد"
+  },
+
+  "HTML Datalist": {
+    "prefix": "html-ar-datalist",
+    "scope": "html",
+    "body": [
+      "<!-- حقل بإقتراحات جاهزة أثناء الكتابة -->",
+      "<input list=\"${1:options}\" name=\"${2:choice}\" placeholder=\"${3:اكتب أو اختر}\">",
+      "<datalist id=\"${1:options}\">",
+      "  <option value=\"${4:الخيار الأول}\">",
+      "  <option value=\"${5:الخيار الثاني}\">",
+      "</datalist>"
+    ],
+    "description": "حقل بإقتراحات جاهزة أثناء الكتابة"
+  },
+
+  "HTML Semantic Layout": {
+    "prefix": "html-ar-layout",
+    "scope": "html",
+    "body": [
+      "<!-- هيكل صفحة دلالي كامل -->",
+      "<header>${1:الرأس}</header>",
+      "<nav>${2:شريط التنقل}</nav>",
+      "<main>",
+      "  <section>${3:المحتوى الرئيسي}</section>",
+      "  <aside>${4:محتوى جانبي}</aside>",
+      "</main>",
+      "<footer>${5:التذييل}</footer>"
+    ],
+    "description": "هيكل صفحة دلالي كامل"
+  },
+
+  "HTML Breadcrumb": {
+    "prefix": "html-ar-breadcrumb",
+    "scope": "html",
+    "body": [
+      "<!-- مسار التنقل لمعرفة مكان الصفحة الحالية -->",
+      "<nav aria-label=\"مسار التنقل\">",
+      "  <ol class=\"breadcrumb\">",
+      "    <li><a href=\"${1:/}\">${2:الرئيسية}</a></li>",
+      "    <li><a href=\"${3:/category}\">${4:القسم}</a></li>",
+      "    <li aria-current=\"page\">${5:الصفحة الحالية}</li>",
+      "  </ol>",
+      "</nav>"
+    ],
+    "description": "مسار التنقل لمعرفة مكان الصفحة الحالية"
+  },
+
+  "HTML Hero Section": {
+    "prefix": "html-ar-hero",
+    "scope": "html",
+    "body": [
+      "<!-- قسم ترحيبي بارز أعلى الصفحة -->",
+      "<section class=\"hero\">",
+      "  <h1>${1:عنوان جذاب}</h1>",
+      "  <p>${2:جملة توضيحية مختصرة}</p>",
+      "  <a href=\"${3:#}\" class=\"hero-btn\">${4:ابدأ الآن}</a>",
+      "</section>"
+    ],
+    "description": "قسم ترحيبي بارز أعلى الصفحة"
+  },
+
+  "HTML Favicon Links": {
+    "prefix": "html-ar-favicon",
+    "scope": "html",
+    "body": [
+      "<!-- أيقونة الموقع في تبويب المتصفح -->",
+      "<link rel=\"icon\" type=\"image/png\" href=\"${1:/favicon.png}\">",
+      "<link rel=\"apple-touch-icon\" href=\"${2:/apple-touch-icon.png}\">"
+    ],
+    "description": "أيقونة الموقع في تبويب المتصفح"
+  },
+
+  "HTML Comment Block": {
+    "prefix": "html-ar-comment",
+    "scope": "html",
+    "body": [
+      "<!-- ======================== -->",
+      "<!-- ${1:اسم القسم} -->",
+      "<!-- ======================== -->"
+    ],
+    "description": "تعليق بارز لتقسيم الكود"
+  }
+}

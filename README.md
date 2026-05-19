@@ -25,6 +25,9 @@
 
 | Technology | Prefix | Snippets |
 |---|---|---|
+| HTML | `html-ar-` | 35 |
+| CSS | `css-ar-` | 33 |
+| JavaScript | `js-ar-` | 32 |
 | TypeScript | `ts-ar-` | 15 |
 | Angular | `ng-ar-` | 25 |
 | NestJS | `nest-ar-` | 12 |
@@ -32,7 +35,7 @@
 | Ionic | `ion-ar-` | 22 |
 | Git | `git-ar-` | 12 |
 
-**الإجمالي: أكتر من 100 snippet**
+**الإجمالي: أكتر من 200 snippet**
 
 ---
 
@@ -64,6 +67,127 @@ ext install MostafaSaqly.arabic-dev-snippets
 ---
 
 ## قائمة الـ Snippets الكاملة
+
+---
+
+### HTML — `html-ar-`
+
+| Prefix | الوصف |
+|---|---|
+| `html-ar-page` | صفحة HTML5 كاملة جاهزة للبدء |
+| `html-ar-meta` | وسوم meta لتحسين الـ SEO ومشاركة الروابط |
+| `html-ar-navbar` | شريط تنقل أساسي بقائمة روابط |
+| `html-ar-header` | رأس الصفحة بعنوان ووصف |
+| `html-ar-footer` | تذييل الصفحة بحقوق النشر |
+| `html-ar-section` | قسم من الصفحة بعنوان ومحتوى |
+| `html-ar-article` | مقال مستقل له معنى بذاته |
+| `html-ar-form` | نموذج إدخال بيانات كامل |
+| `html-ar-input` | حقل إدخال مع تسمية |
+| `html-ar-select` | قائمة اختيار منسدلة |
+| `html-ar-textarea` | صندوق نص متعدد الأسطر |
+| `html-ar-checkbox` | مربع اختيار للموافقة أو التحديد |
+| `html-ar-radio` | مجموعة أزرار اختيار واحد فقط |
+| `html-ar-button` | زر قابل للنقر |
+| `html-ar-table` | جدول بيانات بعناوين وصفوف |
+| `html-ar-ol` | قائمة مرقمة |
+| `html-ar-ul` | قائمة نقطية غير مرقمة |
+| `html-ar-img` | صورة مع نص بديل وتحميل كسول |
+| `html-ar-picture` | صورة متجاوبة تتغير حسب حجم الشاشة |
+| `html-ar-video` | مشغل فيديو مع عناصر التحكم |
+| `html-ar-audio` | مشغل صوت مع عناصر التحكم |
+| `html-ar-link` | رابط يفتح في تبويب جديد بأمان |
+| `html-ar-card` | بطاقة بصورة وعنوان ومحتوى |
+| `html-ar-modal` | نافذة منبثقة بزر إغلاق |
+| `html-ar-accordion` | قسم قابل للطي والفتح بدون جافاسكربت |
+| `html-ar-figure` | صورة مع تعليق وصفي |
+| `html-ar-iframe` | إطار لتضمين صفحة أو فيديو خارجي |
+| `html-ar-progress` | شريط تقدم لإظهار نسبة الإنجاز |
+| `html-ar-fieldset` | تجميع حقول النموذج تحت عنوان واحد |
+| `html-ar-datalist` | حقل بإقتراحات جاهزة أثناء الكتابة |
+| `html-ar-layout` | هيكل صفحة دلالي كامل |
+| `html-ar-breadcrumb` | مسار التنقل لمعرفة مكان الصفحة الحالية |
+| `html-ar-hero` | قسم ترحيبي بارز أعلى الصفحة |
+| `html-ar-favicon` | أيقونة الموقع في تبويب المتصفح |
+| `html-ar-comment` | تعليق بارز لتقسيم الكود |
+
+---
+
+### CSS — `css-ar-`
+
+| Prefix | الوصف |
+|---|---|
+| `css-ar-reset` | إعادة ضبط الأنماط الافتراضية للمتصفح |
+| `css-ar-flex-center` | توسيط العناصر أفقياً وعمودياً بالـ flexbox |
+| `css-ar-flex` | ترتيب العناصر في صف أو عمود مرن |
+| `css-ar-grid` | تقسيم الصفحة لشبكة من الأعمدة |
+| `css-ar-grid-auto` | شبكة متجاوبة تتكيف تلقائياً مع المساحة |
+| `css-ar-media` | أنماط خاصة بحجم شاشة معين |
+| `css-ar-vars` | متغيرات لإعادة استخدام القيم في كل المشروع |
+| `css-ar-transition` | انتقال سلس عند تغير الخصائص |
+| `css-ar-hover` | تأثير عند مرور الماوس فوق العنصر |
+| `css-ar-keyframes` | تعريف حركة مخصصة بمراحل |
+| `css-ar-animation` | تطبيق حركة على عنصر |
+| `css-ar-fadein` | حركة ظهور تدريجي للعنصر |
+| `css-ar-spinner` | مؤشر تحميل دائري يدور |
+| `css-ar-shadow` | ظل ناعم حول العنصر |
+| `css-ar-card` | تنسيق بطاقة بظل وحواف دائرية |
+| `css-ar-btn` | تنسيق زر جذاب مع تأثير hover |
+| `css-ar-gradient` | خلفية متدرجة الألوان |
+| `css-ar-center-abs` | توسيط مطلق للعنصر داخل أبيه |
+| `css-ar-position` | تحديد موضع العنصر بدقة |
+| `css-ar-sticky` | رأس يلتصق بأعلى الشاشة عند التمرير |
+| `css-ar-truncate` | قص النص الطويل وإضافة ثلاث نقاط |
+| `css-ar-clamp` | قص النص بعد عدد محدد من الأسطر |
+| `css-ar-aspect` | الحفاظ على نسبة أبعاد ثابتة للعنصر |
+| `css-ar-glass` | تأثير الزجاج الشفاف الضبابي |
+| `css-ar-scrollbar` | تنسيق شريط التمرير بشكل مخصص |
+| `css-ar-pseudo` | إضافة محتوى قبل أو بعد العنصر |
+| `css-ar-dark` | أنماط الوضع الليلي حسب تفضيل النظام |
+| `css-ar-container` | حاوية بعرض أقصى وتوسيط تلقائي |
+| `css-ar-overlay` | طبقة تغطية شفافة فوق المحتوى |
+| `css-ar-hide` | إخفاء العنصر بصرياً مع بقائه لقارئ الشاشة |
+| `css-ar-fluid-font` | حجم خط متجاوب يتغير مع حجم الشاشة |
+| `css-ar-lift` | رفع العنصر مع ظل عند المرور عليه |
+| `css-ar-comment` | تعليق بارز لتقسيم الكود |
+
+---
+
+### JavaScript — `js-ar-`
+
+| Prefix | الوصف |
+|---|---|
+| `js-ar-select` | اختيار عنصر واحد من الصفحة |
+| `js-ar-select-all` | اختيار كل العناصر المطابقة والمرور عليها |
+| `js-ar-event` | ربط حدث بعنصر |
+| `js-ar-ready` | تشغيل الكود بعد تحميل الصفحة بالكامل |
+| `js-ar-create` | إنشاء عنصر جديد وإضافته للصفحة |
+| `js-ar-toggle` | تبديل وجود class على العنصر |
+| `js-ar-function` | تعريف دالة |
+| `js-ar-arrow` | دالة سهمية مختصرة |
+| `js-ar-fetch` | جلب بيانات من API |
+| `js-ar-async-fetch` | جلب بيانات بطريقة async/await مع معالجة الأخطاء |
+| `js-ar-post` | إرسال بيانات للسيرفر بطلب POST |
+| `js-ar-promise` | إنشاء وعد للعمليات غير المتزامنة |
+| `js-ar-try` | محاولة تنفيذ كود مع التقاط الأخطاء |
+| `js-ar-map` | تحويل كل عنصر في المصفوفة لعنصر جديد |
+| `js-ar-filter` | تصفية المصفوفة حسب شرط معين |
+| `js-ar-reduce` | تلخيص المصفوفة في قيمة واحدة |
+| `js-ar-find` | إيجاد أول عنصر يحقق الشرط |
+| `js-ar-foreach` | المرور على كل عناصر المصفوفة |
+| `js-ar-destruct` | تفكيك الكائن لاستخراج قيمه |
+| `js-ar-spread` | نسخ ودمج المصفوفات أو الكائنات |
+| `js-ar-template` | نص مع متغيرات بداخله |
+| `js-ar-ternary` | شرط مختصر في سطر واحد |
+| `js-ar-optional` | الوصول الآمن لخصائص قد تكون غير موجودة |
+| `js-ar-storage` | حفظ وجلب البيانات من التخزين المحلي |
+| `js-ar-timeout` | تنفيذ كود بعد فترة زمنية محددة |
+| `js-ar-interval` | تكرار تنفيذ كود كل فترة زمنية |
+| `js-ar-debounce` | تأخير تنفيذ الدالة حتى يتوقف المستخدم |
+| `js-ar-class` | تعريف كلاس لإنشاء الكائنات |
+| `js-ar-form-submit` | التقاط إرسال النموذج ومنع إعادة التحميل |
+| `js-ar-array` | إنشاء مصفوفة والعمليات الأساسية عليها |
+| `js-ar-object-loop` | المرور على مفاتيح وقيم الكائن |
+| `js-ar-log` | طباعة قيمة في الكونسول للتتبع |
 
 ---
 
@@ -230,9 +354,8 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 | Course | الوصف | الرابط |
 |---|---|---|
-| Angular | من الصفر للاحتراف | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
-| NestJS + Prisma | كورس كامل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
-| Ionic | تطبيقات الموبايل | [youtube.com/@saqlycourses](https://youtube.com/@saqlycourses) |
+| Angular | من الصفر للاحتراف | [udemy.com/@mostafaabdelazeem](https://www.udemy.com/course/full-frontend-course-arabic-from-zero-to-angular/?referralCode=E87CA0005A426015E2F8) |
+
 
 ---
 

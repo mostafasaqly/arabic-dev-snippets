@@ -33,9 +33,9 @@
 | NestJS | `nest-ar-` | 12 |
 | Prisma | `pr-ar-` | 14 |
 | Ionic | `ion-ar-` | 22 |
-| Git | `git-ar-` | 12 |
+| Git | `git-ar-` | 20 |
 
-**الإجمالي: أكتر من 200 snippet**
+**الإجمالي: أكتر من 208 snippet**
 
 ---
 
@@ -331,20 +331,70 @@ ext install MostafaSaqly.arabic-dev-snippets
 
 ### Git — `git-ar-`
 
+> **طريقة الاستخدام:** افتح ملف `.sh` أو `.bat` — اكتب أي prefix من القائمة دي واضغط **Tab**
+
+---
+
+#### الإعداد والتهيئة
+
 | Prefix | الوصف |
 |---|---|
+| `git-ar-config` | إعداد بيانات المطور والتفضيلات الأساسية |
 | `git-ar-init` | إنشاء repo جديد وربطه بـ GitHub |
-| `git-ar-branch` | إنشاء branch والانتقال إليه |
-| `git-ar-commit` | حفظ التغييرات بشكل صحيح |
-| `git-ar-merge` | دمج الـ branches |
-| `git-ar-undo` | التراجع عن التغييرات |
-| `git-ar-remote` | رفع وجلب التغييرات |
-| `git-ar-conflict` | حل الـ conflicts عند الدمج |
+| `git-ar-ignore` | إنشاء وإدارة ملف `.gitignore` |
+| `git-ar-alias` | اختصارات للأوامر المتكررة |
+
+#### المراقبة والتتبع
+
+| Prefix | الوصف |
+|---|---|
+| `git-ar-status` | عرض حالة الملفات الحالية |
+| `git-ar-diff` | مقارنة التغييرات بين الإصدارات |
+| `git-ar-log` | عرض تاريخ الـ commits بشكل منظم |
+| `git-ar-blame` | معرفة من كتب كل سطر في الملف ومتى |
+| `git-ar-bisect` | تتبع الـ commit المسبب للـ bug بالبحث الثنائي |
+
+#### الحفظ والتغييرات
+
+| Prefix | الوصف |
+|---|---|
+| `git-ar-commit` | حفظ التغييرات مع رسالة واضحة |
+| `git-ar-amend` | تعديل آخر commit — الرسالة أو الملفات |
 | `git-ar-stash` | حفظ مؤقت للتغييرات بدون commit |
-| `git-ar-log` | عرض تاريخ الـ commits بشكل جميل |
-| `git-ar-tag` | وسم الـ releases |
+
+#### الفروع والدمج
+
+| Prefix | الوصف |
+|---|---|
+| `git-ar-branch` | إنشاء وحذف والتنقل بين الـ branches |
+| `git-ar-merge` | دمج فرع في الفرع الرئيسي |
 | `git-ar-rebase` | interactive rebase لإعادة كتابة التاريخ |
-| `git-ar-clean` | تنظيف الـ repo من الـ branches القديمة |
+| `git-ar-cherry-pick` | نقل commit معين من فرع لآخر |
+| `git-ar-conflict` | حل التعارضات الناتجة عن الدمج |
+
+#### التراجع والإصلاح
+
+| Prefix | الوصف |
+|---|---|
+| `git-ar-undo` | التراجع عن آخر commit بأكثر من طريقة |
+| `git-ar-reset` | العودة لنقطة محددة في تاريخ الـ commits |
+| `git-ar-revert` | عكس commit بأمان مناسب للكود المرفوع |
+
+#### التعامل مع السيرفر
+
+| Prefix | الوصف |
+|---|---|
+| `git-ar-remote` | رفع وجلب التغييرات وإدارة المستودعات البعيدة |
+| `git-ar-tag` | إنشاء وإدارة وسوم الإصدارات |
+
+#### الأدوات المتقدمة
+
+| Prefix | الوصف |
+|---|---|
+| `git-ar-submodule` | إدارة المشاريع الفرعية داخل المستودع |
+| `git-ar-worktree` | العمل على أكثر من فرع في نفس الوقت |
+| `git-ar-hooks` | أتمتة المهام عند أوامر Git المختلفة |
+| `git-ar-clean` | تنظيف الـ repo من الـ branches والملفات القديمة |
 
 ---
 

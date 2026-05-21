@@ -6,7 +6,8 @@
       "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''__TRACKED_VAR__'\\\\'','\\\\''utf8'\\\\''\\)\\)')",
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('package.json','utf8'\\)\\)\")",
       "Bash(node -e \"['html','css','javascript'].forEach\\(f=>{const j=require\\('./snippets/'+f+'.json'\\);console.log\\(f+'.json OK -',Object.keys\\(j\\).length,'snippets'\\)}\\)\")",
-      "Bash(node -e \"require\\('./package.json'\\);console.log\\('package.json OK'\\)\")"
+      "Bash(node -e \"require\\('./package.json'\\);console.log\\('package.json OK'\\)\")",
+      "PowerShell(Get-ChildItem \"d:\\\\vscode extensions\\\\Arabic Dev Snippets\" -Name | Where-Object { $_ -notmatch \"node_modules\" })"
     ]
   }
 }

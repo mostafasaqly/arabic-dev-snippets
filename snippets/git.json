@@ -14,6 +14,41 @@
     "description": "إنشاء مستودع جديد وربطه بالمنصة"
   },
 
+  "Git Status": {
+    "prefix": "git-ar-status",
+    "scope": "shellscript,bat",
+    "body": [
+      "# مشاهدة حالة الملفات الحالية",
+      "git status",
+      "",
+      "# عرض مختصر للحالة",
+      "git status -s",
+      "",
+      "# عرض الفروع مع الحالة",
+      "git status -sb"
+    ],
+    "description": "عرض حالة الملفات في المستودع"
+  },
+
+  "Git Diff": {
+    "prefix": "git-ar-diff",
+    "scope": "shellscript,bat",
+    "body": [
+      "# مقارنة التغييرات غير المضافة للـ staging",
+      "git diff",
+      "",
+      "# مقارنة التغييرات المضافة للـ staging",
+      "git diff --staged",
+      "",
+      "# مقارنة بين فرعين",
+      "git diff ${1:main}..${2:feature/اسم-الفرع}",
+      "",
+      "# مقارنة ملف معين",
+      "git diff ${3:filename}"
+    ],
+    "description": "مقارنة التغييرات بين الإصدارات"
+  },
+
   "Git Branch": {
     "prefix": "git-ar-branch",
     "scope": "shellscript,bat",
@@ -21,13 +56,22 @@
       "# إنشاء فرع جديد والانتقال إليه",
       "git checkout -b ${1:feature}/${2:اسم-الفرع}",
       "",
-      "# عرض كل الفروع",
+      "# عرض كل الفروع المحلية",
+      "git branch",
+      "",
+      "# عرض كل الفروع المحلية والبعيدة",
       "git branch -a",
       "",
       "# الانتقال لفرع موجود",
-      "git checkout ${3:main}"
+      "git checkout ${3:main}",
+      "",
+      "# حذف فرع محلي",
+      "git branch -d ${4:اسم-الفرع}",
+      "",
+      "# إعادة تسمية الفرع الحالي",
+      "git branch -m ${5:الاسم-الجديد}"
     ],
-    "description": "إنشاء فرع جديد والانتقال إليه"
+    "description": "إدارة الفروع إنشاءً وحذفاً وتنقلاً"
   },
 
   "Git Commit": {
@@ -49,6 +93,24 @@
     "description": "حفظ التغييرات مع رسالة واضحة"
   },
 
+  "Git Amend": {
+    "prefix": "git-ar-amend",
+    "scope": "shellscript,bat",
+    "body": [
+      "# تعديل آخر commit — الرسالة أو الملفات",
+      "",
+      "# تعديل رسالة آخر commit",
+      "git commit --amend -m \"${1:الرسالة الجديدة}\"",
+      "",
+      "# إضافة ملفات منسية لآخر commit بدون تغيير الرسالة",
+      "git add ${2:filename}",
+      "git commit --amend --no-edit",
+      "",
+      "# تحذير: لا تستخدم amend على commits مرفوعة للسيرفر"
+    ],
+    "description": "تعديل آخر commit سواء الرسالة أو الملفات"
+  },
+
   "Git Merge": {
     "prefix": "git-ar-merge",
     "scope": "shellscript,bat",
@@ -58,10 +120,35 @@
       "git pull origin ${1:main}",
       "git merge ${2:feature/اسم-الفرع}",
       "",
+      "# دمج بدون fast-forward للحفاظ على تاريخ الفرع",
+      "# git merge --no-ff ${2:feature/اسم-الفرع}",
+      "",
       "# أو استخدم إعادة الأساس لتاريخ أنظف",
       "# git rebase ${1:main}"
     ],
     "description": "دمج فرع في الفرع الرئيسي"
+  },
+
+  "Git Cherry Pick": {
+    "prefix": "git-ar-cherry-pick",
+    "scope": "shellscript,bat",
+    "body": [
+      "# نقل commit معين من فرع لآخر",
+      "git cherry-pick ${1:commit-hash}",
+      "",
+      "# نقل أكثر من commit",
+      "git cherry-pick ${2:hash1} ${3:hash2}",
+      "",
+      "# نقل نطاق من الـ commits",
+      "git cherry-pick ${4:hash-قديم}..${5:hash-حديث}",
+      "",
+      "# في حالة تعارض — بعد الحل",
+      "git cherry-pick --continue",
+      "",
+      "# إلغاء العملية",
+      "git cherry-pick --abort"
+    ],
+    "description": "نقل commit معين من فرع لفرع آخر"
   },
 
   "Git Undo": {
@@ -71,6 +158,12 @@
       "# التراجع عن آخر حفظة من غير حذف التغييرات",
       "git reset --soft HEAD~1",
       "",
+      "# التراجع عن آخر حفظة وإزالة التغييرات من الـ staging",
+      "git reset --mixed HEAD~1",
+      "",
+      "# التراجع الكامل عن آخر حفظة وحذف التغييرات نهائياً",
+      "git reset --hard HEAD~1",
+      "",
       "# التراجع عن تغييرات ملف معين",
       "git checkout -- ${1:filename}",
       "",
@@ -78,6 +171,46 @@
       "git restore ."
     ],
     "description": "التراجع عن التغييرات الأخيرة"
+  },
+
+  "Git Reset": {
+    "prefix": "git-ar-reset",
+    "scope": "shellscript,bat",
+    "body": [
+      "# العودة لنقطة معينة في التاريخ",
+      "",
+      "# الطريقة الآمنة — يحتفظ بالتغييرات في الـ staging",
+      "git reset --soft ${1:commit-hash}",
+      "",
+      "# الطريقة المتوسطة — يحتفظ بالتغييرات في الـ working directory",
+      "git reset --mixed ${1:commit-hash}",
+      "",
+      "# الطريقة الحادة — يحذف كل التغييرات (خطر)",
+      "git reset --hard ${1:commit-hash}",
+      "",
+      "# العودة لحالة السيرفر البعيد",
+      "git reset --hard origin/${2:main}"
+    ],
+    "description": "العودة لنقطة محددة في تاريخ الـ commits"
+  },
+
+  "Git Revert": {
+    "prefix": "git-ar-revert",
+    "scope": "shellscript,bat",
+    "body": [
+      "# عكس تأثير commit معين بشكل آمن (بيضيف commit جديد)",
+      "git revert ${1:commit-hash}",
+      "",
+      "# عكس آخر commit",
+      "git revert HEAD",
+      "",
+      "# عكس نطاق من الـ commits",
+      "git revert ${2:hash-قديم}..${3:hash-حديث}",
+      "",
+      "# عكس بدون فتح محرر الرسالة",
+      "git revert --no-edit ${1:commit-hash}"
+    ],
+    "description": "عكس تأثير commit بشكل آمن مناسب للكود المرفوع"
   },
 
   "Git Remote": {
@@ -90,8 +223,14 @@
       "# جلب آخر التغييرات من المنصة",
       "git pull origin ${2:main}",
       "",
+      "# جلب بدون دمج",
+      "git fetch origin",
+      "",
       "# عرض المستودعات البعيدة",
-      "git remote -v"
+      "git remote -v",
+      "",
+      "# تغيير رابط المستودع البعيد",
+      "git remote set-url origin ${3:https://github.com/username/repo.git}"
     ],
     "description": "رفع وجلب التغييرات من المنصة"
   },
@@ -110,7 +249,10 @@
       "git commit -m \"fix: حل تعارض الدمج\"",
       "",
       "# أو استخدم أداة حل التعارضات",
-      "git mergetool"
+      "git mergetool",
+      "",
+      "# لعرض الملفات اللي فيها تعارضات",
+      "git diff --name-only --diff-filter=U"
     ],
     "description": "حل التعارضات الناتجة عن الدمج"
   },
@@ -122,14 +264,23 @@
       "# احتفظ بالتغييرات مؤقتاً من غير حفظ نهائي",
       "git stash save \"${1:وصف التغييرات المؤقتة}\"",
       "",
+      "# حفظ مع الملفات الجديدة غير المتتبعة",
+      "git stash save -u \"${1:وصف التغييرات المؤقتة}\"",
+      "",
       "# عرض قائمة التغييرات المؤقتة",
       "git stash list",
       "",
-      "# استرجاع آخر تغييرات مؤقتة",
+      "# استرجاع آخر تغييرات مؤقتة وحذفها من القائمة",
       "git stash pop",
       "",
-      "# استرجاع تغييرات مؤقتة معينة",
-      "git stash apply stash@{${2:0}}"
+      "# استرجاع تغييرات مؤقتة معينة بدون حذف",
+      "git stash apply stash@{${2:0}}",
+      "",
+      "# حذف stash معين",
+      "git stash drop stash@{${2:0}}",
+      "",
+      "# مشاهدة محتوى stash معين",
+      "git stash show -p stash@{${2:0}}"
     ],
     "description": "حفظ التغييرات مؤقتاً دون تثبيت"
   },
@@ -141,13 +292,66 @@
       "# عرض تاريخ الحفظات بشكل جميل",
       "git log --oneline --graph --decorate --all",
       "",
+      "# عرض آخر 10 commits مع التفاصيل",
+      "git log -10 --pretty=format:\"%h %an %ar - %s\"",
+      "",
       "# عرض تغييرات حفظة معينة",
       "git show ${1:commit-hash}",
       "",
       "# البحث في تاريخ الحفظات",
-      "git log --grep=\"${2:كلمة البحث}\""
+      "git log --grep=\"${2:كلمة البحث}\"",
+      "",
+      "# عرض commits اللي غيرت ملف معين",
+      "git log --follow -- ${3:filename}",
+      "",
+      "# مقارنة commits بين فرعين",
+      "git log ${4:main}..${5:feature/اسم-الفرع} --oneline"
     ],
     "description": "عرض سجل التغييرات بشكل منظم"
+  },
+
+  "Git Blame": {
+    "prefix": "git-ar-blame",
+    "scope": "shellscript,bat",
+    "body": [
+      "# معرفة مين كتب كل سطر في الملف",
+      "git blame ${1:filename}",
+      "",
+      "# blame مع تجاهل التغييرات في المسافات",
+      "git blame -w ${1:filename}",
+      "",
+      "# blame لنطاق أسطر معين",
+      "git blame -L ${2:1},${3:50} ${1:filename}",
+      "",
+      "# blame مع معرفة commit الأصلي حتى لو اتنقل الكود",
+      "git blame -C ${1:filename}"
+    ],
+    "description": "معرفة من كتب كل سطر في الملف ومتى"
+  },
+
+  "Git Bisect": {
+    "prefix": "git-ar-bisect",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إيجاد الـ commit اللي سبب الـ bug بالـ binary search",
+      "",
+      "# 1. ابدأ عملية البحث",
+      "git bisect start",
+      "",
+      "# 2. حدد الـ commit الحالي (فيه bug)",
+      "git bisect bad",
+      "",
+      "# 3. حدد آخر commit كان شغال صح",
+      "git bisect good ${1:commit-hash-قديم}",
+      "",
+      "# Git هيوصلك لكل commit واحد واحد — اختبر وقول:",
+      "git bisect good   # لو شغال",
+      "git bisect bad    # لو فيه bug",
+      "",
+      "# 4. بعد الانتهاء — ارجع للوضع الطبيعي",
+      "git bisect reset"
+    ],
+    "description": "تتبع الـ commit المسبب للـ bug بالبحث الثنائي"
   },
 
   "Git Tag": {
@@ -157,16 +361,28 @@
       "# إنشاء وسم لإصدار جديد",
       "git tag -a v${1:1.0.0} -m \"${2:إصدار 1.0.0 - أول إطلاق}\"",
       "",
+      "# إنشاء وسم خفيف بدون رسالة",
+      "git tag v${1:1.0.0}",
+      "",
       "# عرض كل الوسوم",
       "git tag -l",
+      "",
+      "# عرض تفاصيل وسم معين",
+      "git show v${1:1.0.0}",
       "",
       "# رفع الوسم على المنصة",
       "git push origin v${1:1.0.0}",
       "",
       "# رفع كل الوسوم",
-      "git push origin --tags"
+      "git push origin --tags",
+      "",
+      "# حذف وسم محلي",
+      "git tag -d v${1:1.0.0}",
+      "",
+      "# حذف وسم من المنصة",
+      "git push origin --delete v${1:1.0.0}"
     ],
-    "description": "إنشاء وسم للإصدارات"
+    "description": "إنشاء وإدارة وسوم الإصدارات"
   },
 
   "Git Interactive Rebase": {
@@ -180,12 +396,176 @@
       "# pick   - استخدم الحفظة كما هي",
       "# squash - ادمجها مع اللي قبلها",
       "# reword - غير رسالتها بس",
+      "# edit   - وقف عندها وعدّل",
       "# drop   - احذفها",
+      "# fixup  - ادمجها بدون الاحتفاظ برسالتها",
+      "",
+      "# Rebase على فرع رئيسي لتحديث فرعك",
+      "git rebase ${2:main}",
       "",
       "# بعد الانتهاء",
-      "git push origin ${2:branch-name} --force-with-lease"
+      "git push origin ${3:branch-name} --force-with-lease"
     ],
     "description": "إعادة كتابة سجل التغييرات الأخيرة"
+  },
+
+  "Git Submodule": {
+    "prefix": "git-ar-submodule",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إضافة مشروع خارجي داخل مشروعك",
+      "git submodule add ${1:https://github.com/username/repo.git} ${2:المجلد}",
+      "",
+      "# تحديث كل الـ submodules",
+      "git submodule update --init --recursive",
+      "",
+      "# جلب الكود مع الـ submodules من البداية",
+      "git clone --recurse-submodules ${3:repo-url}",
+      "",
+      "# تحديث submodule لآخر إصدار",
+      "git submodule update --remote ${2:المجلد}",
+      "",
+      "# حذف submodule",
+      "git submodule deinit ${2:المجلد}",
+      "git rm ${2:المجلد}"
+    ],
+    "description": "إدارة المشاريع الفرعية داخل المستودع"
+  },
+
+  "Git Worktree": {
+    "prefix": "git-ar-worktree",
+    "scope": "shellscript,bat",
+    "body": [
+      "# فتح فرعين في وقت واحد في مجلدات مختلفة",
+      "",
+      "# إضافة worktree لفرع موجود",
+      "git worktree add ${1:../مجلد-الفرع} ${2:اسم-الفرع}",
+      "",
+      "# إنشاء فرع جديد مع worktree",
+      "git worktree add -b ${3:feature/جديد} ${4:../مجلد-الفرع}",
+      "",
+      "# عرض كل الـ worktrees",
+      "git worktree list",
+      "",
+      "# حذف worktree",
+      "git worktree remove ${1:../مجلد-الفرع}"
+    ],
+    "description": "العمل على أكثر من فرع في نفس الوقت"
+  },
+
+  "Git Hooks": {
+    "prefix": "git-ar-hooks",
+    "scope": "shellscript,bat",
+    "body": [
+      "# أتمتة مهام قبل وبعد الـ git commands",
+      "# الملفات موجودة في .git/hooks/",
+      "",
+      "# أهم الـ hooks:",
+      "# pre-commit    — يشتغل قبل كل commit",
+      "# commit-msg    — يتحقق من رسالة الـ commit",
+      "# pre-push      — يشتغل قبل الرفع",
+      "# post-merge    — بعد الدمج",
+      "",
+      "# مثال: إنشاء pre-commit hook للفحص",
+      "cat > .git/hooks/pre-commit << 'EOF'",
+      "#!/bin/sh",
+      "npm run lint",
+      "npm test",
+      "EOF",
+      "chmod +x .git/hooks/pre-commit",
+      "",
+      "# أو استخدم husky لإدارة الـ hooks بسهولة",
+      "npx husky init"
+    ],
+    "description": "أتمتة المهام عند أوامر Git المختلفة"
+  },
+
+  "Git Alias": {
+    "prefix": "git-ar-alias",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إنشاء اختصارات لأوامر Git",
+      "",
+      "# اختصارات أساسية",
+      "git config --global alias.st status",
+      "git config --global alias.co checkout",
+      "git config --global alias.br branch",
+      "git config --global alias.cm commit",
+      "",
+      "# اختصار لعرض تاريخ جميل",
+      "git config --global alias.lg \"log --oneline --graph --decorate --all\"",
+      "",
+      "# اختصار لرفع الفرع الحالي",
+      "git config --global alias.pushup \"push -u origin HEAD\"",
+      "",
+      "# عرض كل الاختصارات",
+      "git config --global --list | grep alias"
+    ],
+    "description": "إنشاء اختصارات لأوامر Git المتكررة"
+  },
+
+  "Git Config": {
+    "prefix": "git-ar-config",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إعداد بيانات المطور",
+      "git config --global user.name \"${1:اسمك}\"",
+      "git config --global user.email \"${2:email@example.com}\"",
+      "",
+      "# إعداد المحرر الافتراضي",
+      "git config --global core.editor \"code --wait\"",
+      "",
+      "# إعداد الـ line endings (Windows)",
+      "git config --global core.autocrlf true",
+      "",
+      "# إعداد الفرع الافتراضي",
+      "git config --global init.defaultBranch main",
+      "",
+      "# عرض كل الإعدادات",
+      "git config --global --list"
+    ],
+    "description": "إعداد بيانات Git والتفضيلات الأساسية"
+  },
+
+  "Git Gitignore": {
+    "prefix": "git-ar-ignore",
+    "scope": "shellscript,bat",
+    "body": [
+      "# إنشاء ملف .gitignore أساسي",
+      "cat > .gitignore << 'EOF'",
+      "# Dependencies",
+      "node_modules/",
+      "",
+      "# Build output",
+      "dist/",
+      "build/",
+      "out/",
+      "",
+      "# Environment files",
+      ".env",
+      ".env.local",
+      ".env.production",
+      "",
+      "# Logs",
+      "*.log",
+      "npm-debug.log*",
+      "",
+      "# OS files",
+      ".DS_Store",
+      "Thumbs.db",
+      "",
+      "# IDE",
+      ".vscode/",
+      ".idea/",
+      "EOF",
+      "",
+      "# تجاهل ملف مؤقتاً بدون إضافته للـ .gitignore",
+      "git update-index --assume-unchanged ${1:filename}",
+      "",
+      "# إلغاء التجاهل",
+      "git update-index --no-assume-unchanged ${1:filename}"
+    ],
+    "description": "إنشاء وإدارة ملف .gitignore"
   },
 
   "Git Clean": {
@@ -195,12 +575,18 @@
       "# حذف الفروع المدموجة محلياً",
       "git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs git branch -d",
       "",
-      "# حذف الفروع البعيدة المحذوفة",
+      "# حذف الفروع البعيدة المحذوفة من السيرفر",
       "git remote prune origin",
       "",
-      "# تنظيف الملفات غير المتتبعة",
-      "git clean -fd"
+      "# تنظيف الملفات غير المتتبعة (معاينة قبل الحذف)",
+      "git clean -nfd",
+      "",
+      "# تنفيذ الحذف الفعلي",
+      "git clean -fd",
+      "",
+      "# تنظيف كامل شامل الملفات المتجاهلة",
+      "git clean -fdx"
     ],
-    "description": "تنظيف المستودع من الفروع القديمة"
+    "description": "تنظيف المستودع من الفروع والملفات القديمة"
   }
 }
